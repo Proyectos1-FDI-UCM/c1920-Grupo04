@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "cable") //en final por sprite
         {
             cable = true;
-            //Desactivar gravedad
+            rb.gravityScale = 0;
             //Cambiar el sprite
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
             gameObject.transform.position = ChildGameObject.transform.position;
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "exit") //en final por sprite
         {
             cable = false;
-            //activar gravedad
+            rb.gravityScale = 1;
             //Cambiar el sprite
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
             gameObject.transform.position = ChildGameObject.transform.position;
