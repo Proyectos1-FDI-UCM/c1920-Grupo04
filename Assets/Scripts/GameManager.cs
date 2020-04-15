@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     int Bateria_maxima = 7;
     int Bateria = 7;
     int punt = 0;
-
+    bool mov = true; //true: mov normal  false: mov cable
     UIManager uimanag;
 
     private void Awake()
@@ -30,6 +30,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void CambioMov()
+    {
+        mov = !mov;
+    }
+
+    public bool Block()
+    {
+        return mov;
+    }
     public void RestaVida(int cantidad)
     {               //Que tmb vale para sumarle
         

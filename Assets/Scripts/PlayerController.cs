@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float vel, forceJump;
+    public Sprite enCable;
+    public Sprite enCamino;
     Rigidbody2D rb;
     float deltaX, deltaY;
     bool salto;
@@ -18,19 +20,24 @@ public class PlayerController : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
+
         if (collision.gameObject.tag == "cable") //en final por sprite
         {
             cable = true;
+            GameManager.instance.CambioMov(); //Avisar dejar de disparar y saltar
             rb.gravityScale = 0;
-            //Cambiar el sprite
+            transform.localScale = scale * new Vector2(0.5f, 0.5f); //Cambiar el tamaño para evitar tener la misma box collider
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = enCable;
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
             gameObject.transform.position = ChildGameObject.transform.position;
         }
-        if (collision.gameObject.tag == "exit") //en final por sprite
+        else if (collision.gameObject.tag == "exit") //en final por sprite
         {
             cable = false;
+            GameManager.instance.CambioMov();
             rb.gravityScale = 1;
-            //Cambiar el sprite
+            transform.localScale = scale; //Vuelve al tamaño normal
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = enCamino;
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
             gameObject.transform.position = ChildGameObject.transform.position;
         }
