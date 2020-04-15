@@ -190,4 +190,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 8
-  forceJump: 13
+  forceJump: 10
+  enCable: {fileID: 0}
+  enCamino: {fileID: 0}

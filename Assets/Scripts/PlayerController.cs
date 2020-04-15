@@ -13,10 +13,19 @@ public class PlayerController : MonoBehaviour
     bool salto;
     private Vector2 scale;
     private bool cable = false;
+    bool enElSuelo = false;
+    bool puedesDobleSalto = false;
+    bool tienesDobleSalto = false;  //Tienes el power-up?
+    float contador = 0; //Se utiliza en el salto (tiempo tras salto para usar el doble salto)
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         scale = transform.localScale;
+    }
+
+    private void Start()
+    {
+        GameManager.instance.ReconocerJugador(this);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -41,6 +50,22 @@ public class PlayerController : MonoBehaviour
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
             gameObject.transform.position = ChildGameObject.transform.position;
         }
+        else if (collision.gameObject.tag == "suelo") //si ha colisionado con el suelo
+        {
+            puedesDobleSalto = tienesDobleSalto;    //Se podrá usar de nuevo el doble salto (si lo tienes)
+            enElSuelo = true;                       //Está en el suelo (puede saltar sin gastar el doble salto)
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "suelo") enElSuelo = false; //si se ha ido del suelo (no puede saltar, a no ser que tengas el doble)
+    }
+
+    public void ActivaDobleSalto()
+        //Método llamado por el GameManager cuando coges el power-up de doble salto
+    {
+        tienesDobleSalto = true;
     }
     void Update()
     {
@@ -53,20 +78,42 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(deltaX * vel, rb.velocity.y);
+        contador += Time.fixedDeltaTime; //Cuenta el tiempo desde el último salto normal
+        //Sirve para dejar un tiempo entre un salto y el doble salto, ya que si este contador te hace los dos a la vez solo pulsando una sola vez
 
-        if (!cable)
+        if (!cable) //Si no estás en cable
         {
-            if (GameManager.instance.TieneEnergia() && salto && (Mathf.Abs(rb.velocity.y) < 0.01f))
+            rb.velocity = new Vector2(deltaX * vel, rb.velocity.y); //Movimiento normal
 
+            //SALTO
+            if (GameManager.instance.TieneEnergia() && salto && contador > 0.5f)   //Si tienes energía y pulsas salto
             {
-                GameManager.instance.EnergiaSuma(-1);
-                rb.AddForce((Vector2.up) * forceJump, ForceMode2D.Impulse);
+                //Hay dos posibilidades, o salto normal o el doble.
+
+                if (enElSuelo)   //Si estás en el suelo
+                {
+                    //saltas
+                    GameManager.instance.EnergiaSuma(-1);
+                    rb.AddForce((Vector2.up) * forceJump, ForceMode2D.Impulse);
+                    contador = 0;   //reseteas el contador para realizar el doble salto
+                }
+
+                else if (puedesDobleSalto)  //Si no estás en el suelo, y puedes realizar el doble salto
+                {
+                    rb.velocity = new Vector2(deltaX * vel, 0f); //Se pierde la velocidad que llevases vertical para el siguiente impulso
+                    //(en el salto normal no es perder la velocidad vertical porque al estar en el suelo es 0)
+                    
+                    //saltas(doble)
+                    GameManager.instance.EnergiaSuma(-1);
+                    rb.AddForce((Vector2.up) * forceJump, ForceMode2D.Impulse);
+                    puedesDobleSalto = false;   //pierdes la capacidad del doble salto
+                }
+                
             }
         }
-        else
+        else        //Si estás en cable
         {
-            rb.velocity = new Vector2(deltaX * vel, deltaY * vel);
+            rb.velocity = new Vector2(deltaX * vel, deltaY * vel);  //Movimineto cable
         }
     }
     // Configura la escala de Spark. Hacia dónde mira.

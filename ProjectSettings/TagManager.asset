@@ -7,6 +7,9 @@ TagManager:
   - Escena
   - Disparo
   - Floor
+  - cable
+  - exit
+  - suelo
   layers:
   - Default
   - TransparentFX

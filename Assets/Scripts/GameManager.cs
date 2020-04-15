@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
     public void ActivarDobleSalto()
     {
         Debug.Log("Doble salto adquirido");
-        //jugadorPC.sumaSalto(); falta hacer este método en PlayerController
+        jugadorPC.ActivaDobleSalto(); 
     } 
 
     public void SetUIManager (UIManager uim)
