@@ -161,4 +161,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   despierto: {fileID: 21300000, guid: fde1478f776e8854b88bd81e63d197f3, type: 3}
-  dormido: {fileID: 21300000, guid: ce6adb6eebb070449ac762285d427164, type: 3}
+  dormido: {fileID: 21300000, guid: ee0c6529c203b36498de24dc44675144, type: 3}

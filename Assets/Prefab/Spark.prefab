@@ -191,5 +191,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vel: 8
   forceJump: 10
-  enCable: {fileID: 0}
-  enCamino: {fileID: 0}
+  enCable: {fileID: 21300000, guid: ca6aaad3a22c2514ea638909e6d9252b, type: 3}
+  enCamino: {fileID: 21300000, guid: ebcd87d9d4e2ac942ab4194324b3b7fd, type: 3}

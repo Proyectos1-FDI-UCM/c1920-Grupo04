@@ -585,7 +585,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enCable
       value: 
-      objectReference: {fileID: 21300000, guid: fde1478f776e8854b88bd81e63d197f3,
+      objectReference: {fileID: 21300000, guid: ca6aaad3a22c2514ea638909e6d9252b,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81e57ec01287287478116cf9e7300509, type: 3}
