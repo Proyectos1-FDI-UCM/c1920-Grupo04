@@ -32,6 +32,6 @@ public class UIManager : MonoBehaviour
     public void EnseñaPunt(int puntuacion)
     //Actualiza la puntuación en el HUD
     {
-        puntText.text = "Puntuación: " + puntuacion;
+       // puntText.text = "Puntuación: " + puntuacion;
     }
 }
