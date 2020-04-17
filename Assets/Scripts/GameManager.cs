@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         mov = !mov;
     }
 
-    public bool Block()
+    public bool Block()//Del cambio de movimiento
     {
         return mov;
     }
@@ -50,22 +50,22 @@ public class GameManager : MonoBehaviour
         if (vida < 0) Debug.Log("tas muerto illo");
 
         
-        uimanag.EnseñaVidas(vida, vida_maxima);
+        uimanag.EnseñaVidas(vida);
     }
 
     public void EnergiaSuma (int cantidad)
     {                               //tmb vale para restar (utilizar dentro de disparo y de salto para consumir bateria)
         Debug.Log("Bateria maxima: " + Bateria_maxima + "\nBateria antes" + Bateria);
         
-            Bateria = Bateria + cantidad;
+            Bateria += cantidad;
             if (Bateria > Bateria_maxima)
             {
                 Bateria = Bateria_maxima; //por si se cuela saes patricio?
             }
         
         Debug.Log("Bateria maxima: " + Bateria_maxima + "\nBateria actual: " + Bateria);
-
-        uimanag.EnseñaBaterias(Bateria, Bateria_maxima);
+        if (cantidad < 0) uimanag.EnseñaBaterias(Bateria);
+        else uimanag.DevuelveEnergia(Bateria);
     }
     public int EnergiaParaSumar() //Calcula la diferencia de energía
     {
@@ -78,18 +78,13 @@ public class GameManager : MonoBehaviour
 
     public void MejoraEnergia (int cantidad) 
     {
-        Debug.Log("Bateria maxima antes: " + Bateria_maxima + "\nBateria actual: " + Bateria);
         Bateria_maxima = Bateria_maxima + cantidad;
-        // Queremos la mejora tmb recargue? 
-        //EnergiaSuma(EnergiaParaSumar());        
-        Debug.Log("Bateria maxima ahora: " + Bateria_maxima + "\nBateria actual: " + Bateria);
-
-        uimanag.EnseñaBaterias(Bateria, Bateria_maxima);
+        Bateria = Bateria_maxima;
+        uimanag.masEnergia(Bateria_maxima);
     }
     public void SumaPuntuacion(int puntos)
     {
         punt += puntos;
-        Debug.Log("Puntuacion: " + punt);
 
         uimanag.EnseñaPunt(punt);
     }
@@ -110,8 +105,8 @@ public class GameManager : MonoBehaviour
     //Actualiza un nuevo UIManager (en cada cambio de escena)
     {
         uimanag = uim;
-        uimanag.EnseñaVidas(vida, vida_maxima);
-        uimanag.EnseñaBaterias(Bateria, Bateria_maxima);
+        uimanag.EnseñaVidas(vida);
+        uimanag.EnseñaBaterias(Bateria);
         uimanag.EnseñaPunt(punt);
     }
 }

@@ -16,10 +16,7 @@ public class Disparo : MonoBehaviour
         {
             GameManager.instance.EnergiaSuma(-1);
             GameObject bullet = Instantiate(bala, spawn.transform.position, Quaternion.identity); //Crear la bala
-            //if (this.gameObject.transform.localScale.x < 0)
-            //{
-            //    bullet.GetComponent<Rigidbody2D>().velocity.Set((velocidad * transform.right.x, 0f))
-            //}
+            
             if (gameObject.transform.localScale.x < 0)
                 bullet.GetComponent<VelBala>().velocidad *= -1;
             timer = 0;

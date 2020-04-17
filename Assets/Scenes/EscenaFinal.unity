@@ -1765,9 +1765,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6073bbdbb986443b0a048035794bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidasText: {fileID: 565599530}
-  bateriasText: {fileID: 1732348898}
-  puntText: {fileID: 0}
+  lives: []
+  bat: []
+  scoreText: {fileID: 0}
 --- !u!114 &238710451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1840,8 +1840,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1771892120}
-  m_Father: {fileID: 457590993}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3086,7 +3086,6 @@ Transform:
   m_Children:
   - {fileID: 929490079}
   - {fileID: 312738708}
-  - {fileID: 238710454}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

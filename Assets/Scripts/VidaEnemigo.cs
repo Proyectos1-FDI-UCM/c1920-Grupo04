@@ -15,6 +15,7 @@ public class VidaEnemigo : MonoBehaviour
             vida--;
             if (vida <= 0)
             {
+                GameManager.instance.SumaPuntuacion(100);
                 Destroy(this.gameObject);   //Este objeto (Enemigo/muro) se destruye
             }
         }
