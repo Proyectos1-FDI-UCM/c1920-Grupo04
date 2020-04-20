@@ -1,0 +1,54 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class PauseMenu : MonoBehaviour
+{
+    //booleano para saber si el juego esta pausado o no
+    public static bool gameIsPaused = false;
+    //gameobject menu de pausa
+    public GameObject pauseMenuUI;
+   
+    void Update()
+    {
+        if (Input.GetKeyDown("escape")) {
+            
+            if (gameIsPaused) {
+                Resume();
+            }
+            else {
+                Pause();
+            }
+        }
+    }
+    //al hacer publico el metodo Resume puedo asignarselo a un boton para que continue el juego cuando lo pulse 
+    public void Resume() {
+        //esto quita el menu de pausa de la pantalla
+        pauseMenuUI.SetActive(false);
+        //al poner el Time.timeScale a 1 el juego empezara a moverse con normalidad
+        Time.timeScale = 1f;
+        gameIsPaused = false;
+    }
+
+    void Pause() {
+        //esto hace que aparezca en la pantalla el menu de pausa
+        pauseMenuUI.SetActive(true);
+        //al poner el Time.timeScale a 0 esto hace que se quede parado el juego y que no se pueda mover nada
+        Time.timeScale = 0f;
+        gameIsPaused = true;
+    }
+
+    public void Restart() {
+        Time.timeScale = 1f;
+        gameIsPaused = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void LoadMenu() {
+        Debug.Log("Loading menu ...");
+        //cuando se implemente el menu se cargara la escena del menu al pulsar el boton
+        //Time.timeScale = 1f;
+        //SceneManager.LoadScene("Menu");
+    }
+}
