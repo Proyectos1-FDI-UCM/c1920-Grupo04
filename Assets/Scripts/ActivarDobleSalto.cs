@@ -11,6 +11,5 @@ public class ActivarDobleSalto : MonoBehaviour
             GameManager.instance.ActivarDobleSalto();
             Destroy(this.gameObject);
         }
-        else Debug.Log("mal");
     }
 }

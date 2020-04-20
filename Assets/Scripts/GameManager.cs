@@ -96,10 +96,23 @@ public class GameManager : MonoBehaviour
 
 
     public void ActivarDobleSalto()
+    //Activa la habilidad de doble salto al coger el item
     {
         Debug.Log("Doble salto adquirido");
         jugadorPC.ActivaDobleSalto(); 
     } 
+
+    public void SueloTocado()
+    //Avisa al jugador de que está tocando el suelo
+    {
+        jugadorPC.HeTocadoSuelo();
+    }
+
+    public void SueloFuera()
+    //Avisa al jugador de que ya no está en el suelo
+    {
+        jugadorPC.DejadoDeTocarSuelo();
+    }
 
     public void SetUIManager (UIManager uim)
     //Actualiza un nuevo UIManager (en cada cambio de escena)

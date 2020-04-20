@@ -27,6 +27,15 @@ public class PlayerController : MonoBehaviour
     {
         GameManager.instance.ReconocerJugador(this);
     }
+
+    void Update()
+    {
+        deltaX = Input.GetAxis("Horizontal");
+        setScale();
+        deltaY = Input.GetAxis("Vertical");
+        setScale();
+        salto = Input.GetAxis("Jump") == 1;
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -50,30 +59,24 @@ public class PlayerController : MonoBehaviour
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
             gameObject.transform.position = ChildGameObject.transform.position;
         }
-        else if (collision.gameObject.tag == "suelo") //si ha colisionado con el suelo
-        {
-            puedesDobleSalto = tienesDobleSalto;    //Se podrá usar de nuevo el doble salto (si lo tienes)
-            enElSuelo = true;                       //Está en el suelo (puede saltar sin gastar el doble salto)
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "suelo") enElSuelo = false; //si se ha ido del suelo (no puede saltar, a no ser que tengas el doble)
     }
 
     public void ActivaDobleSalto()
-        //Método llamado por el GameManager cuando coges el power-up de doble salto
+    //Método llamado por el GameManager cuando coges el power-up de doble salto
     {
         tienesDobleSalto = true;
     }
-    void Update()
+
+    public void HeTocadoSuelo()
+    //Llamado desde los pies a través del GameManager
     {
-        deltaX = Input.GetAxis("Horizontal");
-        setScale();
-        deltaY = Input.GetAxis("Vertical");
-        setScale();
-        salto = Input.GetAxis("Jump") == 1;
+        puedesDobleSalto = tienesDobleSalto;    //Se podrá usar de nuevo el doble salto (si lo tienes)
+        enElSuelo = true;                       //Está en el suelo (puede saltar sin gastar el doble salto)
+    }
+
+    public void DejadoDeTocarSuelo()
+    {
+        enElSuelo = false;                      //No se puede saltar, a no ser que tengas el doble
     }
 
     void FixedUpdate()
