@@ -22,12 +22,14 @@ public class UIManager : MonoBehaviour
 
     public void masEnergia(int maximo)
     {
-        maxbat = 8;
-        bat7.enabled = false; //Cambiar el fondo de las baterias
-        bat8.enabled = true;
-        for(int i = maximo; aux != i; i--)//Devuelve a true solo los valores en false
+        //maxbat = 8;
+        //bat7.enabled = false; //Cambiar el fondo de las baterias
+        //bat8.enabled = true;
+        if (maximo != maxbat)
+            bat = new Image[maximo];
+        for (int i = maximo; aux != i; i--)//Devuelve a true solo los valores en false
         {
-            bat[i-1].enabled = true;
+            bat[i].enabled = true;
         }
     }
 
@@ -42,7 +44,6 @@ public class UIManager : MonoBehaviour
     public void EnseñaVidas(int vidas)
     //Actualiza las vidas en el HUD
     {
-        Debug.Log(vidas);
         if (vidas <= 2) lives[0].enabled = false;
         if (vidas <= 1) lives[1].enabled = false;
         if (vidas <= 0) lives[2].enabled = false;

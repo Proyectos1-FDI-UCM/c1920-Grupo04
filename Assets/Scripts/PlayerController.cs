@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
         deltaY = Input.GetAxis("Vertical");
         setScale();
         salto = Input.GetAxis("Jump") == 1;
+        Debug.Log(enElSuelo);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
