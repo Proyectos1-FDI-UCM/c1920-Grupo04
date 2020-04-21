@@ -10,8 +10,8 @@ public class CableBlocked : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<Disparo>() || collision.gameObject.GetComponent<VelBala>())
         {
-            gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-            gameObject.GetComponent<MeshRenderer>().material = actived;
+            this.gameObject.transform.GetChild(0).gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+            this.gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material = actived;
         }
     }
 }
