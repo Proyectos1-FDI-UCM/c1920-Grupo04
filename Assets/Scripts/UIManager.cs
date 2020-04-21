@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
         bat8.enabled = true;
         for(int i = maximo; aux != i; i--)//Devuelve a true solo los valores en false
         {
-            bat[i].enabled = true;
+            bat[i-1].enabled = true;
         }
     }
 
@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
     public void EnseñaVidas(int vidas)
     //Actualiza las vidas en el HUD
     {
+        Debug.Log(vidas);
         if (vidas <= 2) lives[0].enabled = false;
         if (vidas <= 1) lives[1].enabled = false;
         if (vidas <= 0) lives[2].enabled = false;
