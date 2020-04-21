@@ -8,12 +8,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     PlayerController jugadorPC;
-    int vida_maxima = 5;
+    int vida_maxima = 3;
     int vida = 3;
     int Bateria_maxima = 7;
     int Bateria = 7;
     int punt = 0;
     bool mov = true; //true: mov normal  false: mov cable
+    Vector2 spawn;
     UIManager uimanag;
 
     private void Awake()
@@ -47,7 +48,12 @@ public class GameManager : MonoBehaviour
             //si llega a 0 pues end game (añadir después)
         
         Debug.Log("vida: " + vida);
-        if (vida < 0) Debug.Log("tas muerto illo");
+        if (vida < 0)
+            //Al llegar la vida a 0 hacemos que respawnee el jugador (y la escena)
+        {
+            jugadorPC.Respawn();
+            vida = vida_maxima;
+        }
 
         
         uimanag.EnseñaVidas(vida);
@@ -121,5 +127,13 @@ public class GameManager : MonoBehaviour
         uimanag.EnseñaVidas(vida);
         uimanag.EnseñaBaterias(Bateria);
         uimanag.EnseñaPunt(punt);
+    }
+    public void GuardaSpawn(Vector2 posJugador)
+    {
+        spawn = posJugador;
+    }
+    public Vector2 EnviaSpawn()
+    {
+        return spawn;
     }
 }

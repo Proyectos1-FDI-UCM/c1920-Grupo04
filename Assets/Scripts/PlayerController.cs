@@ -128,5 +128,11 @@ public class PlayerController : MonoBehaviour
             transform.localScale = scale;
     }
 
+    public void Respawn()
+    {
+        Vector2 spawn = GameManager.instance.EnviaSpawn();
+        transform.position = spawn;
+        //Por si acaso muriese en una plataforma
+    }
 }
 
