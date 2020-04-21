@@ -8,5 +8,7 @@ public class Estacion_Energía : MonoBehaviour
     {
         int cantidad = GameManager.instance.EnergiaParaSumar();
         GameManager.instance.EnergiaSuma(cantidad);
+        Vector2 posi = new Vector2(jugador.transform.position.x, jugador.transform.position.y);
+        GameManager.instance.GuardaSpawn(posi);
     }
 }
