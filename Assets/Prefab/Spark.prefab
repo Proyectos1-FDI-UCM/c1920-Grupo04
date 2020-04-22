@@ -311,4 +311,4 @@ MonoBehaviour:
   vel: 8
   forceJump: 10
   enCable: {fileID: 21300000, guid: ca6aaad3a22c2514ea638909e6d9252b, type: 3}
-  enCamino: {fileID: 21300000, guid: ebcd87d9d4e2ac942ab4194324b3b7fd, type: 3}
+  enCamino: {fileID: 21300000, guid: b0d1236bc6dfda14391c37a757fad169, type: 3}

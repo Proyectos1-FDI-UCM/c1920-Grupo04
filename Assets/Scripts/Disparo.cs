@@ -7,7 +7,7 @@ public class Disparo : MonoBehaviour
     public GameObject bala;
     public GameObject spawn;
     public float cadencia;
-    private float timer;
+    private float timer = 0;
     
     void Update()
     {
