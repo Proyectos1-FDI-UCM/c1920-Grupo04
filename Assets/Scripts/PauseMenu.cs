@@ -38,7 +38,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         gameIsPaused = true;
     }
-
+    //este metodo reinicia el nivel y recarga la vida y la energia del jugador a como estaba al inicio
     public void Restart() {
         Time.timeScale = 1f;
         gameIsPaused = false;
@@ -47,11 +47,11 @@ public class PauseMenu : MonoBehaviour
         GameManager.instance.RestaVida(-3);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
+    //este metodo carga la escena del menu al pulsar el boton
     public void LoadMenu() {
         Debug.Log("Loading menu ...");
-        //cuando se implemente el menu se cargara la escena del menu al pulsar el boton
-        //Time.timeScale = 1f;
-        //SceneManager.LoadScene("Menu");
+        
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
     }
 }
