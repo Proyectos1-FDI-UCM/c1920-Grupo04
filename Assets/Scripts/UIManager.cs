@@ -43,8 +43,8 @@ public class UIManager : MonoBehaviour
     //Actualiza las vidas en el HUD
     {
         if (vidas <= 2) lives[0].enabled = false;
-        if (vidas <= 1) lives[1].enabled = false;
-        if (vidas <= 0) lives[2].enabled = false;
+        else if (vidas <= 1) lives[1].enabled = false;
+        else if (vidas <= 0) lives[2].enabled = false;
     }
 
     public void EnseñaBaterias(int baterias)
