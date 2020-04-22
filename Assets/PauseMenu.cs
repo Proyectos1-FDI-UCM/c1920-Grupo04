@@ -42,6 +42,9 @@ public class PauseMenu : MonoBehaviour
     public void Restart() {
         Time.timeScale = 1f;
         gameIsPaused = false;
+        int cantidad = GameManager.instance.EnergiaParaSumar();
+        GameManager.instance.EnergiaSuma(cantidad);
+        GameManager.instance.RestaVida(-3);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
