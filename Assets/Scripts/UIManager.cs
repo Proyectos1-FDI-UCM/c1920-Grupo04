@@ -22,12 +22,10 @@ public class UIManager : MonoBehaviour
 
     public void masEnergia(int maximo)
     {
-        //maxbat = 8;
-        //bat7.enabled = false; //Cambiar el fondo de las baterias
-        //bat8.enabled = true;
-        if (maximo != maxbat)
-            bat = new Image[maximo];
-        for (int i = maximo; aux != i; i--)//Devuelve a true solo los valores en false
+        maxbat = 8;
+        bat7.enabled = false; //Cambiar el fondo de las baterias
+        bat8.enabled = true;
+        for(int i = maximo; aux != i; i--)//Devuelve a true solo los valores en false
         {
             bat[i].enabled = true;
         }
