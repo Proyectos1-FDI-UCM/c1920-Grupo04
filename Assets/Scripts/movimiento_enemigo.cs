@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class movimiento_enemigo : MonoBehaviour
+    //Movimiento enemigo normal, sin estar detectando al jugador 
 {
-
+    VisionEnemigo vision;
+    float timer;
     Rigidbody2D rb;
     public int vel;
 
@@ -12,15 +14,17 @@ public class movimiento_enemigo : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
-
+        vision = GetComponent<VisionEnemigo>();
     }
 
     void FixedUpdate()
     {
-
         rb.velocity = new Vector2(vel, rb.velocity.y);
+    }
 
+    private void OnEnable()
+    {
+        vision.ResetTimer();
     }
 
     void OnTriggerEnter2D(Collider2D other)

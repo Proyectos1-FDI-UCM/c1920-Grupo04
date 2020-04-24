@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
             //Al llegar la vida a 0 hacemos que respawnee el jugador (y la escena)
         {
             jugadorPC.Respawn();
+            uimanag.RecuperaVida();
             vida = vida_maxima;
         }
 
@@ -100,11 +101,16 @@ public class GameManager : MonoBehaviour
         jugadorPC = player;
     }
 
+    /*public PlayerController DevolverJugador()
+        //Método que se pasa a los enemigos para que sepan quien es el jugador
+    {
+        return jugadorPC;
+    }*/
+
 
     public void ActivarDobleSalto()
     //Activa la habilidad de doble salto al coger el item
     {
-        Debug.Log("Doble salto adquirido");
         jugadorPC.ActivaDobleSalto(); 
     } 
 
