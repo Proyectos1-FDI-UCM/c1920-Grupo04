@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
             //Al llegar la vida a 0 hacemos que respawnee el jugador (y la escena)
         {
             jugadorPC.Respawn();
-            uimanag.RecuperaVida();
             vida = vida_maxima;
         }
 
