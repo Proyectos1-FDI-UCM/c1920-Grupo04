@@ -39,6 +39,13 @@ public class UIManager : MonoBehaviour
             bat[energy - i-1].enabled = true;
         }
     }
+
+    public void RecuperaVida()
+    {
+        lives[0].enabled = true;
+        lives[1].enabled = true;
+        lives[2].enabled = true;
+    }
     public void EnseñaVidas(int vidas)
     //Actualiza las vidas en el HUD
     {
