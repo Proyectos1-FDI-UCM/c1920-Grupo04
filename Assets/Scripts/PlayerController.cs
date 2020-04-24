@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
                 if (enElSuelo)   //Si estás en el suelo
                 {
                     //saltas
-                    GameManager.instance.EnergiaSuma(-1);
+                    GameManager.instance.ChangeEnergia(-1);
                     rb.AddForce((Vector2.up) * forceJump, ForceMode2D.Impulse);
                     contador = 0;   //reseteas el contador para realizar el doble salto
                 }
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
                     //(en el salto normal no es perder la velocidad vertical porque al estar en el suelo es 0)
                     
                     //saltas(doble)
-                    GameManager.instance.EnergiaSuma(-1);
+                    GameManager.instance.ChangeEnergia(-1);
                     rb.AddForce((Vector2.up) * forceJump, ForceMode2D.Impulse);
                     puedesDobleSalto = false;   //pierdes la capacidad del doble salto
                 }

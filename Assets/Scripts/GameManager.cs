@@ -54,18 +54,16 @@ public class GameManager : MonoBehaviour
     // antiguo: EnergiaSuma
     public void ChangeEnergia (int cantidad)
     { //tmb vale para restar (utilizar dentro de disparo y de salto para consumir bateria)
-        Debug.Log("Bateria maxima: " + uimanag.GetMaxBat() + "\n     Bateria antes: " + Bateria);
+        Debug.Log("Bateria maxima: " + uimanag.GetMaxBat() + "\n     Bateria antes: " + uimanag.GetBateries());
 
         uimanag.SetBats(cantidad);
-            if (uimanag.GetBateries() > uimanag.GetMaxBat())
-            {
-                Bateria = Bateria_maxima; //por si se cuela saes patricio?
-            }
+            
         
-        Debug.Log("Bateria maxima: " + Bateria_maxima + "\n     Bateria actual: " + Bateria);
+        Debug.Log("Bateria maxima: " + uimanag.GetMaxBat() + "\n     Bateria actual: " + uimanag.GetBateries());
         if (cantidad < 0) uimanag.EnseñaBaterias(Bateria);
         else uimanag.DevuelveEnergia(Bateria);
     }
+
     public int EnergiaParaSumar() // Calcula la diferencia de energía
     {
         return Bateria_maxima - Bateria;

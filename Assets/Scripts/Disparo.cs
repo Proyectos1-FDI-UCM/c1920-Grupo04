@@ -14,7 +14,7 @@ public class Disparo : MonoBehaviour
         timer += Time.deltaTime; //Temporizador para limitar el uso de la bala
         if (GameManager.instance.TieneEnergia() && Input.GetAxis("Fire1")==1 && timer > cadencia && GameManager.instance.Block())
         {
-            GameManager.instance.EnergiaSuma(-1);
+            GameManager.instance.ChangeEnergia(-1);
             GameObject bullet = Instantiate(bala, spawn.transform.position, Quaternion.identity); //Crear la bala
             
             if (gameObject.transform.localScale.x < 0)

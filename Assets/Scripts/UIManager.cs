@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
     public Image[] lives;
     public Image[] bat;
     public Text scoreText;
-    private int nBats = 0; //Recordar cuantas energias tenemos (min = 3)
+    private int nBats = 0; // antiguo: aux Recordar cuantas energias tenemos (min = 3)
     private int nLives = 0; //Recordar cuantas vidas tenemos (min = 3)
     private const int MAX_BAT = 10; // Máxima cantidad en todo el juego
     private const int MAX_LIFE = 6; // Máxima cantidad en todo el juego
@@ -37,20 +37,28 @@ public class UIManager : MonoBehaviour
         else
             max_bat = MAX_BAT;
         // Devuelve a true solo los valores en false.
+        ActiveNewBateries(max_bat, nBats);
+        /*
         for (int i = nBats; i < max_bat; i++) 
         {
             bat[i].GetComponent<Image>().enabled = true;
         }
+        */
     }
 
-    public void DevuelveEnergia(int energy)
+    
+    // 'Activa' las baterias añadidas. antiguo: DevuelveEnergia
+    public void ActiveNewBateries(int tope, int act)
     {
-        int dif = energy - aux;
-        for(int i = 0; i < dif; i++)
+        int dif = tope - act;
+        // (i = 1) Para no empezar fuera de los limites del array
+        for (int i = 1; i <= dif; i++)
         {
-            bat[energy - i - 1].enabled = true;
+            // Deshabilita sólo la imagen para no moficar la escala de la batería global
+            bat[tope - i].GetComponent<Image>().enabled = true;
         }
     }
+    
 
     // antiguo: EnseñaVidas
     public void MuestraVidas(int vidas)
@@ -124,5 +132,9 @@ public class UIManager : MonoBehaviour
     public void SetBats(int bats)
     {
         nBats += bats;
+        if (nBats > max_bat)
+        {
+            nBats = max_bat; //por si se cuela saes patricio?
+        }
     }
 }
