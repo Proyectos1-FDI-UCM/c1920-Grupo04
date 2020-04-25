@@ -9,6 +9,8 @@ public class VisionEnemigo : MonoBehaviour
     MovEnemigoPerseguir movEnemigoPerseguir;
     public GameObject player;
     float timer = 0; //contador de tiempo para que el enemigo vuelva a detectarte tras haber llegado a su límite de posición
+    Rigidbody2D rb;
+    bool estaGirado;
 
 
     // Start is called before the first frame update
@@ -17,12 +19,25 @@ public class VisionEnemigo : MonoBehaviour
         //player = GameManager.instance.DevolverJugador().gameObject;
         movEnemigoPerseguir = GetComponent<MovEnemigoPerseguir>();
         movEnemigoPerseguir.enabled = false;
-        
+        rb = GetComponent<Rigidbody2D>();
+        estaGirado = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        //Rotación del sprite
+        if (estaGirado && rb.velocity.x > 0)
+        {
+            estaGirado = false;
+            transform.Rotate(0, 180, 0);
+        }
+        else if (!estaGirado && rb.velocity.x <= 0)
+        {
+            estaGirado = true;
+            transform.Rotate(0, 180, 0);
+        }
+
         //Distancia entre enemigo y jugador
         float distancia = Vector2.Distance(player.transform.position, transform.position);
         timer += Time.fixedDeltaTime;

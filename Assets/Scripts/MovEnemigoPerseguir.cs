@@ -41,20 +41,10 @@ public class MovEnemigoPerseguir : MonoBehaviour
         if (player.transform.position.x > this.gameObject.transform.position.x)
         {
             direccion = vel;
-            if (!estaGirado)
-            {
-                transform.Rotate(0, 180, 0);
-                estaGirado = true;
-            }
         }
         else
         {
             direccion = -vel;
-            if (estaGirado)
-            {
-                transform.Rotate(0, 180, 0);
-                estaGirado = false;
-            }
         }
         rb.velocity = new Vector2(direccion, rb.velocity.y);
     }

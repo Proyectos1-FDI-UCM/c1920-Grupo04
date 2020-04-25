@@ -32,7 +32,6 @@ public class movimiento_enemigo : MonoBehaviour
         if (other.GetComponent<Interact>() == null)
         {
             vel = -vel;
-            transform.Rotate(0, 180, 0);
         }
         //solo cambia de dirección si el trigger no tiene interact (porque si no cada vez que entra a una luz gira también, la luz tiene interact)
     }
