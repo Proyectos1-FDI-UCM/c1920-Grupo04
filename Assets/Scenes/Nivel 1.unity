@@ -26007,6 +26007,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.01
       objectReference: {fileID: 0}
+    - target: {fileID: 8014812544536353500, guid: 81e57ec01287287478116cf9e7300509,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8014812544536353499, guid: 81e57ec01287287478116cf9e7300509,
         type: 3}
       propertyPath: enCamino
@@ -26023,11 +26028,6 @@ PrefabInstance:
         type: 3}
       propertyPath: forceJump
       value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 8014812544536353500, guid: 81e57ec01287287478116cf9e7300509,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81e57ec01287287478116cf9e7300509, type: 3}
