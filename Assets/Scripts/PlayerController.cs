@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         {
             cable = false;
             GameManager.instance.CambioMov();
-            rb.gravityScale = 1;
+            rb.gravityScale = 3;
             transform.localScale = scale; //Vuelve al tamaño normal
             this.gameObject.GetComponent<SpriteRenderer>().sprite = enCamino;
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
