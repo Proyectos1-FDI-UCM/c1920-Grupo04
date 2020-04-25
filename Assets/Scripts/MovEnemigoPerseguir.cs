@@ -10,7 +10,6 @@ public class MovEnemigoPerseguir : MonoBehaviour
     public int vel; //La velocidad cuando te persigue debería de ser mayor que cuando no.
     movimiento_enemigo MovEnemigoNormal;
     int direccion;
-    bool estaGirado;
 
     public GameObject player; //
 
@@ -18,7 +17,6 @@ public class MovEnemigoPerseguir : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        estaGirado = false;
     }
     // Start is called before the first frame update
     void Start()

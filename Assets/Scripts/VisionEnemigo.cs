@@ -26,7 +26,7 @@ public class VisionEnemigo : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //Rotación del sprite
+        //Rotación del sprite (lo pongo en este script porque es el que siempre está activo)
         if (estaGirado && rb.velocity.x > 0)
         {
             estaGirado = false;
@@ -46,7 +46,7 @@ public class VisionEnemigo : MonoBehaviour
 
         //Estos ifs se encargan de activar/desactivar movEnemigoPerseguir si el player entra en el campo de visión
         //Pero si el enemigo llega al límite de donde puede llegar, se encarga el propio movEnemigoPerseguir de desactivarse solo.
-        if (distancia < visionRadio && !movEnemigoPerseguir.enabled && timer > 5f)
+        if (distancia < visionRadio && !movEnemigoPerseguir.enabled && timer > 2f)
         {
             movEnemigoPerseguir.enabled = true;
 
