@@ -17,15 +17,18 @@ public class PlayerController : MonoBehaviour
     bool puedesDobleSalto = false;
     bool tienesDobleSalto = false;  //Tienes el power-up?
     float contador = 0; //Se utiliza en el salto (tiempo tras salto para usar el doble salto)
+    float gravedadIni;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         scale = transform.localScale;
+        
     }
 
-    private void Start()
+    void Start()
     {
         GameManager.instance.ReconocerJugador(this);
+        gravedadIni = rb.gravityScale;
     }
 
     void Update()
