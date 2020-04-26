@@ -9,6 +9,8 @@ TagManager:
   - Floor
   - cable
   - exit
+  - suelo
+  - pared
   layers:
   - Default
   - TransparentFX
