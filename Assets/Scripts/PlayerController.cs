@@ -9,10 +9,8 @@ public class PlayerController : MonoBehaviour
     public Sprite enCable;
     public Sprite enCamino;
     public Sprite jump;
+
     
-    
-    bool running;
-   
     public Animator animator;
     Rigidbody2D rb;
     float deltaX, deltaY;
@@ -62,9 +60,11 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "cable") //en final por sprite
         {
             cable = true;
+            animator.SetBool("ecable", true);
             GameManager.instance.CambioMov(); //Avisar dejar de disparar y saltar
             rb.gravityScale = 0;
             transform.localScale = scale * new Vector2(0.45f, 0.45f); //Cambiar el tamaño para evitar tener la misma box collider
+            animator.SetBool("ecable", true); 
             this.gameObject.GetComponent<SpriteRenderer>().sprite = enCable;
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
             gameObject.transform.position = ChildGameObject.transform.position;
@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
         else if (collision.gameObject.tag == "exit") //en final por sprite
         {
             cable = false;
+            animator.SetBool("ecable", false);
             GameManager.instance.CambioMov();
             rb.gravityScale = 3;
             transform.localScale = scale; //Vuelve al tamaño normal
