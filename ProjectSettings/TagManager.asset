@@ -9,6 +9,8 @@ TagManager:
   - Floor
   - cable
   - exit
+  - suelo
+  - pared
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Disparo
   - Player
   - enemigo
-  - 
+  - "estaci\xF3n"
   - 
   - 
   - 

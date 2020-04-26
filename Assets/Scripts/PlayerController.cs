@@ -17,16 +17,19 @@ public class PlayerController : MonoBehaviour
     bool salto;
     private Vector2 scale;
     private bool cable = false;
-    bool enElSuelo = false;
+    public bool enElSuelo = false;
     bool puedesDobleSalto = false;
     bool tienesDobleSalto = false;  //Tienes el power-up?
     float contador = 0; //Se utiliza en el salto (tiempo tras salto para usar el doble salto)
     float gravedadIni;
+    public bool movRightBlock, movLeftBlock;
+    public float velY, velX;
+    public float maxFallVelY, maxJumpVel;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        scale = transform.localScale;
-        
+        scale = transform.localScale;        
     }
 
     void Start()
@@ -44,10 +47,13 @@ public class PlayerController : MonoBehaviour
         setScale();
         salto = Input.GetAxis("Jump") == 1;
         Debug.Log(enElSuelo);
+        if (rb.velocity.y < -maxFallVelY) rb.velocity = new Vector2(rb.velocity.x, -maxFallVelY);
+        if (rb.velocity.y > maxJumpVel) rb.velocity = new Vector2(rb.velocity.x, maxJumpVel);
+        velY = rb.velocity.y;
+        velX = rb.velocity.x;
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-
         if (collision.gameObject.tag == "cable") //en final por sprite
         {
             cable = true;
@@ -67,8 +73,33 @@ public class PlayerController : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sprite = enCamino;
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
             gameObject.transform.position = ChildGameObject.transform.position;
-        }
+        }        
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        ContactPoint2D contact = collision.GetContact(0);
+        // Checkea colsiones paredes. 
+        if (contact.normal.x > 0.9 && contact.normal.x < 1.1)
+            movLeftBlock = true;
+        else
+            movLeftBlock = false;
+        if (contact.normal.x < -0.9 && contact.normal.x > -1.1)
+            movRightBlock = true;
+        else
+            movRightBlock = false;
+    }
+
+    /*
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (movLeftBlock)
+            movLeftBlock = false;
+        else if (movRightBlock)
+            movRightBlock = false;
+        else if (rb.velocity.y < -0.9)
+            enElSuelo = false;
+    }*/
 
     public void ActivaDobleSalto()
     //Método llamado por el GameManager cuando coges el power-up de doble salto
@@ -95,7 +126,11 @@ public class PlayerController : MonoBehaviour
 
         if (!cable) //Si no estás en cable
         {
-            rb.velocity = new Vector2(deltaX * vel, rb.velocity.y); //Movimiento normal
+            // Permite el movimiento lateral a la derecha y viceversa
+            if (deltaX > 0 && !movRightBlock)
+                rb.velocity = new Vector2(deltaX * vel, rb.velocity.y); //Movimiento normal
+            else if (deltaX < 0 && !movLeftBlock)
+                rb.velocity = new Vector2(deltaX * vel, rb.velocity.y); //Movimiento normal
 
             //SALTO
             if (GameManager.instance.TieneEnergia() && salto && contador > 0.5f)   //Si tienes energía y pulsas salto
@@ -119,8 +154,7 @@ public class PlayerController : MonoBehaviour
                     GameManager.instance.EnergiaSuma(-1);
                     rb.AddForce((Vector2.up) * forceJump, ForceMode2D.Impulse);
                     puedesDobleSalto = false;   //pierdes la capacidad del doble salto
-                }
-                
+                }                
             }
         }
         else        //Si estás en cable

@@ -93,7 +93,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000007450581, y: 0.0000009536743}
+  m_Offset: {x: 0, y: 0.45277014}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -104,7 +104,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 0.99999994}
+  m_Size: {x: 1.0000001, y: 2.8110888}
   m_EdgeRadius: 0
 --- !u!114 &6090212354950953403
 MonoBehaviour:
@@ -268,7 +268,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.21546984, y: -0.05894786}
+  m_Offset: {x: 0.21546984, y: -0.058947623}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -279,7 +279,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0290604, y: 3.701787}
+  m_Size: {x: 2.0290604, y: 3.7017865}
   m_EdgeRadius: 0
 --- !u!114 &8014812544536353498
 MonoBehaviour:
@@ -312,3 +312,10 @@ MonoBehaviour:
   forceJump: 10
   enCable: {fileID: 21300000, guid: ca6aaad3a22c2514ea638909e6d9252b, type: 3}
   enCamino: {fileID: 21300000, guid: b0d1236bc6dfda14391c37a757fad169, type: 3}
+  enElSuelo: 0
+  movRightBlock: 0
+  movLeftBlock: 0
+  velY: 0
+  velX: 0
+  maxFallVelY: 6
+  maxJumpVel: 12
