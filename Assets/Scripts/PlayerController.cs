@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Sprite enCamino;
     public Animation idle;
     public Animation run;
+    public bool running;
     Animator animator;
     Rigidbody2D rb;
     float deltaX, deltaY;
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         GameManager.instance.ReconocerJugador(this);
         gravedadIni = rb.gravityScale;
+        
     }
 
     void Update()
