@@ -19,7 +19,7 @@ public class EndGame : MonoBehaviour
         //esto restaura la energia y la vida del jugador a como esta al principio del juego
         int cantidad = GameManager.instance.EnergiaParaSumar();
         GameManager.instance.EnergiaSuma(cantidad);
-        GameManager.instance.RestaVida(-3);
+        GameManager.instance.ChangeVida(-3);
         
         SceneManager.LoadScene(0);
     }

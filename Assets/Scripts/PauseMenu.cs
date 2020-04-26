@@ -44,7 +44,7 @@ public class PauseMenu : MonoBehaviour
         gameIsPaused = false;
         int cantidad = GameManager.instance.EnergiaParaSumar();
         GameManager.instance.EnergiaSuma(cantidad);
-        GameManager.instance.RestaVida(-3);
+        GameManager.instance.ChangeVida(-3);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     //este metodo carga la escena del menu al pulsar el boton

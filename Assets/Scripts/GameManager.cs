@@ -41,29 +41,29 @@ public class GameManager : MonoBehaviour
         Debug.Log(mov);
         return mov;
     }
-    public void RestaVida(int cantidad)
-    {               //Que tmb vale para sumarle
-        
-            vida = vida - cantidad;
-            if (vida > vida_maxima) vida = vida_maxima; //por si se cuela saes patricio?
-            //si llega a 0 pues end game (añadir después)
-        
-        Debug.Log("vida: " + vida);
-        if (vida < 0)
-            //Al llegar la vida a 0 hacemos que respawnee el jugador (y la escena)
+
+    // Sirve para restar o sumar vida en función del parámetro.
+    public void ChangeVida(int cantidad)
+    {               
+
+        vida = vida + cantidad;
+        if (vida > vida_maxima) vida = vida_maxima; //por si se cuela saes patricio?
+                                                    //si llega a 0 pues end game (añadir después)
+
+        if (vida <= 0)
+        //Al llegar la vida a 0 hacemos que respawnee el jugador (y la escena)
         {
             jugadorPC.Respawn();
             uimanag.RecuperaVida();
             vida = vida_maxima;
         }
 
-        
         uimanag.EnseñaVidas(vida);
     }
 
     public void EnergiaSuma (int cantidad)
     {                               //tmb vale para restar (utilizar dentro de disparo y de salto para consumir bateria)
-        Debug.Log("Bateria maxima: " + Bateria_maxima + "\nBateria antes" + Bateria);
+        //Debug.Log("Bateria maxima: " + Bateria_maxima + "\nBateria antes" + Bateria);
         
             Bateria += cantidad;
             if (Bateria > Bateria_maxima)
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
                 Bateria = Bateria_maxima; //por si se cuela saes patricio?
             }
         
-        Debug.Log("Bateria maxima: " + Bateria_maxima + "\nBateria actual: " + Bateria);
+        //Debug.Log("Bateria maxima: " + Bateria_maxima + "\nBateria actual: " + Bateria);
         if (cantidad < 0) uimanag.EnseñaBaterias(Bateria);
         else uimanag.DevuelveEnergia(Bateria);
     }
