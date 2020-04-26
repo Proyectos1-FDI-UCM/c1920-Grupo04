@@ -8,9 +8,10 @@ public class PlayerController : MonoBehaviour
     public float vel, velEnCable, forceJump;
     public Sprite enCable;
     public Sprite enCamino;
-    public Animation idle;
+    public Sprite jump;
     public Animation run;
-    public bool running;
+    bool running;
+   
     Animator animator;
     Rigidbody2D rb;
     float deltaX, deltaY;
@@ -29,7 +30,8 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        scale = transform.localScale;        
+        scale = transform.localScale;
+        
     }
 
     void Start()

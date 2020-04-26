@@ -1032,6 +1032,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3575443172912563708, guid: ea367619b94911f48b8163fe35fc5bad,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.32
+      objectReference: {fileID: 0}
     - target: {fileID: 1092308438223990391, guid: ea367619b94911f48b8163fe35fc5bad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1041,11 +1046,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 3575443172912563708, guid: ea367619b94911f48b8163fe35fc5bad,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.32
       objectReference: {fileID: 0}
     - target: {fileID: 6999138367315111020, guid: ea367619b94911f48b8163fe35fc5bad,
         type: 3}
@@ -18328,6 +18328,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1956742324}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &477391134
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477391127}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f8b566b69d668b4da7ae2a895420e3f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &489143859
 GameObject:
   m_ObjectHideFlags: 0
@@ -27031,6 +27050,23 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.01
       objectReference: {fileID: 0}
+    - target: {fileID: 8014812544536353499, guid: 81e57ec01287287478116cf9e7300509,
+        type: 3}
+      propertyPath: jump
+      value: 
+      objectReference: {fileID: 21300000, guid: 767cedd1b6031e34aa440660df4d01c8,
+        type: 3}
+    - target: {fileID: 8014812544536353499, guid: 81e57ec01287287478116cf9e7300509,
+        type: 3}
+      propertyPath: movRightBlock
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014812544536353499, guid: 81e57ec01287287478116cf9e7300509,
+        type: 3}
+      propertyPath: enCamino
+      value: 
+      objectReference: {fileID: 21300000, guid: da400f86c22ae7640821b2aa6fe94590,
+        type: 3}
     - target: {fileID: 6478471727844003377, guid: 81e57ec01287287478116cf9e7300509,
         type: 3}
       propertyPath: m_IsActive
