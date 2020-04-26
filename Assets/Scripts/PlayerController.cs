@@ -9,10 +9,9 @@ public class PlayerController : MonoBehaviour
     public Sprite enCable;
     public Sprite enCamino;
     public Sprite jump;
-    public Animation run;
-    bool running;
-   
-    Animator animator;
+
+    
+    public Animator animator;
     Rigidbody2D rb;
     float deltaX, deltaY;
     bool salto;
@@ -44,6 +43,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         deltaX = Input.GetAxis("Horizontal");
+        animator.SetFloat("mov", Mathf.Abs(deltaX));
         setScale();
         deltaY = Input.GetAxis("Vertical");
         setScale();
@@ -52,15 +52,19 @@ public class PlayerController : MonoBehaviour
         if (rb.velocity.y > maxJumpVel) rb.velocity = new Vector2(rb.velocity.x, maxJumpVel);
         velY = rb.velocity.y;
         velX = rb.velocity.x;
+        
+        
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "cable") //en final por sprite
         {
             cable = true;
+            animator.SetBool("ecable", true);
             GameManager.instance.CambioMov(); //Avisar dejar de disparar y saltar
             rb.gravityScale = 0;
             transform.localScale = scale * new Vector2(0.45f, 0.45f); //Cambiar el tamaño para evitar tener la misma box collider
+            
             this.gameObject.GetComponent<SpriteRenderer>().sprite = enCable;
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
             gameObject.transform.position = ChildGameObject.transform.position;
@@ -68,6 +72,7 @@ public class PlayerController : MonoBehaviour
         else if (collision.gameObject.tag == "exit") //en final por sprite
         {
             cable = false;
+            
             GameManager.instance.CambioMov();
             rb.gravityScale = 3;
             transform.localScale = scale; //Vuelve al tamaño normal
@@ -167,6 +172,7 @@ public class PlayerController : MonoBehaviour
         else        //Si estás en cable
         {
             rb.velocity = new Vector2(deltaX * velEnCable, deltaY * velEnCable);  //Movimineto cable
+            
         }
     }
     // Configura la escala de Spark. Hacia dónde mira.
