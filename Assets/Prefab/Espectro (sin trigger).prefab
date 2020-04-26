@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ebac7624aae9c4d96192eb69ac3783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 3
+  vel: 2
 --- !u!114 &1763367770631592026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8d000d2b9f06514f87e6c729249da0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 6
+  vel: 4
   player: {fileID: 0}
 --- !u!114 &1944611019436673398
 MonoBehaviour:
