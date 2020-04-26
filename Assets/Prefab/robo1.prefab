@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7caa5806e33c9394a9843e5cc8f92c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRadio: 20
+  visionRadio: 11
   player: {fileID: 8014812544536353502, guid: 81e57ec01287287478116cf9e7300509, type: 3}
 --- !u!114 &4052860481977525966
 MonoBehaviour:

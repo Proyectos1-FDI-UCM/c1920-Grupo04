@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float vel, forceJump;
+    public float vel, velEnCable, forceJump;
     public Sprite enCable;
     public Sprite enCamino;
     public Animation idle;
@@ -89,6 +89,11 @@ public class PlayerController : MonoBehaviour
             movRightBlock = false;
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        movLeftBlock = false;
+        movRightBlock = false;
+    }
     /*
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -104,6 +109,7 @@ public class PlayerController : MonoBehaviour
     //Método llamado por el GameManager cuando coges el power-up de doble salto
     {
         tienesDobleSalto = true;
+        enElSuelo = true; //Esto no debería de estar aquí, pero soluciona el bug de que al coger el doble salto no podías saltar
     }
 
     public void HeTocadoSuelo()
@@ -132,7 +138,7 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(deltaX * vel, rb.velocity.y); //Movimiento normal
 
             //SALTO
-            if (GameManager.instance.TieneEnergia() && salto && contador > 0.5f)   //Si tienes energía y pulsas salto
+            if (GameManager.instance.TieneEnergia() && salto && contador > 0.25f)   //Si tienes energía y pulsas salto
             {
                 //Hay dos posibilidades, o salto normal o el doble.
 
@@ -158,7 +164,7 @@ public class PlayerController : MonoBehaviour
         }
         else        //Si estás en cable
         {
-            rb.velocity = new Vector2(deltaX * vel, deltaY * vel);  //Movimineto cable
+            rb.velocity = new Vector2(deltaX * velEnCable, deltaY * velEnCable);  //Movimineto cable
         }
     }
     // Configura la escala de Spark. Hacia dónde mira.
