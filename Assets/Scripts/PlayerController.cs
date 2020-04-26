@@ -171,7 +171,7 @@ public class PlayerController : MonoBehaviour
         else        //Si estás en cable
         {
             rb.velocity = new Vector2(deltaX * velEnCable, deltaY * velEnCable);  //Movimineto cable
-            animator.
+            
         }
     }
     // Configura la escala de Spark. Hacia dónde mira.
