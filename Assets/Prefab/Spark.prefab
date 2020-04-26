@@ -249,7 +249,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -309,13 +309,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 8
-  forceJump: 10
+  forceJump: 15
   enCable: {fileID: 21300000, guid: ca6aaad3a22c2514ea638909e6d9252b, type: 3}
   enCamino: {fileID: 21300000, guid: b0d1236bc6dfda14391c37a757fad169, type: 3}
+  idle: {fileID: 0}
+  run: {fileID: 0}
+  running: 0
   enElSuelo: 0
   movRightBlock: 0
   movLeftBlock: 0
   velY: 0
   velX: 0
   maxFallVelY: 6
-  maxJumpVel: 12
+  maxJumpVel: 18

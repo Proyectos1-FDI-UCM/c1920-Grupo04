@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     public bool Block()//Del cambio de movimiento
     {
+        Debug.Log(mov);
         return mov;
     }
     public void RestaVida(int cantidad)
@@ -85,7 +86,7 @@ public class GameManager : MonoBehaviour
 
     public void MejoraEnergia (int cantidad) 
     {
-        Bateria_maxima = Bateria_maxima + cantidad;
+        Bateria_maxima += cantidad;
         Bateria = Bateria_maxima;
         uimanag.masEnergia(Bateria_maxima);
     }

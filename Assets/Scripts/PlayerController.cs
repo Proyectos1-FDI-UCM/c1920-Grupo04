@@ -46,7 +46,6 @@ public class PlayerController : MonoBehaviour
         deltaY = Input.GetAxis("Vertical");
         setScale();
         salto = Input.GetAxis("Jump") == 1;
-        Debug.Log(enElSuelo);
         if (rb.velocity.y < -maxFallVelY) rb.velocity = new Vector2(rb.velocity.x, -maxFallVelY);
         if (rb.velocity.y > maxJumpVel) rb.velocity = new Vector2(rb.velocity.x, maxJumpVel);
         velY = rb.velocity.y;
@@ -59,7 +58,7 @@ public class PlayerController : MonoBehaviour
             cable = true;
             GameManager.instance.CambioMov(); //Avisar dejar de disparar y saltar
             rb.gravityScale = 0;
-            transform.localScale = scale * new Vector2(0.5f, 0.5f); //Cambiar el tamaño para evitar tener la misma box collider
+            transform.localScale = scale * new Vector2(0.45f, 0.45f); //Cambiar el tamaño para evitar tener la misma box collider
             this.gameObject.GetComponent<SpriteRenderer>().sprite = enCable;
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
             gameObject.transform.position = ChildGameObject.transform.position;
