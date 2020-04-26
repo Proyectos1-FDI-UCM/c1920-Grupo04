@@ -24936,7 +24936,7 @@ GameObject:
   - component: {fileID: 1843575107}
   - component: {fileID: 1843575106}
   - component: {fileID: 1843575105}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: estaciones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26032,7 +26032,7 @@ PrefabInstance:
     - target: {fileID: 6478471727844003377, guid: 81e57ec01287287478116cf9e7300509,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81e57ec01287287478116cf9e7300509, type: 3}
