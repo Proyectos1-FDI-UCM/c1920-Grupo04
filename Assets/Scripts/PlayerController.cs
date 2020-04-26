@@ -9,10 +9,11 @@ public class PlayerController : MonoBehaviour
     public Sprite enCable;
     public Sprite enCamino;
     public Sprite jump;
-    public Animation run;
+    
+    
     bool running;
    
-    Animator animator;
+    public Animator animator;
     Rigidbody2D rb;
     float deltaX, deltaY;
     bool salto;
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         deltaX = Input.GetAxis("Horizontal");
+        animator.SetFloat("mov", Mathf.Abs(deltaX));
         setScale();
         deltaY = Input.GetAxis("Vertical");
         setScale();
@@ -52,6 +54,8 @@ public class PlayerController : MonoBehaviour
         if (rb.velocity.y > maxJumpVel) rb.velocity = new Vector2(rb.velocity.x, maxJumpVel);
         velY = rb.velocity.y;
         velX = rb.velocity.x;
+        
+        
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -167,6 +171,7 @@ public class PlayerController : MonoBehaviour
         else        //Si estás en cable
         {
             rb.velocity = new Vector2(deltaX * velEnCable, deltaY * velEnCable);  //Movimineto cable
+            animator.
         }
     }
     // Configura la escala de Spark. Hacia dónde mira.
