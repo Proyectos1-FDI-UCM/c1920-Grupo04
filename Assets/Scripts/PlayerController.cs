@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     public float vel, forceJump;
     public Sprite enCable;
     public Sprite enCamino;
+    public Animation idle;
+    public Animation run;
+    Animator animator;
     Rigidbody2D rb;
     float deltaX, deltaY;
     bool salto;

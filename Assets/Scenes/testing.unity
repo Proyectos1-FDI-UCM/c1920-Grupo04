@@ -203,6 +203,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8746371125819280406, guid: 0a91d995c86c1bd45bffc5c1a9afa7ff,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3219632124118707063, guid: 245c2e845f659d44e91e7bad6e44f906,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -379,7 +384,7 @@ PrefabInstance:
     - target: {fileID: 6318747499412470201, guid: 6ac662924dc39d843a9abf0f6460f433,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6318747499412470201, guid: 6ac662924dc39d843a9abf0f6460f433,
         type: 3}
@@ -2629,7 +2634,7 @@ PrefabInstance:
     - target: {fileID: 6318747499412470201, guid: 6ac662924dc39d843a9abf0f6460f433,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6318747499412470201, guid: 6ac662924dc39d843a9abf0f6460f433,
         type: 3}
@@ -3093,7 +3098,7 @@ PrefabInstance:
     - target: {fileID: 5319587427854710606, guid: 40b39a524b27b0943a066d93a006a0af,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5319587427854710606, guid: 40b39a524b27b0943a066d93a006a0af,
         type: 3}
@@ -3563,7 +3568,7 @@ PrefabInstance:
     - target: {fileID: 3181579229106347859, guid: a4640374ae7067e43ab18277b34a03ea,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3181579229106347859, guid: a4640374ae7067e43ab18277b34a03ea,
         type: 3}
@@ -3896,7 +3901,7 @@ PrefabInstance:
     - target: {fileID: 2454316268410273658, guid: 80beb0d634931584a9b44bd07453a150,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2454316268410273658, guid: 80beb0d634931584a9b44bd07453a150,
         type: 3}
@@ -4286,6 +4291,25 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!95 &1498991312
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498991303}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f8b566b69d668b4da7ae2a895420e3f, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1576289553
 GameObject:
   m_ObjectHideFlags: 0
@@ -4412,7 +4436,7 @@ PrefabInstance:
     - target: {fileID: 672530511578770513, guid: 618ceea4d1edd9e45aff747e55a44799,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 672530511578770513, guid: 618ceea4d1edd9e45aff747e55a44799,
         type: 3}
@@ -4774,7 +4798,7 @@ PrefabInstance:
     - target: {fileID: 5816323277598954938, guid: 079a64d988416af499bcd2ebcbabcf29,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5816323277598954938, guid: 079a64d988416af499bcd2ebcbabcf29,
         type: 3}
@@ -4843,7 +4867,7 @@ PrefabInstance:
     - target: {fileID: 6318747499412470201, guid: 6ac662924dc39d843a9abf0f6460f433,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6318747499412470201, guid: 6ac662924dc39d843a9abf0f6460f433,
         type: 3}
@@ -7800,7 +7824,7 @@ PrefabInstance:
     - target: {fileID: 7927311610618594024, guid: a515e328567f5824384f7b348b951aac,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7927311610618594024, guid: a515e328567f5824384f7b348b951aac,
         type: 3}

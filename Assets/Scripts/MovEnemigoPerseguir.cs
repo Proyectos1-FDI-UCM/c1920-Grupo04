@@ -27,7 +27,10 @@ public class MovEnemigoPerseguir : MonoBehaviour
 
     private void OnEnable()
     {
-        MovEnemigoNormal.enabled = false;
+        if (MovEnemigoNormal)
+        {
+            MovEnemigoNormal.enabled = false;
+        }
     }
     private void OnDisable()
     {

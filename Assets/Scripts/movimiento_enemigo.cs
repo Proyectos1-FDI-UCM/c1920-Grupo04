@@ -27,8 +27,11 @@ public class movimiento_enemigo : MonoBehaviour
 
     private void OnEnable()
     {
-        vision.ResetTimer();
-        timer = 2f; //cualquier valor > 1 vale, es para que se ejecute el if del onTriggerStay nada más activarse
+        if (vision)
+        {
+            vision.ResetTimer();
+            timer = 2f; //cualquier valor > 1 vale, es para que se ejecute el if del onTriggerStay nada más activarse
+        }
     }
 
     void OnTriggerStay2D(Collider2D other)
