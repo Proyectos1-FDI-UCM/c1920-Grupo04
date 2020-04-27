@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sprite = enCable;
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
             gameObject.transform.position = ChildGameObject.transform.position;
+            transform.GetChild(1).gameObject.SetActive(false);
         }
         else if (collision.gameObject.tag == "exit") //en final por sprite
         {
@@ -80,6 +81,7 @@ public class PlayerController : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sprite = enCamino;
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
             gameObject.transform.position = ChildGameObject.transform.position;
+            transform.GetChild(1).gameObject.SetActive(true);
         }        
     }
 
