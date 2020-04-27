@@ -86,6 +86,6 @@ public class UIManager : MonoBehaviour
     public void EnseñaPunt(int puntuacion)
     //Actualiza la puntuación en el HUD
     {
-        scoreText.text = "Points:" + puntuacion.ToString();
+        scoreText.text = puntuacion.ToString();
     }
 }
