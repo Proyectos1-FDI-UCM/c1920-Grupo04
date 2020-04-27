@@ -63,13 +63,13 @@ public class GameManager : MonoBehaviour
 
     public void EnergiaSuma (int cantidad)
     {                               //tmb vale para restar (utilizar dentro de disparo y de salto para consumir bateria)
-                                    //Debug.Log("Bateria maxima: " + Bateria_maxima + "\nBateria antes" + Bateria);
-
-        Bateria += cantidad;
-        if (Bateria > Bateria_maxima)
-        {
-            Bateria = Bateria_maxima; //por si se cuela saes patricio?
-        }
+        //Debug.Log("Bateria maxima: " + Bateria_maxima + "\nBateria antes" + Bateria);
+        
+            Bateria += cantidad;
+            if (Bateria > Bateria_maxima)
+            {
+                Bateria = Bateria_maxima; //por si se cuela saes patricio?
+            }
         
         //Debug.Log("Bateria maxima: " + Bateria_maxima + "\nBateria actual: " + Bateria);
         if (cantidad < 0) uimanag.EnseñaBaterias(Bateria);
@@ -87,9 +87,9 @@ public class GameManager : MonoBehaviour
     public void MejoraEnergia (int cantidad) 
     {
         //Bateria_maxima += cantidad;
-        //Bateria_maxima = 8; //Esto soluciona el bug que hay para el Hito 2, pero esto no va a ser así al final
-        //Bateria = Bateria_maxima;
-        uimanag.masEnergia(8);
+        Bateria_maxima = 8; //Esto soluciona el bug que hay para el Hito 2, pero esto no va a ser así al final
+        Bateria = Bateria_maxima;
+        uimanag.masEnergia(Bateria_maxima);
     }
     public void SumaPuntuacion(int puntos)
     {
