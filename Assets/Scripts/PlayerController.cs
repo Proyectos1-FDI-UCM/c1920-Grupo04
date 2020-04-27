@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "cable") //en final por sprite
         {
             cable = true;
+            animator.enabled = false;
             animator.SetBool("ecable", true);
             GameManager.instance.CambioMov(); //Avisar dejar de disparar y saltar
             rb.gravityScale = 0;
@@ -72,7 +73,7 @@ public class PlayerController : MonoBehaviour
         else if (collision.gameObject.tag == "exit") //en final por sprite
         {
             cable = false;
-            
+            animator.enabled = true;
             GameManager.instance.CambioMov();
             rb.gravityScale = 3;
             transform.localScale = scale; //Vuelve al tamaño normal
