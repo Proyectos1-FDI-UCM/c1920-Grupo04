@@ -86,7 +86,8 @@ public class GameManager : MonoBehaviour
 
     public void MejoraEnergia (int cantidad) 
     {
-        Bateria_maxima += cantidad;
+        //Bateria_maxima += cantidad;
+        Bateria_maxima = 8; //Esto soluciona el bug que hay para el Hito 2, pero esto no va a ser así al final
         Bateria = Bateria_maxima;
         uimanag.masEnergia(Bateria_maxima);
     }
