@@ -6,10 +6,8 @@ public class MejoraEnergia : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D jugador)
     {
-        bool yaEsta = false;
-        if (jugador.gameObject.GetComponent<PlayerController>() != null && !yaEsta)
+        if (jugador.gameObject.GetComponent<PlayerController>() != null)
         {
-            yaEsta = true;
             GameManager.instance.MejoraEnergia(1);
             Destroy(this.gameObject);
         }
