@@ -146,7 +146,7 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(deltaX * vel, rb.velocity.y); //Movimiento normal
 
             //SALTO
-            if (GameManager.instance.TieneEnergia() && salto && contador > 0.25f)   //Si tienes energía y pulsas salto
+            if (salto && GameManager.instance.TieneEnergia() && contador > 0.25f)   //Si tienes energía y pulsas salto
             {
                 //Hay dos posibilidades, o salto normal o el doble.
 
