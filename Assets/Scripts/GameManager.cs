@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     int Bateria_maxima = 7;
     int Bateria = 7;
     int punt = 0;
-    public bool mov = true; //true: mov normal  false: mov cable
+    bool mov = true; //true: mov normal  false: mov cable
     Vector2 spawn;
     UIManager uimanag;
 
@@ -31,19 +31,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /* NO ENTIENDO PORQUE PERO TIENE DELAY Y FALLA
     public void CambioMov()
     {
         mov = !mov;
-    }*/
-
-    public void MovCable()
-    {
-        mov = false;
-    }
-    public void MovNormal()
-    {
-        mov = true;
     }
 
     public bool Block()//Del cambio de movimiento

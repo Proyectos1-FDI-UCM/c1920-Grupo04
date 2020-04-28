@@ -61,8 +61,8 @@ public class PlayerController : MonoBehaviour
         {
             cable = true;
             animator.enabled = false;
-            //animator.SetBool("ecable", true);
-            GameManager.instance.MovCable(); //Avisar dejar de disparar y saltar
+            animator.SetBool("ecable", true);
+            GameManager.instance.CambioMov(); //Avisar dejar de disparar y saltar
             rb.gravityScale = 0;
             transform.localScale = scale * new Vector2(0.45f, 0.45f); //Cambiar el tamaño para evitar tener la misma box collider
             
@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         {
             cable = false;
             animator.enabled = true;
-            GameManager.instance.MovNormal();
+            GameManager.instance.CambioMov();
             rb.gravityScale = 3;
             transform.localScale = scale; //Vuelve al tamaño normal
             this.gameObject.GetComponent<SpriteRenderer>().sprite = enCamino;
