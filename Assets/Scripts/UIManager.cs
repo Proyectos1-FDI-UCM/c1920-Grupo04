@@ -35,21 +35,24 @@ public class UIManager : MonoBehaviour
     public void DevuelveEnergia(int energy)
     {
         int dif = energy - aux;
-        if (energy == 7)
+        if (energy < 8)
         {
             for (int i = 0; i < dif; i++)
             {
                 bat[energy - i - 1].enabled = true;
             }
         }
-        else
+        else// bateria = 8
         {
-            for (int i = 0; i < dif; i++)
             {
-                if ((energy - i - 2) != -1)
-                    bat[energy - i - 2].enabled = true;
+                for (int i = 0; i < dif; i++)
+                {
+                    if ((energy - i - 2) != -1)
+                        bat[energy - i - 2].enabled = true;
+                }
+                batextra.enabled = true;
             }
-            batextra.enabled = true;
+            
         }
         //if (maxbat == 8 ) batextra.enabled = true;
     }
