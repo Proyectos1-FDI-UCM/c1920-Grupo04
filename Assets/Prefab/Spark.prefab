@@ -296,6 +296,8 @@ MonoBehaviour:
   bala: {fileID: 542567520535890736, guid: ed34aa7d5bc6d314e8dc03a66fbea6b4, type: 3}
   spawn: {fileID: 8014812544526893187}
   cadencia: 2
+  sonidoBala: {fileID: 6397156545224308798, guid: 70413532aeb2971428b2eb41b19f6217,
+    type: 3}
 --- !u!114 &8014812544536353499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,9 +315,8 @@ MonoBehaviour:
   forceJump: 15
   enCable: {fileID: 21300000, guid: ca6aaad3a22c2514ea638909e6d9252b, type: 3}
   enCamino: {fileID: 21300000, guid: b0d1236bc6dfda14391c37a757fad169, type: 3}
-  idle: {fileID: 0}
-  run: {fileID: 0}
-  running: 0
+  jump: {fileID: 0}
+  animator: {fileID: 0}
   enElSuelo: 0
   movRightBlock: 0
   movLeftBlock: 0

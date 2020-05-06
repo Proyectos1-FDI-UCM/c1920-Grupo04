@@ -11,6 +11,7 @@ TagManager:
   - exit
   - suelo
   - pared
+  - Enemigo
   layers:
   - Default
   - TransparentFX
@@ -20,9 +21,9 @@ TagManager:
   - UI
   - 
   - 
-  - Pared
-  - Disparo
   - Player
+  - Disparo
+  - Pared
   - enemigo
   - "estaci\xF3n"
   - pies

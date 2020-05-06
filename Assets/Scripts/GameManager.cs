@@ -154,4 +154,9 @@ public class GameManager : MonoBehaviour
     {
         return spawn;
     }
+    /*
+    public GameObject GetPlayer()
+    {
+        return jugadorPC.GetPlayerGameObject();
+    }*/
 }

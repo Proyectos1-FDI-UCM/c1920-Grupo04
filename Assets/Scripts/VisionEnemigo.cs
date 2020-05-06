@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Este este script esta pensado de forma que compara las posiciones y
+/// según la distancia le persigue o no, pero no tiene en cuenta si están en
+/// la misma horizontal.
+/// </summary>
 public class VisionEnemigo : MonoBehaviour
 {
     //Script que detecta si el jugador está en el campo de visión de un enemigo, y activa el movimiento correspondiente de este enemigo

@@ -193,5 +193,10 @@ public class PlayerController : MonoBehaviour
         transform.position = spawn;
         //Por si acaso muriese en una plataforma
     }
+    /*
+    public GameObject GetPlayerGameObject()
+    {
+        return rb.gameObject;
+    }*/
 }
 
