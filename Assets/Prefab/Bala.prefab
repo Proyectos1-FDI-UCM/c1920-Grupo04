@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891e355a7e4f63f4d9814974d63e06a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sonidoDestruir: {fileID: 7004358721047761972, guid: c7f2bc0bf6f4ac24a9f5717aef254d8c,
+    type: 3}
 --- !u!212 &8354425255043193551
 SpriteRenderer:
   m_ObjectHideFlags: 0

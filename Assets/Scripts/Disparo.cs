@@ -8,12 +8,15 @@ public class Disparo : MonoBehaviour
     public GameObject spawn;
     public float cadencia;
     private float timer = 2;
+
+    public GameObject sonidoBala;
     
     void Update()
     {
         timer += Time.deltaTime; //Temporizador para limitar el uso de la bala
         if (Input.GetAxis("Fire1") == 1 && GameManager.instance.TieneEnergia() && timer > cadencia && GameManager.instance.Block())
         {
+            Instantiate(sonidoBala);
             GameManager.instance.EnergiaSuma(-1);
             GameObject bullet = Instantiate(bala, spawn.transform.position, Quaternion.identity); //Crear la bala
             
