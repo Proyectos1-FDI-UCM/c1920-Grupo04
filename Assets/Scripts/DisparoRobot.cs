@@ -16,8 +16,7 @@ public class DisparoRobot : MonoBehaviour
     void Start()
     {
         bulletSpawn.position = transform.position;
-        layermask = 1 << 8; //La capa 8 es la del player.
-        origin = new Vector2(transform.position.x, transform.position.y);
+        layermask = 1 << 8; //La capa 8 es la del player.        
     }
 
     // Update is called once per frame
@@ -31,7 +30,8 @@ public class DisparoRobot : MonoBehaviour
     /// máxima, hacia ambos lados, si encuentra al jugador, dispara hacia donde se encuentre.
     /// </summary>
     void LocalizaAlJugador()
-    {       
+    {
+        origin = new Vector2(transform.position.x, transform.position.y);
         //Localiza a que lado está el jugador y si está dentro del rango
         if (Physics2D.Raycast(origin, Vector2.right, distance, layermask))
         {
@@ -39,12 +39,14 @@ public class DisparoRobot : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
             dirValue = 1;
             if (!shotOnCD) shootPlayer();
+            Debug.Log("DERECHA");
         }
         else if (Physics2D.Raycast(origin, Vector2.left, distance, layermask))
         {
             transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
             dirValue = -1;
             if (!shotOnCD) shootPlayer();
+            Debug.Log("IZQUIERDA");
         }
     }
 
@@ -54,7 +56,7 @@ public class DisparoRobot : MonoBehaviour
         GameObject newBullet = Instantiate(bullet, bulletSpawn.position, Quaternion.identity, bulletSpawn);
         //Velocidad y horientación de la bala
         newBullet.GetComponent<VelBala>().changeDirVel(dirValue);
-        newBullet.transform.localScale = new Vector2(dirValue * Mathf.Abs(newBullet.transform.localScale.x), newBullet.transform.localScale.y);
+        //newBullet.transform.localScale = new Vector2(dirValue * Mathf.Abs(newBullet.transform.localScale.x), newBullet.transform.localScale.y);
         //CoolDown
         shotOnCD = true;
         Invoke("resetCD", CD);
