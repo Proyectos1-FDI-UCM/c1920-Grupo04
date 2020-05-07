@@ -14,7 +14,6 @@ public class VelBala : MonoBehaviour
 
     void FixedUpdate()
     {
-        //print(transform.right);
         velocidadVec = new Vector2(velocidad * transform.right.x, 0f);
         rb.velocity = velocidadVec;
     }
@@ -22,6 +21,5 @@ public class VelBala : MonoBehaviour
     public void changeDirVel(int dirValue)
     {
         transform.right = new Vector2(transform.right.x * dirValue, transform.right.y);
-        Debug.Log(transform.right);
     }
 }

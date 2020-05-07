@@ -18,7 +18,7 @@ public class Disparo : MonoBehaviour
         {
             Instantiate(sonidoBala);
             GameManager.instance.EnergiaSuma(-1);
-            GameObject bullet = Instantiate(bala, spawn.transform.position, Quaternion.identity); //Crear la bala
+            GameObject bullet = Instantiate(bala, spawn.transform.position, Quaternion.identity, spawn.transform); //Crear la bala
             
             if (gameObject.transform.localScale.x < 0)
                 bullet.GetComponent<VelBala>().velocidad *= -1;

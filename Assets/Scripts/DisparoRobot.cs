@@ -10,22 +10,20 @@ public class DisparoRobot : MonoBehaviour
     public float CD;
     bool shotOnCD;
     int layermask, dirValue;
-    Vector2 direction, origin;
+    Vector2 origin;
+
     // Start is called before the first frame update
     void Start()
     {
         bulletSpawn.position = transform.position;
-        //player = GameManager.instance.GetPlayer();
-        layermask = 1 << 8;
+        layermask = 1 << 8; //La capa 8 es la del player.
         origin = new Vector2(transform.position.x, transform.position.y);
-        Debug.Log("AWAKE");
     }
 
     // Update is called once per frame
     void Update()
     {
         LocalizaAlJugador();
-        Debug.Log("buscando...");
     }
 
     /// <summary>
@@ -33,31 +31,31 @@ public class DisparoRobot : MonoBehaviour
     /// máxima, hacia ambos lados, si encuentra al jugador, dispara hacia donde se encuentre.
     /// </summary>
     void LocalizaAlJugador()
-    {
-        
+    {       
+        //Localiza a que lado está el jugador y si está dentro del rango
         if (Physics2D.Raycast(origin, Vector2.right, distance, layermask))
         {
             //Cambia el lado al que mira el robot
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
-            //direction = Vector2.right;
             dirValue = 1;
             if (!shotOnCD) shootPlayer();
-            Debug.Log("DERECHA");
         }
         else if (Physics2D.Raycast(origin, Vector2.left, distance, layermask))
         {
             transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
-            //direction = Vector2.left;
             dirValue = -1;
             if (!shotOnCD) shootPlayer();
-            Debug.Log("IZQUIERDA");
         }
     }
 
     void shootPlayer()
     {
+        //Genera la bala
         GameObject newBullet = Instantiate(bullet, bulletSpawn.position, Quaternion.identity, bulletSpawn);
+        //Velocidad y horientación de la bala
         newBullet.GetComponent<VelBala>().changeDirVel(dirValue);
+        newBullet.transform.localScale = new Vector2(dirValue * Mathf.Abs(newBullet.transform.localScale.x), newBullet.transform.localScale.y);
+        //CoolDown
         shotOnCD = true;
         Invoke("resetCD", CD);
     }
