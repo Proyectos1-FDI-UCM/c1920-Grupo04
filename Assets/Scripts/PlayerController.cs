@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public Sprite enCable;
     public Sprite enCamino;
     public Sprite jump;
-
+    public GameObject cambioMov;
     
     public Animator animator;
     Rigidbody2D rb;
@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "cable") //en final por sprite
         {
+            Instantiate(cambioMov);
             cable = true;
             animator.enabled = false;
             //animator.SetBool("ecable", true);
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "exit") //en final por sprite
         {
+            Instantiate(cambioMov);
             cable = false;
             animator.enabled = true;
             GameManager.instance.MovNormal();

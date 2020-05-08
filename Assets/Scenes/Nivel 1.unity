@@ -21503,16 +21503,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -5.78
       objectReference: {fileID: 0}
-    - target: {fileID: 8746371124469490323, guid: 0a91d995c86c1bd45bffc5c1a9afa7ff,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8746371124469490323, guid: 0a91d995c86c1bd45bffc5c1a9afa7ff,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.86
-      objectReference: {fileID: 0}
     - target: {fileID: 4804730030512533653, guid: 0a91d995c86c1bd45bffc5c1a9afa7ff,
         type: 3}
       propertyPath: player
@@ -21523,6 +21513,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 477391127}
+    - target: {fileID: 8746371124469490323, guid: 0a91d995c86c1bd45bffc5c1a9afa7ff,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746371124469490323, guid: 0a91d995c86c1bd45bffc5c1a9afa7ff,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.86
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a91d995c86c1bd45bffc5c1a9afa7ff, type: 3}
 --- !u!4 &1084254126 stripped
@@ -27049,6 +27049,12 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 477391134}
+    - target: {fileID: 8014812544536353499, guid: 81e57ec01287287478116cf9e7300509,
+        type: 3}
+      propertyPath: cambioMov
+      value: 
+      objectReference: {fileID: 798849815186791469, guid: b29eaa05e90f9534ab371a4512532020,
+        type: 3}
     - target: {fileID: 6478471727844003377, guid: 81e57ec01287287478116cf9e7300509,
         type: 3}
       propertyPath: m_IsActive
@@ -27614,6 +27620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 2030444995}
+  Click: {fileID: 6701182587075270472, guid: c18ee055a2152ea4a9de1f242ee06ad9, type: 3}
 --- !u!114 &2047519134
 MonoBehaviour:
   m_ObjectHideFlags: 0

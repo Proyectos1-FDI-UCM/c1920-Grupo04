@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public static bool gameIsPaused = false;
     //gameobject menu de pausa
     public GameObject pauseMenuUI;
+    public GameObject Click;
    
     void Update()
     {
@@ -24,6 +25,8 @@ public class PauseMenu : MonoBehaviour
     }
     //al hacer publico el metodo Resume puedo asignarselo a un boton para que continue el juego cuando lo pulse 
     public void Resume() {
+
+        Instantiate(Click);
         //esto quita el menu de pausa de la pantalla
         pauseMenuUI.SetActive(false);
         //al poner el Time.timeScale a 1 el juego empezara a moverse con normalidad
@@ -41,6 +44,7 @@ public class PauseMenu : MonoBehaviour
     //este metodo reinicia el nivel y recarga la vida y la energia del jugador a como estaba al inicio
     public void Restart() {
         Time.timeScale = 1f;
+        Instantiate(Click);
         gameIsPaused = false;
         int cantidad = GameManager.instance.EnergiaParaSumar();
         GameManager.instance.EnergiaSuma(cantidad);
@@ -50,7 +54,7 @@ public class PauseMenu : MonoBehaviour
     //este metodo carga la escena del menu al pulsar el boton
     public void LoadMenu() {
         Debug.Log("Loading menu ...");
-        
+        Instantiate(Click);
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
