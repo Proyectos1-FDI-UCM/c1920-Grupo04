@@ -1419,7 +1419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291786307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.6, y: -1.7, z: 0}
+  m_LocalPosition: {x: -6.9, y: -2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 938052389}
@@ -25220,41 +25220,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3219632124118707063, guid: 245c2e845f659d44e91e7bad6e44f906,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -23.677517
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219632124118707063, guid: 245c2e845f659d44e91e7bad6e44f906,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.15577742
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219632124118707063, guid: 245c2e845f659d44e91e7bad6e44f906,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -88.244415
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219632124118707063, guid: 245c2e845f659d44e91e7bad6e44f906,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219632124118707063, guid: 245c2e845f659d44e91e7bad6e44f906,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219632124118707063, guid: 245c2e845f659d44e91e7bad6e44f906,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219632124118707063, guid: 245c2e845f659d44e91e7bad6e44f906,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219632124118707063, guid: 245c2e845f659d44e91e7bad6e44f906,
-        type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
@@ -27004,6 +26969,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 291786308}
     m_Modifications:
+    - target: {fileID: 2982402572757198028, guid: 81e57ec01287287478116cf9e7300509,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726977044801677336, guid: 81e57ec01287287478116cf9e7300509,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8014812544536353502, guid: 81e57ec01287287478116cf9e7300509,
         type: 3}
       propertyPath: m_Name

@@ -60,31 +60,41 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "cable") //en final por sprite
         {
             Instantiate(cambioMov);
-            cable = true;
+            cable = true; //Movimiento cable (dejar de saltar)
             animator.enabled = false;
-            //animator.SetBool("ecable", true);
-            GameManager.instance.MovCable(); //Avisar dejar de disparar y saltar
+            GameManager.instance.MovCable(); //Avisar dejar de disparar
             rb.gravityScale = 0;
             transform.localScale = scale * new Vector2(0.45f, 0.45f); //Cambiar el tamaño para evitar tener la misma box collider
             
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = enCable;
-            GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
-            gameObject.transform.position = ChildGameObject.transform.position;
-            transform.GetChild(1).gameObject.SetActive(false);
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = enCable; //Sprite cable
+            GameObject ChildGameObject = collision.transform.GetChild(0).gameObject; //Punto de entrada
+            gameObject.transform.position = ChildGameObject.transform.position; 
+            transform.GetChild(1).gameObject.SetActive(false); //Desactivar pies
+            //Cambio de collider del personaje
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            gameObject.GetComponent<PolygonCollider2D>().enabled = false;
         }
         else if (collision.gameObject.tag == "exit") //en final por sprite
         {
             Instantiate(cambioMov);
-            cable = false;
+            Invoke("DelaySalto", 0.1f); //Movimiento normal (volver a saltar)
             animator.enabled = true;
-            GameManager.instance.MovNormal();
+            GameManager.instance.MovNormal(); //Volver a disparar
             rb.gravityScale = 3;
             transform.localScale = scale; //Vuelve al tamaño normal
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = enCamino;
-            GameObject ChildGameObject = collision.transform.GetChild(0).gameObject;
-            gameObject.transform.position = ChildGameObject.transform.position;
-            transform.GetChild(1).gameObject.SetActive(true);
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = enCamino; //Sprite normal
+            GameObject ChildGameObject = collision.transform.GetChild(0).gameObject; //Punto de salida
+            gameObject.transform.position = ChildGameObject.transform.position; 
+            transform.GetChild(1).gameObject.SetActive(true); //Activar pies
+            //Cambio de collider del personaje       
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            gameObject.GetComponent<PolygonCollider2D>().enabled = true;
         }        
+    }
+
+    void DelaySalto()
+    {
+        cable = false;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -176,7 +186,7 @@ public class PlayerController : MonoBehaviour
         }
         else        //Si estás en cable
         {
-            rb.velocity = new Vector2(deltaX * velEnCable, deltaY * velEnCable);  //Movimineto cable
+            rb.velocity = new Vector2(deltaX * velEnCable, deltaY * velEnCable);  //Movimiento cable
             
         }
     }
