@@ -11,14 +11,18 @@ public class MainMenu : MonoBehaviour
     //cargar el primer nivel en el menu de seleccion de niveles
     public void NewGame() {
         SceneManager.LoadScene(1);
-        Instantiate(click);
+        Sound();
     }
     //El metodo QuitGame sirve para salir del juego pero en el editor no se cerrara el juego pero si ocurrira 
     //cuando se haga la build del juego
     public void QuitGame() {
-        Instantiate(click);
+        Sound();
         Debug.Log("QUIT!");
         Application.Quit();
     }
     
+    public void Sound() //Metodo al que hay que llamar en cada boton
+    {
+        Instantiate(click);
+    }
 }
