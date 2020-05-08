@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8869911060109683509}
   - component: {fileID: 6354396509214346452}
   - component: {fileID: 6090212354950953403}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6478471727844003377}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.227, y: -1.8591, z: -166.72565}
+  m_LocalPosition: {x: 0.227, y: -1.8591, z: 0}
   m_LocalScale: {x: 1.8965821, y: 0.11824323, z: 1}
   m_Children: []
   m_Father: {fileID: 8014812544536353496}
@@ -127,7 +127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8014812544526893186}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 8014812544536353501}
   - component: {fileID: 8014812544536353498}
   - component: {fileID: 8014812544536353499}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Spark
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -176,9 +176,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8014812544536353502}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7105, y: 0.74, z: 1}
+  m_LocalScale: {x: 0.717605, y: 0.7474, z: 1.01}
   m_Children:
   - {fileID: 8014812544526893186}
   - {fileID: 9004536862746234111}
@@ -316,6 +316,7 @@ MonoBehaviour:
   enCable: {fileID: 21300000, guid: ca6aaad3a22c2514ea638909e6d9252b, type: 3}
   enCamino: {fileID: 21300000, guid: b0d1236bc6dfda14391c37a757fad169, type: 3}
   jump: {fileID: 0}
+  cambioMov: {fileID: 0}
   animator: {fileID: 0}
   enElSuelo: 0
   movRightBlock: 0
