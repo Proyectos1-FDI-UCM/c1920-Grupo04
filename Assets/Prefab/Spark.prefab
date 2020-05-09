@@ -32,7 +32,7 @@ Transform:
   m_LocalScale: {x: 1.8965821, y: 0.11824323, z: 1}
   m_Children: []
   m_Father: {fileID: 8014812544536353496}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1633433384165500896
 MeshFilter:
@@ -93,7 +93,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07950252, y: 0.6704345}
+  m_Offset: {x: 0.07786465, y: 0.6869426}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -104,7 +104,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.48765135, y: 2.37576}
+  m_Size: {x: 0.5713587, y: 2.3427439}
   m_EdgeRadius: 0
 --- !u!114 &6090212354950953403
 MonoBehaviour:
@@ -118,36 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783bdea8648f9a141b25a922c1fbf0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &8014812544526893187
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8014812544526893186}
-  m_Layer: 0
-  m_Name: Spawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8014812544526893186
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8014812544526893187}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8014812544536353496}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8014812544536353502
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +133,7 @@ GameObject:
   - component: {fileID: 8014812544536353499}
   - component: {fileID: 1726977044801677336}
   - component: {fileID: 2982402572757198028}
+  - component: {fileID: 1927509395462534538}
   m_Layer: 8
   m_Name: Spark
   m_TagString: Player
@@ -181,7 +152,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.717605, y: 0.7474, z: 1.01}
   m_Children:
-  - {fileID: 8014812544526893186}
   - {fileID: 9004536862746234111}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -269,8 +239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bala: {fileID: 542567520535890736, guid: ed34aa7d5bc6d314e8dc03a66fbea6b4, type: 3}
-  spawn: {fileID: 8014812544526893187}
-  cadencia: 2
+  ShotPool: {fileID: 0}
+  cadencia: 1
   sonidoBala: {fileID: 6397156545224308798, guid: 70413532aeb2971428b2eb41b19f6217,
     type: 3}
 --- !u!114 &8014812544536353499
@@ -291,8 +261,9 @@ MonoBehaviour:
   enCable: {fileID: 21300000, guid: ca6aaad3a22c2514ea638909e6d9252b, type: 3}
   enCamino: {fileID: 21300000, guid: b0d1236bc6dfda14391c37a757fad169, type: 3}
   jump: {fileID: 0}
-  cambioMov: {fileID: 0}
-  animator: {fileID: 0}
+  cambioMov: {fileID: 798849815186791469, guid: b29eaa05e90f9534ab371a4512532020,
+    type: 3}
+  animator: {fileID: 1927509395462534538}
   enElSuelo: 0
   movRightBlock: 0
   movLeftBlock: 0
@@ -332,14 +303,14 @@ PolygonCollider2D:
       - {x: -0.33699182, y: 0.6696904}
       - {x: -0.50457007, y: -0.3338267}
       - {x: -0.50457007, y: -0.9114924}
-      - {x: -0.24907857, y: -1.2545922}
-      - {x: -0.16775434, y: -1.8333461}
-      - {x: -0.08423998, y: -1.9197928}
-      - {x: 0.3870627, y: -1.9195542}
-      - {x: 0.84145755, y: -1.9198828}
-      - {x: 0.9162592, y: -1.8335433}
-      - {x: 0.9175742, y: -0.8062724}
-      - {x: 0.91365844, y: -0.50045794}
+      - {x: -0.42724404, y: -1.274031}
+      - {x: -0.2780092, y: -1.6392702}
+      - {x: -0.1668129, y: -1.9170074}
+      - {x: 0.3870627, y: -1.916675}
+      - {x: 0.91673523, y: -1.9170561}
+      - {x: 1.0256014, y: -1.6367862}
+      - {x: 0.92584586, y: -0.99674535}
+      - {x: 0.9260244, y: -0.5001317}
       - {x: 0.8322538, y: 0.66824305}
 --- !u!61 &2982402572757198028
 BoxCollider2D:
@@ -348,7 +319,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8014812544536353502}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -367,3 +338,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.343245, y: 2.3944201}
   m_EdgeRadius: 0
+--- !u!95 &1927509395462534538
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014812544536353502}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f8b566b69d668b4da7ae2a895420e3f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

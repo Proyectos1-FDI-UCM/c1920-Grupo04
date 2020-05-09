@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sprite = enCable; //Sprite cable
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject; //Punto de entrada
             gameObject.transform.position = ChildGameObject.transform.position; 
-            transform.GetChild(1).gameObject.SetActive(false); //Desactivar pies
+            transform.GetChild(0).gameObject.SetActive(false); //Desactivar pies
             //Cambio de collider del personaje
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
             gameObject.GetComponent<PolygonCollider2D>().enabled = false;
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sprite = enCamino; //Sprite normal
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject; //Punto de salida
             gameObject.transform.position = ChildGameObject.transform.position; 
-            transform.GetChild(1).gameObject.SetActive(true); //Activar pies
+            transform.GetChild(0).gameObject.SetActive(true); //Activar pies
             //Cambio de collider del personaje       
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<PolygonCollider2D>().enabled = true;

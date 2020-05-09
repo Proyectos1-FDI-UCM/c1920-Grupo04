@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DisparoRobot : MonoBehaviour
 {
-    public Transform bulletSpawn;
+    public Transform ShotPool;
     public GameObject bullet;
     public float distance;
     public float CD;
@@ -15,7 +15,6 @@ public class DisparoRobot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bulletSpawn.position = transform.position;
         layermask = 1 << 8; //La capa 8 es la del player.        
     }
 
@@ -52,8 +51,10 @@ public class DisparoRobot : MonoBehaviour
 
     void shootPlayer()
     {
+        //Calcula el punto de salida
+        Vector2 shotpoint = new Vector2(transform.position.x, transform.position.y);
         //Genera la bala
-        GameObject newBullet = Instantiate(bullet, bulletSpawn.position, Quaternion.identity, bulletSpawn);
+        GameObject newBullet = Instantiate(bullet, shotpoint, Quaternion.identity, ShotPool);
         //Velocidad y horientación de la bala
         newBullet.GetComponent<VelBala>().changeDirVel(dirValue);
         //newBullet.transform.localScale = new Vector2(dirValue * Mathf.Abs(newBullet.transform.localScale.x), newBullet.transform.localScale.y);
