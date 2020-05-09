@@ -654,6 +654,36 @@ Transform:
   m_Father: {fileID: 1233682879}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -0.30100003, y: 0, z: 0}
+--- !u!1 &243136284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 243136285}
+  m_Layer: 0
+  m_Name: ShotPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &243136285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243136284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &251575505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,7 +2487,7 @@ GameObject:
   - component: {fileID: 455849896}
   - component: {fileID: 455849898}
   - component: {fileID: 455849897}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18284,7 +18314,7 @@ GameObject:
   - component: {fileID: 505075126}
   - component: {fileID: 505075125}
   - component: {fileID: 505075128}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BarraRompible-SP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19137,6 +19167,11 @@ PrefabInstance:
       propertyPath: spawn
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8014812544536353498, guid: 81e57ec01287287478116cf9e7300509,
+        type: 3}
+      propertyPath: ShotPool
+      value: 
+      objectReference: {fileID: 243136285}
     - target: {fileID: 1927509395462534538, guid: 81e57ec01287287478116cf9e7300509,
         type: 3}
       propertyPath: m_Controller
@@ -25472,7 +25507,7 @@ GameObject:
   - component: {fileID: 1838418970}
   - component: {fileID: 1838418969}
   - component: {fileID: 1838418968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BarraRompible-S1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29369,5 +29404,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3332473023798017680, guid: f8892dba41639aa4ebef7ffe7503e927,
+        type: 3}
+      propertyPath: ShotPool
+      value: 
+      objectReference: {fileID: 243136285}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8892dba41639aa4ebef7ffe7503e927, type: 3}
