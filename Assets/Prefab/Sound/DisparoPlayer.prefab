@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7053093388349202971}
   - component: {fileID: 4339150390749580642}
   m_Layer: 0
-  m_Name: Sonido Salto
+  m_Name: DisparoPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,8 @@ AudioSource:
   m_GameObject: {fileID: 6397156545224308798}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: f4f217313f434954a83cae3d296642a0,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: ec807bd9a8e13104c886d62c98909fb8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
