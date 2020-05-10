@@ -454,6 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1670613926}
+  Click: {fileID: 0}
 --- !u!114 &26170806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29001,6 +29002,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.01
       objectReference: {fileID: 0}
+    - target: {fileID: 8014812544536353498, guid: 81e57ec01287287478116cf9e7300509,
+        type: 3}
+      propertyPath: sonidoBala
+      value: 
+      objectReference: {fileID: 6397156545224308798, guid: 70413532aeb2971428b2eb41b19f6217,
+        type: 3}
     - target: {fileID: 8014812544536353499, guid: 81e57ec01287287478116cf9e7300509,
         type: 3}
       propertyPath: jump
@@ -29033,12 +29040,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 8014812544536353498, guid: 81e57ec01287287478116cf9e7300509,
-        type: 3}
-      propertyPath: sonidoBala
-      value: 
-      objectReference: {fileID: 6397156545224308798, guid: 70413532aeb2971428b2eb41b19f6217,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81e57ec01287287478116cf9e7300509, type: 3}
 --- !u!1 &2110991175
@@ -29329,3 +29330,77 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 24635079}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7328337515663625368
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2573886799438334704, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593524721046281096, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.6858602
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593524721046281096, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6885546
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593524721046281096, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.18381
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593524721046281096, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593524721046281096, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593524721046281096, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593524721046281096, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593524721046281096, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593524721046281096, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593524721046281096, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593524721046281096, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
+        type: 3}
+      propertyPath: audioFiles.Array.data[0].audioName
+      value: DBala
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 228551554952a674986aad72423a7f70, type: 3}
