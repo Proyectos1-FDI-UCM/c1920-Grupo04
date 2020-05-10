@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioFiles:
-  - audioName: "Detrucci\xF3n bala"
+  - audioName: DestrBala
     audioClip: {fileID: 8300000, guid: 5c09ed317c4f029408a614c8909ff67b, type: 3}
     volume: 0.513
     source: {fileID: 0}
@@ -88,6 +88,12 @@ MonoBehaviour:
     playOnAwake: 0
   - audioName: seleccion
     audioClip: {fileID: 8300000, guid: faa7b41bf1981de41afcbb37b62a37a3, type: 3}
+    volume: 0.474
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: DispRoboRanged
+    audioClip: {fileID: 8300000, guid: 220e455152ad64ea3862da6a600ee519, type: 3}
     volume: 0.474
     source: {fileID: 0}
     isLooping: 0
