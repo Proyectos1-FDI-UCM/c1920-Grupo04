@@ -44,51 +44,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioFiles:
-  - audioName: "Detrucci\xF3n bala"
+  - audioName: DestrBala
     audioClip: {fileID: 8300000, guid: 5c09ed317c4f029408a614c8909ff67b, type: 3}
     volume: 0.513
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: 
-    audioClip: {fileID: 0}
-    volume: 0
+  - audioName: CambioMov
+    audioClip: {fileID: 8300000, guid: cd107ccca180f7546ab428769192d27e, type: 3}
+    volume: 0.475
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: 
-    audioClip: {fileID: 0}
-    volume: 0
+  - audioName: CogerObjeto
+    audioClip: {fileID: 8300000, guid: b6be2e219ff5b5742a7e59e558adbeb9, type: 3}
+    volume: 0.531
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: 
-    audioClip: {fileID: 0}
-    volume: 0
+  - audioName: DispEnemigo
+    audioClip: {fileID: 8300000, guid: b88090f0871f91b409ccc9b88f6f8f50, type: 3}
+    volume: 0.574
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: 
-    audioClip: {fileID: 0}
-    volume: 0
+  - audioName: DispSpark
+    audioClip: {fileID: 8300000, guid: ec807bd9a8e13104c886d62c98909fb8, type: 3}
+    volume: 0.545
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: 
-    audioClip: {fileID: 0}
-    volume: 0
+  - audioName: Fondogame
+    audioClip: {fileID: 8300000, guid: 5e852176c9dc4304abc122da5e88cd63, type: 3}
+    volume: 0.531
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: 
-    audioClip: {fileID: 0}
-    volume: 0
+  - audioName: PowerUp
+    audioClip: {fileID: 8300000, guid: a1a6ddb8aeb92d643808792dbe782c03, type: 3}
+    volume: 0.481
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  - audioName: 
-    audioClip: {fileID: 0}
-    volume: 0
+  - audioName: seleccion
+    audioClip: {fileID: 8300000, guid: faa7b41bf1981de41afcbb37b62a37a3, type: 3}
+    volume: 0.474
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: DispRoboRanged
+    audioClip: {fileID: 8300000, guid: 220e455152ad64ea3862da6a600ee519, type: 3}
+    volume: 0.474
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0

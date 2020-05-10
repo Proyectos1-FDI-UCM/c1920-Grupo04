@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+
     public Slider masterSlider;
     public AudioMixer audioMixer;  
     
@@ -18,6 +19,7 @@ public class MainMenu : MonoBehaviour
         masterSlider.value = PlayerPrefs.GetFloat("volume", 0f);
         audioMixer.SetFloat("volume", masterSlider.value);
     }
+ 
 
     //este metodo es para empezar el juego al hacer que se cargue la escena Nivel 1 y tambien lo voy a usar para
     //cargar el primer nivel en el menu de seleccion de niveles
@@ -35,7 +37,7 @@ public class MainMenu : MonoBehaviour
     
     public void Sound() //Metodo al que hay que llamar en cada boton
     {
-        Instantiate(click);
+        AudioManager.instance.PlaySound("seleccion", "play");
     }
     //este es el metodo que usa el slider para cambiar el volumen del juego
     public void SetVolume(float volume) {

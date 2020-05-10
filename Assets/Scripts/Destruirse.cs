@@ -9,7 +9,7 @@ public class Destruirse : MonoBehaviour
     {
         Destroy(this.gameObject);
         //Instantiate(sonidoDestruir); 
-        AudioManager.instance.PlaySound("DBala", "play");
+        AudioManager.instance.PlaySound("DestrBala", "play");
 
     }
 }

@@ -55,6 +55,7 @@ public class DisparoRobot : MonoBehaviour
         Vector2 shotpoint = new Vector2(transform.position.x, transform.position.y);
         //Genera la bala
         GameObject newBullet = Instantiate(bullet, shotpoint, Quaternion.identity, ShotPool);
+        AudioManager.instance.PlaySound("DispRoboRanged", "play");
         //Velocidad y horientación de la bala
         newBullet.GetComponent<VelBala>().changeDirVel(dirValue);
         //newBullet.transform.localScale = new Vector2(dirValue * Mathf.Abs(newBullet.transform.localScale.x), newBullet.transform.localScale.y);
