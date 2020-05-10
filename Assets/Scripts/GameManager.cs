@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     PlayerController jugadorPC;
+    AudioManager audioManager;
     int vida_maxima = 3;
     int vida = 3;
     int Bateria_maxima = 7;
@@ -159,4 +161,12 @@ public class GameManager : MonoBehaviour
     {
         return jugadorPC.GetPlayerGameObject();
     }*/
+    public void SetAudioManager(AudioManager AM)
+    {
+        audioManager = AM;
+    }
+    public AudioManager GetAudioManager()
+    {
+        return audioManager;
+    }
 }
