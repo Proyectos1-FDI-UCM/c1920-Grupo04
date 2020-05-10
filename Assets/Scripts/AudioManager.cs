@@ -7,7 +7,8 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    public AudioFile[] audioFiles;    
+    public AudioFile[] audioFiles;
+    public AudioMixerGroup audioMaster;
 
     private void Awake()
     {
@@ -27,7 +28,9 @@ public class AudioManager : MonoBehaviour
         //Prepara todos los audios (previamente configurados desde el editor):
         foreach (var s in audioFiles)
         {
+            //Para cada audio crea su propio AudioSource
             s.source = gameObject.AddComponent<AudioSource>();
+            s.source.outputAudioMixerGroup = audioMaster; //AudioMixer configurado por Slider
             s.source.clip = s.audioClip;
             s.source.volume = s.volume;
             s.source.loop = s.isLooping;
