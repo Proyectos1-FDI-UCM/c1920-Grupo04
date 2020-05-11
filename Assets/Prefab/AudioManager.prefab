@@ -122,4 +122,10 @@ MonoBehaviour:
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
+  - audioName: MainTheme
+    audioClip: {fileID: 8300000, guid: 5e852176c9dc4304abc122da5e88cd63, type: 3}
+    volume: 0.474
+    source: {fileID: 0}
+    isLooping: 1
+    playOnAwake: 1
   audioMaster: {fileID: 24300002, guid: f4f217313f434954a83cae3d296642a0, type: 2}
