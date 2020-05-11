@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class DisparoRobot : MonoBehaviour
 {
-    public Transform ShotPool;
     public GameObject bullet;
     public float distance;
     public float CD;
     bool shotOnCD;
     int layermask, dirValue;
     Vector2 origin;
+    private Transform shotPool;
 
     // Start is called before the first frame update
     void Start()
     {
-        layermask = 1 << 8; //La capa 8 es la del player.        
+        layermask = 1 << 8; //La capa 8 es la del player.  
+        shotPool = ShotPool.instance.transform;
     }
 
     // Update is called once per frame
@@ -54,7 +55,7 @@ public class DisparoRobot : MonoBehaviour
         //Calcula el punto de salida
         Vector2 shotpoint = new Vector2(transform.position.x, transform.position.y);
         //Genera la bala
-        GameObject newBullet = Instantiate(bullet, shotpoint, Quaternion.identity, ShotPool);
+        GameObject newBullet = Instantiate(bullet, shotpoint, Quaternion.identity, shotPool);
         AudioManager.instance.PlaySound("DispRoboRanged", "play");
         //Velocidad y horientación de la bala
         newBullet.GetComponent<VelBala>().changeDirVel(dirValue);

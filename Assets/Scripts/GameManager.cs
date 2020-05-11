@@ -161,12 +161,12 @@ public class GameManager : MonoBehaviour
     {
         return jugadorPC.GetPlayerGameObject();
     }*/
-    public void SetAudioManager(AudioManager AM)
-    {
-        audioManager = AM;
-    }
-    public AudioManager GetAudioManager()
-    {
-        return audioManager;
-    }
+    //public void SetAudioManager(AudioManager AM)
+    //{
+    //    audioManager = AM;
+    //}
+    //public AudioManager GetAudioManager()
+    //{
+    //    return audioManager;
+    //}
 }

@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "cable") //en final por sprite
         {
-            Instantiate(cambioMov);
+            //Instantiate(cambioMov);
             cable = true; //Movimiento cable (dejar de saltar)
             animator.enabled = false;
             GameManager.instance.MovCable(); //Avisar dejar de disparar
@@ -76,8 +76,8 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "exit") //en final por sprite
         {
-            Instantiate(cambioMov);
-            Invoke("DelaySalto", 0.1f); //Movimiento normal (volver a saltar)
+            //Instantiate(cambioMov);
+            Invoke("DelaySalto", 0.2f); //Movimiento normal (volver a saltar)
             animator.enabled = true;
             GameManager.instance.MovNormal(); //Volver a disparar
             rb.gravityScale = 3;

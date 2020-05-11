@@ -41,10 +41,10 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        GameManager.instance.SetAudioManager(this);
-    }
+    //private void Start()
+    //{
+    //    GameManager.instance.SetAudioManager(this);
+    //}
 
     //Para reproducir sonidos sueltos.
     public void PlaySound(string name, string action)

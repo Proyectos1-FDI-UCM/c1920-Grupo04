@@ -507,61 +507,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
-        type: 3}
-      propertyPath: audioFiles.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
-        type: 3}
-      propertyPath: audioFiles.Array.data[0].audioName
-      value: DestrBala
-      objectReference: {fileID: 0}
-    - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
-        type: 3}
-      propertyPath: audioFiles.Array.data[10].audioName
-      value: interruptor
-      objectReference: {fileID: 0}
-    - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
-        type: 3}
-      propertyPath: audioFiles.Array.data[10].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: f456331f54b714e6c8014b90393d67cb, type: 3}
-    - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
-        type: 3}
-      propertyPath: audioFiles.Array.data[10].volume
-      value: 0.474
-      objectReference: {fileID: 0}
-    - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
-        type: 3}
-      propertyPath: audioFiles.Array.data[11].audioName
-      value: morirenemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
-        type: 3}
-      propertyPath: audioFiles.Array.data[11].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 8c8cf390751984ba59f5827d68ddbdeb, type: 3}
-    - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
-        type: 3}
-      propertyPath: audioFiles.Array.data[11].volume
-      value: 0.474
-      objectReference: {fileID: 0}
-    - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
-        type: 3}
-      propertyPath: audioFiles.Array.data[12].audioName
-      value: morirespectro
-      objectReference: {fileID: 0}
-    - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
-        type: 3}
-      propertyPath: audioFiles.Array.data[12].audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 7a3425a4be3824548a882a539d96bbd7, type: 3}
-    - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
-        type: 3}
-      propertyPath: audioFiles.Array.data[12].volume
-      value: 0.474
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 228551554952a674986aad72423a7f70, type: 3}
 --- !u!1 &224372522
@@ -2613,9 +2558,9 @@ MonoBehaviour:
   m_FillRect: {fileID: 1908644014}
   m_HandleRect: {fileID: 129582820}
   m_Direction: 0
-  m_MinValue: -80
+  m_MinValue: -45
   m_MaxValue: 0
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:

@@ -104,4 +104,22 @@ MonoBehaviour:
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
-  audioMaster: {fileID: 0}
+  - audioName: interruptor
+    audioClip: {fileID: 8300000, guid: f456331f54b714e6c8014b90393d67cb, type: 3}
+    volume: 0.474
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: morirenemigo
+    audioClip: {fileID: 8300000, guid: 8c8cf390751984ba59f5827d68ddbdeb, type: 3}
+    volume: 0.474
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  - audioName: morirespectro
+    audioClip: {fileID: 8300000, guid: 7a3425a4be3824548a882a539d96bbd7, type: 3}
+    volume: 0.474
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  audioMaster: {fileID: 24300002, guid: f4f217313f434954a83cae3d296642a0, type: 2}

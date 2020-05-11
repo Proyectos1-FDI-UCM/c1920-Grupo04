@@ -129,8 +129,8 @@ GameObject:
   - component: {fileID: 8014812544536353496}
   - component: {fileID: 8014812544536353497}
   - component: {fileID: 8014812544536353500}
-  - component: {fileID: 8014812544536353498}
   - component: {fileID: 8014812544536353499}
+  - component: {fileID: 197839411906608761}
   - component: {fileID: 1726977044801677336}
   - component: {fileID: 2982402572757198028}
   - component: {fileID: 1927509395462534538}
@@ -226,23 +226,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8014812544536353498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8014812544536353502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f831fb71647a20419d594f625820c60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bala: {fileID: 542567520535890736, guid: ed34aa7d5bc6d314e8dc03a66fbea6b4, type: 3}
-  ShotPool: {fileID: 0}
-  cadencia: 1
-  sonidoBala: {fileID: 6397156545224308798, guid: 70413532aeb2971428b2eb41b19f6217,
-    type: 3}
 --- !u!114 &8014812544536353499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +254,20 @@ MonoBehaviour:
   velX: 0
   maxFallVelY: 6
   maxJumpVel: 18
+--- !u!114 &197839411906608761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014812544536353502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f831fb71647a20419d594f625820c60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bala: {fileID: 542567520535890736, guid: ed34aa7d5bc6d314e8dc03a66fbea6b4, type: 3}
+  cadencia: 2
 --- !u!60 &1726977044801677336
 PolygonCollider2D:
   m_ObjectHideFlags: 0

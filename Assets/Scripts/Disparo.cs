@@ -5,10 +5,14 @@ using UnityEngine;
 public class Disparo : MonoBehaviour
 {
     public GameObject bala;
-    public Transform ShotPool;
     public float cadencia;
     private float timer = 2;
-    
+    private Transform shotPool;
+
+    private void Start()
+    {
+        shotPool = ShotPool.instance.transform;
+    }
     void Update()
     {
         timer += Time.deltaTime; //Temporizador para limitar el uso de la bala
@@ -17,7 +21,7 @@ public class Disparo : MonoBehaviour
             AudioManager.instance.PlaySound("DispSpark", "play");
             GameManager.instance.EnergiaSuma(-1);
             Vector2 shotpoint = new Vector2(transform.position.x + 0.25f, transform.position.y - 0.05f);
-            GameObject bullet = Instantiate(bala, shotpoint, Quaternion.identity, ShotPool); //Crear la bala
+            GameObject bullet = Instantiate(bala, shotpoint, Quaternion.identity, shotPool); //Crear la bala
             
             if (gameObject.transform.localScale.x < 0)
                 bullet.GetComponent<VelBala>().velocidad *= -1;
