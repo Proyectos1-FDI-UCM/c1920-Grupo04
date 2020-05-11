@@ -10,6 +10,7 @@ public class MuertePorLuz : MonoBehaviour
     {
         if (collision.GetComponent<Interact>() != null)     //Si el trigger tiene componente de interacción (solo el trigger de luz lo tiene)
         {
+            AudioManager.instance.PlaySound("morirespectro", "play");
             Destroy(this.gameObject);                       //Se destruye
         }
     }

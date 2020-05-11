@@ -167,6 +167,7 @@ public class PlayerController : MonoBehaviour
                 if (enElSuelo)   //Si estás en el suelo
                 {
                     //saltas
+                    AudioManager.instance.PlaySound("jump", "play");
                     GameManager.instance.EnergiaSuma(-1);
                     rb.AddForce((Vector2.up) * forceJump, ForceMode2D.Impulse);
                     contador = 0;   //reseteas el contador para realizar el doble salto
@@ -174,6 +175,7 @@ public class PlayerController : MonoBehaviour
 
                 else if (puedesDobleSalto)  //Si no estás en el suelo, y puedes realizar el doble salto
                 {
+                    AudioManager.instance.PlaySound("jump", "play");
                     rb.velocity = new Vector2(deltaX * vel, 0f); //Se pierde la velocidad que llevases vertical para el siguiente impulso
                     //(en el salto normal no es perder la velocidad vertical porque al estar en el suelo es 0)
                     

@@ -98,3 +98,10 @@ MonoBehaviour:
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
+  - audioName: jump
+    audioClip: {fileID: 8300000, guid: 82cf973fcda45a64fac56bd7c42db48b, type: 3}
+    volume: 0.474
+    source: {fileID: 0}
+    isLooping: 0
+    playOnAwake: 0
+  audioMaster: {fileID: 0}

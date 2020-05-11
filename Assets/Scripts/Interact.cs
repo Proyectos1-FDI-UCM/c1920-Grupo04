@@ -28,6 +28,7 @@ public class Interact : MonoBehaviour
       
     }
     private void OnEnable() {
+        AudioManager.instance.PlaySound("interruptor", "play");
         Debug.Log("Activado");
         if (spriteRenderer.sprite == LampOff) {
             spriteRenderer.sprite = LampOn;
@@ -42,6 +43,7 @@ public class Interact : MonoBehaviour
         }
     }
     private void OnDisable() {
+        AudioManager.instance.PlaySound("interruptor", "play");
         Debug.Log("Desactivado");
         if (spriteRenderer.sprite == LampOn) {
             spriteRenderer.sprite = LampOff;

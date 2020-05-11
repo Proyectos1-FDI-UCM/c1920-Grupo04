@@ -43,7 +43,7 @@ public class PauseMenu : MonoBehaviour
     //este metodo reinicia el nivel y recarga la vida y la energia del jugador a como estaba al inicio
     public void Restart() {
         Time.timeScale = 1f;
-        AudioManager.instance.PlaySound("DBala", "play");
+        AudioManager.instance.PlaySound("seleccion", "play");
         gameIsPaused = false;
         int cantidad = GameManager.instance.EnergiaParaSumar();
         GameManager.instance.EnergiaSuma(cantidad);
