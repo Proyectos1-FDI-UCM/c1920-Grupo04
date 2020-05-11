@@ -7,7 +7,7 @@ public class ShotPool : MonoBehaviour
     public static ShotPool instance;
     private void Awake()
     {
-        //Un único AudioManager:
+        //Un único ShotPool:
         if (instance == null)
         {
             instance = this;

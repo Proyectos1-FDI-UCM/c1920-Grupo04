@@ -11,7 +11,7 @@ public class MovEnemigoPerseguir : MonoBehaviour
     movimiento_enemigo MovEnemigoNormal;
     int direccion;
 
-    public GameObject player; //
+    private GameObject player; //
 
 
     private void Awake()
@@ -23,6 +23,7 @@ public class MovEnemigoPerseguir : MonoBehaviour
     {
         //player = GameManager.instance.DevolverJugador().gameObject;
         MovEnemigoNormal = GetComponent<movimiento_enemigo>();
+        player = PlayerController.instance.gameObject;
     }
 
     private void OnEnable()

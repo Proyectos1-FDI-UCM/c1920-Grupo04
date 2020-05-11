@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Sprite enCamino;
     public Sprite jump;
     public GameObject cambioMov;
+    public static PlayerController instance;
     
     public Animator animator;
     Rigidbody2D rb;
@@ -31,6 +32,18 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         scale = transform.localScale;
         
+        //Un único GameObject Player (Spark):
+        if (instance == null)
+        {
+            instance = this;
+        }
+
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()

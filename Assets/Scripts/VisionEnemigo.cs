@@ -12,10 +12,10 @@ public class VisionEnemigo : MonoBehaviour
     //Script que detecta si el jugador está en el campo de visión de un enemigo, y activa el movimiento correspondiente de este enemigo
     public float visionRadio;
     MovEnemigoPerseguir movEnemigoPerseguir;
-    public GameObject player;
     float timer = 0; //contador de tiempo para que el enemigo vuelva a detectarte tras haber llegado a su límite de posición
     Rigidbody2D rb;
     bool estaGirado;
+    private GameObject player;
 
 
     // Start is called before the first frame update
@@ -26,6 +26,7 @@ public class VisionEnemigo : MonoBehaviour
         movEnemigoPerseguir.enabled = false;
         rb = GetComponent<Rigidbody2D>();
         estaGirado = false;
+        player = PlayerController.instance.gameObject;
     }
 
     // Update is called once per frame
