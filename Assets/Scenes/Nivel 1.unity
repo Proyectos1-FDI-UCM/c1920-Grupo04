@@ -24438,6 +24438,25 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1428790027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8746371125819280407, guid: 0a91d995c86c1bd45bffc5c1a9afa7ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 1084254125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1428790028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428790027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 912a8e2331563f44894cf7ab0cd2ed98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 6684426476097144805, guid: ec75c05e7bed0a54ca3f19c3ce5d4755, type: 3}
 --- !u!1 &1439010182
 GameObject:
   m_ObjectHideFlags: 0
@@ -26183,6 +26202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1792518626}
+  - component: {fileID: 1792518627}
   m_Layer: 0
   m_Name: Enemigos
   m_TagString: Untagged
@@ -26207,6 +26227,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1792518627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792518625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131af90ca2ead9d45a09ba2ab0a51348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1795307644
 GameObject:
   m_ObjectHideFlags: 0
@@ -28492,6 +28524,25 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1846516732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8746371125819280407, guid: 0a91d995c86c1bd45bffc5c1a9afa7ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 1925882079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1846516733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846516732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 912a8e2331563f44894cf7ab0cd2ed98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 6684426476097144805, guid: ec75c05e7bed0a54ca3f19c3ce5d4755, type: 3}
 --- !u!4 &1878560922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2558622438175919472, guid: ea367619b94911f48b8163fe35fc5bad,
