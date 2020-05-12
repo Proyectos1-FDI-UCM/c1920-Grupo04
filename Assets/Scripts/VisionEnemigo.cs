@@ -11,6 +11,7 @@ public class VisionEnemigo : MonoBehaviour
 {
     //Script que detecta si el jugador está en el campo de visión de un enemigo, y activa el movimiento correspondiente de este enemigo
     public float visionRadio;
+    movimiento_enemigo movNormal;
     MovEnemigoPerseguir movEnemigoPerseguir;
     float timer = 0; //contador de tiempo para que el enemigo vuelva a detectarte tras haber llegado a su límite de posición
     Rigidbody2D rb;
@@ -24,9 +25,24 @@ public class VisionEnemigo : MonoBehaviour
         //player = GameManager.instance.DevolverJugador().gameObject;
         movEnemigoPerseguir = GetComponent<MovEnemigoPerseguir>();
         movEnemigoPerseguir.enabled = false;
+        movNormal = GetComponent<movimiento_enemigo>();
         rb = GetComponent<Rigidbody2D>();
-        estaGirado = false;
         player = PlayerController.instance.gameObject;
+        estaGirado = false;
+    }
+
+    private void OnEnable()
+        //Este script (visión) se activa cuando el enemigo de goma deja de estar dormido
+    {
+        movNormal.enabled = true; //Cuando se despierta se activa por defecto su movNormal
+    }
+
+    private void OnDisable()
+    //Este script (visión) SOLO se desactiva cuando el enemigo de goma se duerme
+    {
+        //Cuando se desactiva su visión se desactivan cualquier movimiento activado
+        movNormal.enabled = false;
+        movEnemigoPerseguir.enabled = false;
     }
 
     // Update is called once per frame
@@ -48,18 +64,17 @@ public class VisionEnemigo : MonoBehaviour
         float distancia = Vector2.Distance(player.transform.position, transform.position);
         timer += Time.fixedDeltaTime;
 
-        //Al activarse y desactivarse movEnemigoPerseguir, se activa/desactiva el movNormal con OnEnable/Disable en MovEnemigoPerseguir
-
         //Estos ifs se encargan de activar/desactivar movEnemigoPerseguir si el player entra en el campo de visión
         //Pero si el enemigo llega al límite de donde puede llegar, se encarga el propio movEnemigoPerseguir de desactivarse solo.
         if (distancia < visionRadio && !movEnemigoPerseguir.enabled && timer > 2f)
         {
             movEnemigoPerseguir.enabled = true;
-
+            movNormal.enabled = false;
         }
         if (distancia >= visionRadio && movEnemigoPerseguir.enabled)
         {
             movEnemigoPerseguir.enabled = false;
+            movNormal.enabled = true;
         }
     }
 
