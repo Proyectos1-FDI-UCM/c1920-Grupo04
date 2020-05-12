@@ -8,10 +8,9 @@ public class MovEnemigoPerseguir : MonoBehaviour
 
     Rigidbody2D rb;
     public int vel; //La velocidad cuando te persigue debería de ser mayor que cuando no.
-    movimiento_enemigo MovEnemigoNormal;
+    movimiento_enemigo movNormal;
     int direccion;
-
-    private GameObject player; //
+    private GameObject player;
 
 
     private void Awake()
@@ -22,21 +21,18 @@ public class MovEnemigoPerseguir : MonoBehaviour
     void Start()
     {
         //player = GameManager.instance.DevolverJugador().gameObject;
-        MovEnemigoNormal = GetComponent<movimiento_enemigo>();
+        movNormal = GetComponent<movimiento_enemigo>();
         player = PlayerController.instance.gameObject;
     }
-
+    /*
     private void OnEnable()
     {
-        if (MovEnemigoNormal)
-        {
-            MovEnemigoNormal.enabled = false;
-        }
+        MovEnemigoNormal.enabled = false;
     }
     private void OnDisable()
     {
         MovEnemigoNormal.enabled = true;
-    }
+    }*/
 
     private void FixedUpdate()
     {
@@ -57,7 +53,8 @@ public class MovEnemigoPerseguir : MonoBehaviour
         //si el trigger no tiene interact (la luz es la que tiene interact, pero queremos los demás triggers), ha llegado a su límite de movimiento
         if (other.GetComponent<Interact>() == null)
         {
-            this.enabled = false; //Se desactiva este script, y con el OnDisable, se activa el otro movimiento
+            movNormal.enabled = true;
+            this.enabled = false;
         }
         
     }

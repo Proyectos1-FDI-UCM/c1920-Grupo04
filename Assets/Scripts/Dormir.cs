@@ -8,23 +8,24 @@ public class Dormir : MonoBehaviour
     public Sprite despierto;
     public Sprite dormido;
     SpriteRenderer spriteRenderer;
-    movimiento_enemigo mov;
+    VisionEnemigo vision;
     Danyo danyo;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        mov = GetComponent<movimiento_enemigo>();
+        vision = GetComponent<VisionEnemigo>();
         danyo = GetComponent<Danyo>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.GetComponent<Interact>() != null && mov.enabled == false)   //Si el trigger tiene componente de interacción (solo el trigger de luz lo tiene)
+        if (vision.enabled == false && collision.GetComponent<Interact>() != null)   //Si el trigger tiene componente de interacción (solo el trigger de luz lo tiene)
         {
-            //Se activa su movimiento y su daño
-            mov.enabled = true;
+            //Se activa su visión y su daño
+            vision.enabled = true;
             danyo.enabled = true;
             spriteRenderer.sprite = despierto;
         }
@@ -32,10 +33,10 @@ public class Dormir : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponent<Interact>() != null)     //Si el trigger tiene componente de interacción (solo el trigger de luz lo tiene)
+        if (vision.enabled = true && collision.GetComponent<Interact>() != null)     //Si el trigger tiene componente de interacción (solo el trigger de luz lo tiene)
         {
-            //Se desactiva su movimiento y su daño
-            mov.enabled = false;
+            //Se desactiva su visión y su daño
+            vision.enabled = false;
             danyo.enabled = false;
             spriteRenderer.sprite = dormido;
         }
