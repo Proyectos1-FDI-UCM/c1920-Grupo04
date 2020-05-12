@@ -218,6 +218,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 spawn = GameManager.instance.EnviaSpawn();
         transform.position = spawn;
+        GameManager.instance.RespawnEnemies();
         //Por si acaso muriese en una plataforma
     }
     /*

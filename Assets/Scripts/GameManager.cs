@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     PlayerController jugadorPC;
+    RespawnPadre respaw;
     AudioManager audioManager;
     int vida_maxima = 3;
     int vida = 3;
@@ -155,6 +156,14 @@ public class GameManager : MonoBehaviour
     public Vector2 EnviaSpawn()
     {
         return spawn;
+    }
+    public void Reconocerespawn(RespawnPadre repo)
+    {
+        respaw = repo;
+    }
+    public void RespawnEnemies()
+    {
+        respaw.Respawn();
     }
     /*
     public GameObject GetPlayer()

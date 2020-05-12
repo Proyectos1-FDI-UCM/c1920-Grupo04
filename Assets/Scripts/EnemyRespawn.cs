@@ -8,6 +8,7 @@ public class EnemyRespawn : MonoBehaviour
     bool dead = false;
     public void Respawn()
     {
+
         if (dead)
         {
             Instantiate(enemy, gameObject.transform);
