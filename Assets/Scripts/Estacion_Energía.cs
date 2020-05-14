@@ -10,5 +10,6 @@ public class Estacion_Energía : MonoBehaviour
         GameManager.instance.EnergiaSuma(cantidad);
         Vector2 posi = new Vector2(jugador.transform.position.x, jugador.transform.position.y);
         GameManager.instance.GuardaSpawn(posi);
+        GameManager.instance.RespawnEnemies();
     }
 }
