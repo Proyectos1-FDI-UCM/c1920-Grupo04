@@ -20,7 +20,6 @@ public class PiesSpark : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        //if (collision.gameObject.CompareTag("suelo"))
-            GameManager.instance.SueloFuera();
+        GameManager.instance.SueloFuera();
     }
 }
