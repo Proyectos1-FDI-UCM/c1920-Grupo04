@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8869911060109683509}
   - component: {fileID: 6354396509214346452}
   - component: {fileID: 6090212354950953403}
+  - component: {fileID: 738049674861893596}
   m_Layer: 13
   m_Name: Pies
   m_TagString: Untagged
@@ -87,7 +88,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6478471727844003377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -118,6 +119,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783bdea8648f9a141b25a922c1fbf0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &738049674861893596
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478471727844003377}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.050448332, y: 4.4574256}
+      - {x: -0.3415248, y: 2.1453598}
+      - {x: -0.16619512, y: -0.47734335}
+      - {x: 0.3222699, y: -0.47734335}
+      - {x: 0.46922222, y: 2.0968032}
 --- !u!1 &8014812544536353502
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,9 +162,9 @@ GameObject:
   - component: {fileID: 8014812544536353500}
   - component: {fileID: 8014812544536353499}
   - component: {fileID: 197839411906608761}
-  - component: {fileID: 1726977044801677336}
   - component: {fileID: 2982402572757198028}
   - component: {fileID: 1927509395462534538}
+  - component: {fileID: 7341067911657066855}
   m_Layer: 8
   m_Name: Spark
   m_TagString: Player
@@ -268,39 +299,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bala: {fileID: 542567520535890736, guid: ed34aa7d5bc6d314e8dc03a66fbea6b4, type: 3}
   cadencia: 2
---- !u!60 &1726977044801677336
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8014812544536353502}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
-    newSize: {x: 2.46, y: 3.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.5256192, y: -1.2459282}
-      - {x: -0.37221956, y: 1.8360994}
-      - {x: 0.8014824, y: 1.834322}
-      - {x: 0.9218613, y: -1.2427636}
-    - - {x: -0.019281358, y: -1.9160912}
-      - {x: -0.5273425, y: -1.2456985}
-      - {x: 0.92050993, y: -1.2379029}
-      - {x: 0.7521229, y: -1.9160857}
 --- !u!61 &2982402572757198028
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -346,3 +344,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &7341067911657066855
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014812544536353502}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 2.46, y: 3.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.98185235, y: -1.5659634}
+      - {x: 0.75889075, y: 1.8380716}
+      - {x: -0.3257464, y: 1.8363203}
+      - {x: -0.48838806, y: -1.5759277}
