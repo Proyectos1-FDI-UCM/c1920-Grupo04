@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8869911060109683509}
   - component: {fileID: 6090212354950953403}
   - component: {fileID: 738049674861893596}
+  - component: {fileID: 6599325303436075981}
   m_Layer: 13
   m_Name: Pies
   m_TagString: Untagged
@@ -122,6 +123,18 @@ PolygonCollider2D:
       - {x: -0.16619512, y: -0.47734335}
       - {x: 0.3222699, y: -0.47734335}
       - {x: 0.46922222, y: 2.0968032}
+--- !u!114 &6599325303436075981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478471727844003377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51804496ff4c4d344a64c0cf2b0bbcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8014812544536353502
 GameObject:
   m_ObjectHideFlags: 0

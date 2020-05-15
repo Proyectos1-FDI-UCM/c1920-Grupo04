@@ -1622,7 +1622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291786307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.6, y: -2.5, z: 0}
+  m_LocalPosition: {x: -6.1, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 630921017}
@@ -21856,24 +21856,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980178054}
   m_CullTransparentMesh: 0
---- !u!1 &982593212 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6478471727844003377, guid: 81e57ec01287287478116cf9e7300509,
-    type: 3}
-  m_PrefabInstance: {fileID: 630921015}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &982593215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982593212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51804496ff4c4d344a64c0cf2b0bbcda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1024182345
 GameObject:
   m_ObjectHideFlags: 0
