@@ -6,11 +6,11 @@ public class Paracaidas : MonoBehaviour
 {
     int layermask;
     float distance;
-    Vector2 origin;
+    //Vector2 origin;
 
     void Start()
     {
-        origin = new Vector2(transform.position.x, transform.position.y);
+        //origin = new Vector2(transform.position.x, transform.position.y);
         distance = 0.5f;
         layermask = 1 << 17;
     }
@@ -19,9 +19,9 @@ public class Paracaidas : MonoBehaviour
     {
         Vector2 actualVel = gameObject.GetComponentInParent<Rigidbody2D>().velocity;
         if (actualVel.y < -5)
-            if (Physics2D.Raycast(origin, Vector2.down, distance, layermask))
+            if (Physics2D.Raycast(transform.position, Vector2.down, distance, layermask))
             {
-                Vector2 newVel = new Vector2(actualVel.x, -2);
+                Vector2 newVel = new Vector2(actualVel.x, -4);
                 gameObject.GetComponentInParent<Rigidbody2D>().velocity = newVel;
                 Debug.Log("Paracaidas");
             }
