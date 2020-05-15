@@ -269,7 +269,7 @@ MonoBehaviour:
   movLeftBlock: 0
   velY: 0
   velX: 0
-  maxFallVelY: 6
+  maxFallVelY: 18
   maxJumpVel: 18
 --- !u!114 &197839411906608761
 MonoBehaviour:
