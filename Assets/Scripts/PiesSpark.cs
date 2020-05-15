@@ -8,13 +8,18 @@ public class PiesSpark : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (collision.gameObject.CompareTag("suelo"))
+        if (Mathf.Abs(Vector2.Angle(collision.GetContact(0).normal, Vector2.down)) == 180)
+            GameManager.instance.SueloTocado();
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (Mathf.Abs(Vector2.Angle(collision.GetContact(0).normal, Vector2.down)) == 180)
             GameManager.instance.SueloTocado();
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        //if (collision.gameObject.CompareTag("suelo"))
-            GameManager.instance.SueloFuera();
+        GameManager.instance.SueloFuera();
     }
 }
