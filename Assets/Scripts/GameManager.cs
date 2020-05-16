@@ -165,6 +165,10 @@ public class GameManager : MonoBehaviour
     {
         respaw.Respawn();
     }
+    public void RespawnPlayer()
+    {
+        jugadorPC.Respawn();
+    }
     /*
     public GameObject GetPlayer()
     {
