@@ -20,7 +20,6 @@ public class Danyo : MonoBehaviour
             {
                 GameManager.instance.ChangeVida(-damage);
                 time = Time.time;
-                Debug.Log("hola");
             }
         }
     }
@@ -32,7 +31,6 @@ public class Danyo : MonoBehaviour
             {
                 GameManager.instance.ChangeVida(-damage);
                 time = Time.time;
-                Debug.Log("hola");
             }
         }
     }
