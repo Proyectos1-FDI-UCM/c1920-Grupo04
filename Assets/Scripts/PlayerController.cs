@@ -57,12 +57,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        salto = Input.GetKeyDown("w");
         deltaX = Input.GetAxis("Horizontal");
         animator.SetFloat("mov", Mathf.Abs(deltaX));
         setScale();
         deltaY = Input.GetAxis("Vertical");
         setScale();
-        salto = Input.GetKeyDown("w");
         if (rb.velocity.y < -maxFallVelY) rb.velocity = new Vector2(rb.velocity.x, -maxFallVelY);
         if (rb.velocity.y > maxJumpVel) rb.velocity = new Vector2(rb.velocity.x, maxJumpVel);
         velY = rb.velocity.y;
