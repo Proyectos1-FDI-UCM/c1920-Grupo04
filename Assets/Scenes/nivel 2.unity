@@ -4760,7 +4760,7 @@ GameObject:
   - component: {fileID: 1231518055}
   - component: {fileID: 1231518054}
   - component: {fileID: 1231518053}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Tilemap
   m_TagString: suelo
   m_Icon: {fileID: 0}
