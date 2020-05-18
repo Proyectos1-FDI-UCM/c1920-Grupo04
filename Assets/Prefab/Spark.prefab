@@ -263,8 +263,10 @@ MonoBehaviour:
   jump: {fileID: 0}
   cambioMov: {fileID: 798849815186791469, guid: b29eaa05e90f9534ab371a4512532020,
     type: 3}
+  pies: {fileID: 0}
   animator: {fileID: 1927509395462534538}
   enElSuelo: 0
+  contador: 0
   movRightBlock: 0
   movLeftBlock: 0
   velY: 0
@@ -355,7 +357,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.98185235, y: -1.5659634}
+    - - {x: 1.116811, y: -1.6112989}
       - {x: 0.75889075, y: 1.8380716}
       - {x: -0.3257464, y: 1.8363203}
-      - {x: -0.48838806, y: -1.5759277}
+      - {x: -0.4203917, y: -1.6055577}
