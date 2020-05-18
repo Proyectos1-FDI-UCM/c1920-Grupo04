@@ -19437,12 +19437,18 @@ PrefabInstance:
       propertyPath: maxFallVelY
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 8014812544536353499, guid: 81e57ec01287287478116cf9e7300509,
+        type: 3}
+      propertyPath: enElSuelo
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7564633086743900600, guid: 81e57ec01287287478116cf9e7300509,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6090212354950953403, guid: 81e57ec01287287478116cf9e7300509, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 81e57ec01287287478116cf9e7300509, type: 3}
 --- !u!1 &630921016 stripped
 GameObject:

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public Sprite jump;
     public GameObject cambioMov;
     public static PlayerController instance;
+    public Paracaidas pies;
     
     public Animator animator;
     Rigidbody2D rb;
@@ -21,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public bool enElSuelo = false;
     bool puedesDobleSalto = false;
     bool tienesDobleSalto = false;  //Tienes el power-up?
-    float contador = 0; //Se utiliza en el salto (tiempo tras salto para usar el doble salto)
+    public float contador = 0; //Se utiliza en el salto (tiempo tras salto para usar el doble salto)
     float gravedadIni;
     public bool movRightBlock, movLeftBlock;
     public float velY, velX;
@@ -50,7 +51,8 @@ public class PlayerController : MonoBehaviour
     {
         GameManager.instance.ReconocerJugador(this);
         gravedadIni = rb.gravityScale;
-        
+        movRightBlock = false;
+        movLeftBlock = false;
     }
 
     void Update()
@@ -65,6 +67,8 @@ public class PlayerController : MonoBehaviour
         if (rb.velocity.y > maxJumpVel) rb.velocity = new Vector2(rb.velocity.x, maxJumpVel);
         velY = rb.velocity.y;
         velX = rb.velocity.x;
+        movRightBlock = pies.CheckMove(Vector2.right, movRightBlock);
+        movLeftBlock = pies.CheckMove(Vector2.left, movLeftBlock);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -89,8 +93,8 @@ public class PlayerController : MonoBehaviour
         else if (collision.gameObject.tag == "exit") //en final por sprite
         {
             //Instantiate(cambioMov);
-            //Invoke("DelaySalto", 0.2f); //Movimiento normal (volver a saltar)
-            cable = false;
+            //Invoke("DelaySalto", 0.2f); 
+            cable = false; //Movimiento normal (volver a saltar)
             animator.enabled = true;
             GameManager.instance.MovNormal(); //Volver a disparar
             rb.gravityScale = 3;
@@ -102,7 +106,8 @@ public class PlayerController : MonoBehaviour
             //Cambio de collider del personaje       
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<PolygonCollider2D>().enabled = true;
-        }        
+        }
+        CheckLateralMoves(collision);
     }
 
     void DelaySalto()
@@ -124,21 +129,27 @@ public class PlayerController : MonoBehaviour
             movRightBlock = false;
     }
 
+    private void CheckLateralMoves(Collision2D collision)
+    {
+        string coll = collision.gameObject.tag;
+        if (coll != "exit" && coll != "cable")
+        {
+            ContactPoint2D contact = collision.GetContact(0);
+            // Checkea colsiones paredes. 
+            if (contact.normal.x > 0.9 && contact.normal.x < 1.1)
+                movLeftBlock = true;
+            if (contact.normal.x < -0.9 && contact.normal.x > -1.1)
+                movRightBlock = true;
+        }
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         movLeftBlock = false;
         movRightBlock = false;
     }
-    /*
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (movLeftBlock)
-            movLeftBlock = false;
-        else if (movRightBlock)
-            movRightBlock = false;
-        else if (rb.velocity.y < -0.9)
-            enElSuelo = false;
-    }*/
+
+
 
     public void ActivaDobleSalto()
     //Método llamado por el GameManager cuando coges el power-up de doble salto
@@ -161,6 +172,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         contador += Time.fixedDeltaTime; //Cuenta el tiempo desde el último salto normal
         //Sirve para dejar un tiempo entre un salto y el doble salto, ya que si este contador te hace los dos a la vez solo pulsando una sola vez
 
@@ -173,7 +185,7 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(deltaX * vel, rb.velocity.y); //Movimiento normal
 
             //SALTO
-            if (salto && GameManager.instance.TieneEnergia() && contador > 0.25f)   //Si tienes energía y pulsas salto
+            if (salto && GameManager.instance.TieneEnergia())   //Si tienes energía y pulsas salto
             {
                 //Hay dos posibilidades, o salto normal o el doble.
 
@@ -187,7 +199,7 @@ public class PlayerController : MonoBehaviour
                     salto = false;
                 }
 
-                else if (puedesDobleSalto)  //Si no estás en el suelo, y puedes realizar el doble salto
+                else if (puedesDobleSalto && contador > 0.25f)  //Si no estás en el suelo, y puedes realizar el doble salto
                 {
                     AudioManager.instance.PlaySound("jump", "play");
                     rb.velocity = new Vector2(deltaX * vel, 0f); //Se pierde la velocidad que llevases vertical para el siguiente impulso
