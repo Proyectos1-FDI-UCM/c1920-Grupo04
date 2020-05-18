@@ -24,15 +24,6 @@ public class MovEnemigoPerseguir : MonoBehaviour
         movNormal = GetComponent<movimiento_enemigo>();
         player = PlayerController.instance.gameObject;
     }
-    /*
-    private void OnEnable()
-    {
-        MovEnemigoNormal.enabled = false;
-    }
-    private void OnDisable()
-    {
-        MovEnemigoNormal.enabled = true;
-    }*/
 
     private void FixedUpdate()
     {
@@ -51,7 +42,7 @@ public class MovEnemigoPerseguir : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         //si el trigger no tiene interact (la luz es la que tiene interact, pero queremos los demás triggers), ha llegado a su límite de movimiento
-        if (other.GetComponent<Interact>() == null)
+        if (this.enabled && other.GetComponent<Interact>() == null)
         {
             movNormal.enabled = true;
             this.enabled = false;

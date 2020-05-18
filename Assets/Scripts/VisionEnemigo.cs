@@ -18,17 +18,20 @@ public class VisionEnemigo : MonoBehaviour
     bool estaGirado;
     private GameObject player;
 
-
+    private void Awake()
+    {
+        estaGirado = false;
+        movNormal = GetComponent<movimiento_enemigo>();
+    }
     // Start is called before the first frame update
     void Start()
     {
         //player = GameManager.instance.DevolverJugador().gameObject;
         movEnemigoPerseguir = GetComponent<MovEnemigoPerseguir>();
         movEnemigoPerseguir.enabled = false;
-        movNormal = GetComponent<movimiento_enemigo>();
         rb = GetComponent<Rigidbody2D>();
         player = PlayerController.instance.gameObject;
-        estaGirado = false;
+        
     }
 
     private void OnEnable()
@@ -63,6 +66,7 @@ public class VisionEnemigo : MonoBehaviour
         //Distancia entre enemigo y jugador
         float distancia = Vector2.Distance(player.transform.position, transform.position);
         timer += Time.fixedDeltaTime;
+
 
         //Estos ifs se encargan de activar/desactivar movEnemigoPerseguir si el player entra en el campo de visión
         //Pero si el enemigo llega al límite de donde puede llegar, se encarga el propio movEnemigoPerseguir de desactivarse solo.

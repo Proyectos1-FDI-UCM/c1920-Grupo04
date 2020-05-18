@@ -10,6 +10,7 @@ public class Dormir : MonoBehaviour
     SpriteRenderer spriteRenderer;
     VisionEnemigo vision;
     Danyo danyo;
+    Rigidbody2D rb;
     
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class Dormir : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         vision = GetComponent<VisionEnemigo>();
         danyo = GetComponent<Danyo>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -39,6 +41,7 @@ public class Dormir : MonoBehaviour
             vision.enabled = false;
             danyo.enabled = false;
             spriteRenderer.sprite = dormido;
+            rb.velocity = Vector2.zero;
         }
     }
 

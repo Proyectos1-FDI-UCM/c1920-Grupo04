@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fde1478f776e8854b88bd81e63d197f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee0c6529c203b36498de24dc44675144, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7968301819900757953}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9ebac7624aae9c4d96192eb69ac3783, type: 3}
   m_Name: 
@@ -144,13 +144,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7968301819900757953}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7caa5806e33c9394a9843e5cc8f92c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   visionRadio: 20
-  player: {fileID: 0}
 --- !u!114 &1320293410355638019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,13 +157,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7968301819900757953}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8d000d2b9f06514f87e6c729249da0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 6
-  player: {fileID: 0}
 --- !u!114 &2450437516207325863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +170,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7968301819900757953}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62111142af6158c4698fbc742078bf4f, type: 3}
   m_Name: 
