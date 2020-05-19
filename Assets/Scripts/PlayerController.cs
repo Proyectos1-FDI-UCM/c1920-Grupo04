@@ -11,7 +11,9 @@ public class PlayerController : MonoBehaviour
     public Sprite jump;
     public GameObject cambioMov;
     public static PlayerController instance;
-    
+   
+    float saltotimer;
+
     public Animator animator;
     Rigidbody2D rb;
     float deltaX, deltaY;
@@ -61,7 +63,9 @@ public class PlayerController : MonoBehaviour
         deltaY = Input.GetAxis("Vertical");
         setScale();
         salto = Input.GetKeyDown("w");
-       
+
+        saltotimer += Time.deltaTime;
+
         if (rb.velocity.y < -maxFallVelY) rb.velocity = new Vector2(rb.velocity.x, -maxFallVelY);
         if (rb.velocity.y > maxJumpVel) rb.velocity = new Vector2(rb.velocity.x, maxJumpVel);
         velY = rb.velocity.y;
@@ -151,8 +155,13 @@ public class PlayerController : MonoBehaviour
     public void HeTocadoSuelo()
     //Llamado desde los pies a través del GameManager
     {
+       
         puedesDobleSalto = tienesDobleSalto;    //Se podrá usar de nuevo el doble salto (si lo tienes)
         enElSuelo = true;                       //Está en el suelo (puede saltar sin gastar el doble salto)
+        if (saltotimer >= 1f)
+        {
+            animator.SetFloat("jump", 0f); //animación salto acaba
+        }
     }
 
     public void DejadoDeTocarSuelo()
@@ -176,12 +185,14 @@ public class PlayerController : MonoBehaviour
             //SALTO
             if (salto && GameManager.instance.TieneEnergia() && contador > 0.25f)   //Si tienes energía y pulsas salto
             {
-                animator.enabled = false;
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = jump; //Sprite salto
+               
                 //Hay dos posibilidades, o salto normal o el doble.
 
                 if (enElSuelo)   //Si estás en el suelo
                 {
+                    saltotimer = 0;
+                    animator.SetFloat("jump", 2f);//animación salto
+
                     //saltas
                     AudioManager.instance.PlaySound("jump", "play");
                     GameManager.instance.EnergiaSuma(-1);
@@ -193,6 +204,9 @@ public class PlayerController : MonoBehaviour
 
                 else if (puedesDobleSalto)  //Si no estás en el suelo, y puedes realizar el doble salto
                 {
+                    saltotimer = 0;
+                    animator.SetFloat("jump", 2f);//animación salto
+
                     AudioManager.instance.PlaySound("jump", "play");
                     rb.velocity = new Vector2(deltaX * vel, 0f); //Se pierde la velocidad que llevases vertical para el siguiente impulso
                     //(en el salto normal no es perder la velocidad vertical porque al estar en el suelo es 0)
