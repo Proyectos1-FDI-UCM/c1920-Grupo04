@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
     public static bool gameIsPaused = false;
     //gameobject menu de pausa
     public GameObject pauseMenuUI;
+    //GameManager para poder destruirlo al volver al menu
+    public GameManager instance;
    
     void Update()
     {
@@ -55,6 +57,7 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Loading menu ...");
         AudioManager.instance.PlaySound("DBala", "play");
         Time.timeScale = 1f;
+        Destroy(instance.gameObject);
         SceneManager.LoadScene(0);
     }
 }

@@ -17894,6 +17894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndUI: {fileID: 592565941}
+  gameManager: {fileID: 1824956465}
 --- !u!114 &1795889900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17907,6 +17908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1839323629}
+  instance: {fileID: 1824956465}
 --- !u!114 &1795889901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18017,6 +18019,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1824956465 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 935425228326059536, guid: 245c2e845f659d44e91e7bad6e44f906,
+    type: 3}
+  m_PrefabInstance: {fileID: 1438402637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059773dbedf4ed04a9dd15ee9ca56fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1839323629
 GameObject:
   m_ObjectHideFlags: 0

@@ -25351,6 +25351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndUI: {fileID: 281563920}
+  gameManager: {fileID: 0}
 --- !u!61 &1529540163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29673,6 +29674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 2030444995}
+  instance: {fileID: 90972334}
 --- !u!114 &2047519134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29686,6 +29688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndUI: {fileID: 281563920}
+  gameManager: {fileID: 90972334}
 --- !u!1 &2053382371
 GameObject:
   m_ObjectHideFlags: 0
