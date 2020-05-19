@@ -19437,6 +19437,12 @@ PrefabInstance:
       propertyPath: maxFallVelY
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 8014812544536353499, guid: 81e57ec01287287478116cf9e7300509,
+        type: 3}
+      propertyPath: jump
+      value: 
+      objectReference: {fileID: 21300000, guid: 767cedd1b6031e34aa440660df4d01c8,
+        type: 3}
     - target: {fileID: 7564633086743900600, guid: 81e57ec01287287478116cf9e7300509,
         type: 3}
       propertyPath: m_Enabled

@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour
         deltaY = Input.GetAxis("Vertical");
         setScale();
         salto = Input.GetKeyDown("w");
+       
         if (rb.velocity.y < -maxFallVelY) rb.velocity = new Vector2(rb.velocity.x, -maxFallVelY);
         if (rb.velocity.y > maxJumpVel) rb.velocity = new Vector2(rb.velocity.x, maxJumpVel);
         velY = rb.velocity.y;
@@ -175,6 +176,8 @@ public class PlayerController : MonoBehaviour
             //SALTO
             if (salto && GameManager.instance.TieneEnergia() && contador > 0.25f)   //Si tienes energía y pulsas salto
             {
+                animator.enabled = false;
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = jump; //Sprite salto
                 //Hay dos posibilidades, o salto normal o el doble.
 
                 if (enElSuelo)   //Si estás en el suelo
@@ -185,6 +188,7 @@ public class PlayerController : MonoBehaviour
                     rb.AddForce((Vector2.up) * forceJump, ForceMode2D.Impulse);
                     contador = 0;   //reseteas el contador para realizar el doble salto
                     salto = false;
+                    
                 }
 
                 else if (puedesDobleSalto)  //Si no estás en el suelo, y puedes realizar el doble salto
