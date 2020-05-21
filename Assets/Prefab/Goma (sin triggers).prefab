@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1320293410355638019}
   - component: {fileID: 2450437516207325863}
   - component: {fileID: 8979389220721783518}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Goma (sin triggers)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

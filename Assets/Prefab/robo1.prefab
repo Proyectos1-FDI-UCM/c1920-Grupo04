@@ -114,7 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visionRadio: 11
-  player: {fileID: 8014812544536353502, guid: 81e57ec01287287478116cf9e7300509, type: 3}
 --- !u!114 &4052860481977525966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +127,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 5
-  player: {fileID: 8014812544536353502, guid: 81e57ec01287287478116cf9e7300509, type: 3}
 --- !u!114 &6684426476097144728
 MonoBehaviour:
   m_ObjectHideFlags: 0
