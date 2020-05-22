@@ -8,13 +8,13 @@ public class Drop : MonoBehaviour
 
     public GameObject drop;  //game object público que se va a dropear (batertía)
 
-    Disparo scriptDisparo;
+    DisparoRobot scriptDisparo;
 
     // Start is called before the first frame update
     void Start()
     {
         //guarda en scriptDisparo si este gameObject (robot) tiene o no este script
-        scriptDisparo = this.gameObject.GetComponent<Disparo>();
+        scriptDisparo = this.gameObject.GetComponent<DisparoRobot>();
     }
 
     private void OnDestroy()
