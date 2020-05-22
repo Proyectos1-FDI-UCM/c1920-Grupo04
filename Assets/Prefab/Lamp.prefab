@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5816323277598954939}
   - component: {fileID: 5816323277598954937}
   m_Layer: 0
-  m_Name: Lamp_0
+  m_Name: Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5816323277598954940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.59, y: 8.22, z: 426.09436}
+  m_LocalPosition: {x: -13.59, y: 8.22, z: 0}
   m_LocalScale: {x: 1.449, y: 1.449, z: 1.449}
   m_Children: []
   m_Father: {fileID: 0}
