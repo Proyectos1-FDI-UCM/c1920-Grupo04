@@ -29388,14 +29388,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 630921016}
-    - target: {fileID: 8746371124469490322, guid: 0a91d995c86c1bd45bffc5c1a9afa7ff,
-        type: 3}
-      propertyPath: CD
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8746371124469490321, guid: 0a91d995c86c1bd45bffc5c1a9afa7ff,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746371124469490322, guid: 0a91d995c86c1bd45bffc5c1a9afa7ff,
+        type: 3}
+      propertyPath: CD
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
