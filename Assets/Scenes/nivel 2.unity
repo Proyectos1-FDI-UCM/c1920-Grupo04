@@ -1756,9 +1756,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 430723530}
-  - {fileID: 906744666}
-  - {fileID: 1282097885}
   - {fileID: 1004014210}
   - {fileID: 864611439}
   - {fileID: 312681385}
@@ -1768,7 +1765,7 @@ Transform:
   - {fileID: 1308688258}
   - {fileID: 526190875}
   m_Father: {fileID: 599962850}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &238598162
 GameObject:
@@ -2262,6 +2259,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1813597710}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &323563627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 323563628}
+  m_Layer: 0
+  m_Name: Robots disparo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &323563628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323563627}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 430723530}
+  - {fileID: 906744666}
+  - {fileID: 1282097885}
+  m_Father: {fileID: 599962850}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &328281225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2342,7 +2372,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 224632432}
+    m_TransformParent: {fileID: 323563628}
     m_Modifications:
     - target: {fileID: 3332473023471832897, guid: f8892dba41639aa4ebef7ffe7503e927,
         type: 3}
@@ -3648,6 +3678,7 @@ Transform:
   m_LocalPosition: {x: 11.812481, y: -8.85041, z: -16878.701}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 323563628}
   - {fileID: 224632432}
   - {fileID: 1188198121}
   m_Father: {fileID: 0}
@@ -4644,7 +4675,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 224632432}
+    m_TransformParent: {fileID: 323563628}
     m_Modifications:
     - target: {fileID: 3332473023471832897, guid: f8892dba41639aa4ebef7ffe7503e927,
         type: 3}
@@ -5850,7 +5881,7 @@ Transform:
   - {fileID: 1634882490}
   - {fileID: 1448110408}
   m_Father: {fileID: 599962850}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1190124515
 PrefabInstance:
@@ -17645,7 +17676,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 224632432}
+    m_TransformParent: {fileID: 323563628}
     m_Modifications:
     - target: {fileID: 3332473023471832897, guid: f8892dba41639aa4ebef7ffe7503e927,
         type: 3}
