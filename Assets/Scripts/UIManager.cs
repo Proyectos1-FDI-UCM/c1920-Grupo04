@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     public Image bat7;
     public Image bat8;
     public Image batextra;
-    public Text scoreText;
+    public Text scoreText, finalScoreText;
     private int aux = 0; //Recordar cuantas energias tenemos
     private int maxbat = 7;
 
@@ -102,5 +102,6 @@ public class UIManager : MonoBehaviour
     //Actualiza la puntuación en el HUD
     {
         scoreText.text = puntuacion.ToString();
+        finalScoreText.text = puntuacion.ToString();
     }
 }
