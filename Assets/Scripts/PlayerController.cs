@@ -275,9 +275,8 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Render(bool aux)
-        //Desactiva o activa el sprite / animator, cuando Spark parpadea
+        //Desactiva o activa el sprite, cuando Spark parpadea
     {
-        animator.enabled = aux;
         spriteRend.enabled = aux;
     }
 
