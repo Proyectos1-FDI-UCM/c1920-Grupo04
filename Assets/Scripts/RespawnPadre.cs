@@ -10,16 +10,19 @@ public class RespawnPadre : MonoBehaviour
     }
     public void Respawn()
     {
-        foreach (Transform child in transform)
+        for (int i = 0; i < transform.childCount; i++)
         {
-            if (child.GetComponent<EnemyRespawn>())
+            foreach (Transform child in transform.GetChild(i))
             {
-                child.GetComponent<EnemyRespawn>().Respawn();
-            }
+                if (child.GetComponent<EnemyRespawn>())
+                {
+                    child.GetComponent<EnemyRespawn>().Respawn();
+                }
 
-            /*
-            child.GetComponent<EnemyRespawn>().Respawn();
-            GetComponent<EnemyRespawn>().Respawn(); */
+                /*
+                child.GetComponent<EnemyRespawn>().Respawn();
+                GetComponent<EnemyRespawn>().Respawn(); */
+            }
         }
     }
 }
