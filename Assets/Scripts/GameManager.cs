@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
             uimanag.RecuperaVida();
             vida = vida_maxima;
         }
+        else jugadorPC.Parpadea(); //Si le han quitado vida, y no ha muerto
 
         uimanag.EnseñaVidas(vida);
     }

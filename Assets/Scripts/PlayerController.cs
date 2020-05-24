@@ -11,16 +11,14 @@ public class PlayerController : MonoBehaviour
     public Sprite jump;
     public GameObject cambioMov;
     public static PlayerController instance;
-   
-    float saltotimer;
-
     public Animator animator;
+    public bool enElSuelo = false;
+    float saltotimer;
     Rigidbody2D rb;
     float deltaX, deltaY;
     bool salto;
     private Vector2 scale;
     private bool cable = false;
-    public bool enElSuelo = false;
     bool puedesDobleSalto = false;
     bool tienesDobleSalto = false;  //Tienes el power-up?
     float contador = 0; //Se utiliza en el salto (tiempo tras salto para usar el doble salto)
@@ -28,6 +26,9 @@ public class PlayerController : MonoBehaviour
     public bool movRightBlock, movLeftBlock;
     public float velY, velX;
     public float maxFallVelY, maxJumpVel;
+    bool parpadeo;
+    float parpadeoTimer;
+    SpriteRenderer spriteRend;
 
     void Awake()
     {
@@ -51,8 +52,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         GameManager.instance.ReconocerJugador(this);
+        spriteRend = GetComponent<SpriteRenderer>();
         gravedadIni = rb.gravityScale;
-        
+        parpadeo = false;
+        parpadeoTimer = 0f;
     }
 
     void Update()
@@ -70,6 +73,24 @@ public class PlayerController : MonoBehaviour
         if (rb.velocity.y > maxJumpVel) rb.velocity = new Vector2(rb.velocity.x, maxJumpVel);
         velY = rb.velocity.y;
         velX = rb.velocity.x;
+
+        //Parpadeo si te quitan vida
+        if (parpadeo)
+        {
+            parpadeoTimer += Time.deltaTime;
+            if (parpadeoTimer < 0.15f) Render(false);
+            else if (parpadeoTimer < 0.3f) Render(true);
+            else if (parpadeoTimer < 0.45f) Render(false);
+            else if (parpadeoTimer < 0.6f) Render(true);
+            else if (parpadeoTimer < 0.75f) Render(false);
+            else if (parpadeoTimer < 0.9f)
+            {
+                Render(true);
+                //Reseteo
+                parpadeo = false;
+                parpadeoTimer = 0f;
+            }
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -148,16 +169,6 @@ public class PlayerController : MonoBehaviour
         movLeftBlock = false;
         movRightBlock = false;
     }
-    /*
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (movLeftBlock)
-            movLeftBlock = false;
-        else if (movRightBlock)
-            movRightBlock = false;
-        else if (rb.velocity.y < -0.9)
-            enElSuelo = false;
-    }*/
 
     public void ActivaDobleSalto()
     //Método llamado por el GameManager cuando coges el power-up de doble salto
@@ -256,10 +267,19 @@ public class PlayerController : MonoBehaviour
         GameManager.instance.RespawnEnemies();
         //Por si acaso muriese en una plataforma
     }
-    /*
-    public GameObject GetPlayerGameObject()
+
+    public void Parpadea()
+        //Método llamado al perder vida para que Spark empiece a parpadear
     {
-        return rb.gameObject;
-    }*/    
+        parpadeo = true;
+    }
+
+    private void Render(bool aux)
+        //Desactiva o activa el sprite / animator, cuando Spark parpadea
+    {
+        animator.enabled = aux;
+        spriteRend.enabled = aux;
+    }
+
 }
 
