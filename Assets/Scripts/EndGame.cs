@@ -11,8 +11,6 @@ public class EndGame : MonoBehaviour
     public GameObject EndUI;
     //este booleano es para saber si ha terminado el nivel (de momento no tiene uso, esto se usara cuando haya mas niveles)
     public static bool levelFinished = false;
-    //esto es el GameManager para poder destruirlo al regresar al menu
-    public GameManager gameManager;
 
     //esto es para regresar al menu principal
     public void returnMenu () {
@@ -24,7 +22,7 @@ public class EndGame : MonoBehaviour
 
         //esto destruye el GameManager antes de que se cargue la escena del menu para que no cause problemas
         //si se quiere empezar una nueva partida
-        Destroy(gameManager.gameObject);
+        Destroy(GameManager.instance.gameObject);
         SceneManager.LoadScene(0);
     }
 
