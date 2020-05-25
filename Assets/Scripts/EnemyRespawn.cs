@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class EnemyRespawn : MonoBehaviour
 {
-    GameObject enemy;
+    public GameObject enemy;
     bool dead = false;
-    private void Start()
-    {        
-        enemy = transform.GetChild(0).gameObject;
-    }
+
     public void Respawn()
     {
         if (dead)
         {
-            Instantiate(enemy, gameObject.transform);
+            Instantiate(enemy, transform);
             dead = false;
         }
     }

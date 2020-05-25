@@ -2989,28 +2989,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4992074956027677776, guid: 5748653c315875a4587eec9f511ac0cf,
         type: 3}
-      propertyPath: m_UVRect.width
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992074956027677776, guid: 5748653c315875a4587eec9f511ac0cf,
-        type: 3}
-      propertyPath: m_UVRect.x
-      value: -0.035
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992074956027677776, guid: 5748653c315875a4587eec9f511ac0cf,
-        type: 3}
       propertyPath: m_RaycastTarget
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992074956027677776, guid: 5748653c315875a4587eec9f511ac0cf,
-        type: 3}
-      propertyPath: m_UVRect.y
-      value: 0.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992074956027677776, guid: 5748653c315875a4587eec9f511ac0cf,
-        type: 3}
-      propertyPath: m_UVRect.height
-      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5748653c315875a4587eec9f511ac0cf, type: 3}

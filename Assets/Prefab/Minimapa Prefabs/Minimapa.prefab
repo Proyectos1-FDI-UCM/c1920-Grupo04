@@ -145,10 +145,10 @@ MonoBehaviour:
   m_Texture: {fileID: 8400000, guid: 920d9d7bb1765714fbab45a397f28909, type: 2}
   m_UVRect:
     serializedVersion: 2
-    x: 0.025
-    y: 0.33
-    width: 0.95
-    height: 0.325
+    x: 0.014
+    y: 0.285
+    width: 0.9
+    height: 0.3
 --- !u!1 &4992074956486286387
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 4992074956486286388}
   - component: {fileID: 4992074956486286389}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Minimapa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
