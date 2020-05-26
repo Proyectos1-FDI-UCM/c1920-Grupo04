@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     Vector2 spawn;
     UIManager uimanag;
     bool disparo = true; // indica si puede disparar
+    bool DSalto = false; // indica si puede hacer el doble salto
 
     private void Awake()
     {
@@ -185,5 +186,20 @@ public class GameManager : MonoBehaviour
     public void freeDisparo()
     {
         disparo = true;
+    }
+
+    public bool puedeDSalto()
+    {
+        return DSalto;
+    }
+
+    public void blockDSalto()
+    {
+        DSalto = false;
+    }
+
+    public void freeDSalto()
+    {
+        DSalto = true;
     }
 }

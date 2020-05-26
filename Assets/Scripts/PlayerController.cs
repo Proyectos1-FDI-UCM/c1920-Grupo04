@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     bool parpadeo;
     float parpadeoTimer;
     SpriteRenderer spriteRend;
+    public GameObject CD_DSalto;
 
     void Awake()
     {
@@ -175,6 +176,7 @@ public class PlayerController : MonoBehaviour
     {
         tienesDobleSalto = true;
         enElSuelo = true; //Esto no debería de estar aquí, pero soluciona el bug de que al coger el doble salto no podías saltar
+        CD_DSalto.SetActive(true);
     }
 
     public void HeTocadoSuelo()
@@ -192,6 +194,7 @@ public class PlayerController : MonoBehaviour
     public void DejadoDeTocarSuelo()
     {
         enElSuelo = false;                      //No se puede saltar, a no ser que tengas el doble
+        GameManager.instance.freeDSalto();
     }
 
     void FixedUpdate()
@@ -208,7 +211,7 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(deltaX * vel, rb.velocity.y); //Movimiento normal
 
             //SALTO
-            if (salto && GameManager.instance.TieneEnergia() && contador > 0.25f)   //Si tienes energía y pulsas salto
+            if (salto && GameManager.instance.TieneEnergia())   //Si tienes energía y pulsas salto
             {
                
                 //Hay dos posibilidades, o salto normal o el doble.
@@ -227,7 +230,7 @@ public class PlayerController : MonoBehaviour
                     
                 }
 
-                else if (puedesDobleSalto)  //Si no estás en el suelo, y puedes realizar el doble salto
+                else if (puedesDobleSalto && contador > 0.25f && GameManager.instance.puedeDSalto())  //Si no estás en el suelo, y puedes realizar el doble salto
                 {
                     saltotimer = 0;
                     animator.SetFloat("jump", 2f);//animación salto
@@ -241,6 +244,7 @@ public class PlayerController : MonoBehaviour
                     rb.AddForce((Vector2.up) * forceJump, ForceMode2D.Impulse);
                     puedesDobleSalto = false;   //pierdes la capacidad del doble salto
                     salto = false;
+                    GameManager.instance.blockDSalto();
                 }                
             }
         }
