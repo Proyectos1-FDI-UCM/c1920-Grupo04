@@ -179,6 +179,12 @@ public class PlayerController : MonoBehaviour
         CD_DSalto.SetActive(true);
     }
 
+    public void Nivel2Inicializacion()
+    {
+        tienesDobleSalto = true;
+        CD_DSalto.SetActive(true);
+    }
+
     public void HeTocadoSuelo()
     //Llamado desde los pies a través del GameManager
     {

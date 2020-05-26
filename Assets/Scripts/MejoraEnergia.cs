@@ -9,7 +9,7 @@ public class MejoraEnergia : MonoBehaviour
         if (jugador.gameObject.GetComponent<PlayerController>() != null)
         {
             AudioManager.instance.PlaySound("PowerUp", "play");
-            GameManager.instance.MejoraEnergia(1);
+            GameManager.instance.MejoraEnergia();
             Destroy(this.gameObject);
         }
     }
