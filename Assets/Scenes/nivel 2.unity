@@ -2309,6 +2309,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 323563628}
     m_Modifications:
+    - target: {fileID: 3332473023471832897, guid: f8892dba41639aa4ebef7ffe7503e927,
+        type: 3}
+      propertyPath: m_Name
+      value: Robot Ranged Corpse (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 4823576353606261972, guid: f8892dba41639aa4ebef7ffe7503e927,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2318,11 +2323,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332473023471832897, guid: f8892dba41639aa4ebef7ffe7503e927,
-        type: 3}
-      propertyPath: m_Name
-      value: Robot Ranged Corpse (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3332473023471832909, guid: f8892dba41639aa4ebef7ffe7503e927,
         type: 3}
@@ -4285,6 +4285,12 @@ PrefabInstance:
       propertyPath: nextTimeDoorCanOpen
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8331135578958222256, guid: ca1abe6093cfc0840984eed9fdd38b0b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3965e728a022c7f49bddf0bf8cfa7677,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca1abe6093cfc0840984eed9fdd38b0b, type: 3}
 --- !u!1 &853916297 stripped
@@ -4458,6 +4464,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 323563628}
     m_Modifications:
+    - target: {fileID: 3332473023471832897, guid: f8892dba41639aa4ebef7ffe7503e927,
+        type: 3}
+      propertyPath: m_Name
+      value: Robot Ranged Corpse (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4823576353606261972, guid: f8892dba41639aa4ebef7ffe7503e927,
         type: 3}
       propertyPath: m_RootOrder
@@ -4477,11 +4488,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332473023471832897, guid: f8892dba41639aa4ebef7ffe7503e927,
-        type: 3}
-      propertyPath: m_Name
-      value: Robot Ranged Corpse (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3332473023471832909, guid: f8892dba41639aa4ebef7ffe7503e927,
         type: 3}
@@ -4554,11 +4560,6 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3332473023798017692, guid: f8892dba41639aa4ebef7ffe7503e927,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7472193005422468050, guid: f8892dba41639aa4ebef7ffe7503e927,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -4568,6 +4569,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.1818182
+      objectReference: {fileID: 0}
+    - target: {fileID: 3332473023798017692, guid: f8892dba41639aa4ebef7ffe7503e927,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8892dba41639aa4ebef7ffe7503e927, type: 3}
@@ -17545,6 +17551,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 323563628}
     m_Modifications:
+    - target: {fileID: 3332473023471832897, guid: f8892dba41639aa4ebef7ffe7503e927,
+        type: 3}
+      propertyPath: m_Name
+      value: Robot Ranged Corpse
+      objectReference: {fileID: 0}
     - target: {fileID: 4823576353606261972, guid: f8892dba41639aa4ebef7ffe7503e927,
         type: 3}
       propertyPath: m_RootOrder
@@ -17564,11 +17575,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.606669
-      objectReference: {fileID: 0}
-    - target: {fileID: 3332473023471832897, guid: f8892dba41639aa4ebef7ffe7503e927,
-        type: 3}
-      propertyPath: m_Name
-      value: Robot Ranged Corpse
       objectReference: {fileID: 0}
     - target: {fileID: 3332473023471832909, guid: f8892dba41639aa4ebef7ffe7503e927,
         type: 3}
@@ -17641,11 +17647,6 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3332473023798017692, guid: f8892dba41639aa4ebef7ffe7503e927,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7472193005422468050, guid: f8892dba41639aa4ebef7ffe7503e927,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -17655,6 +17656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.1818182
+      objectReference: {fileID: 0}
+    - target: {fileID: 3332473023798017692, guid: f8892dba41639aa4ebef7ffe7503e927,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8892dba41639aa4ebef7ffe7503e927, type: 3}
@@ -18126,6 +18132,12 @@ PrefabInstance:
       propertyPath: objetivo.Array.data[1]
       value: 
       objectReference: {fileID: 195890965}
+    - target: {fileID: 8331135578958222256, guid: ca1abe6093cfc0840984eed9fdd38b0b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3965e728a022c7f49bddf0bf8cfa7677,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca1abe6093cfc0840984eed9fdd38b0b, type: 3}
 --- !u!1001 &1365528347
@@ -19111,6 +19123,17 @@ PrefabInstance:
       propertyPath: objetivo.Array.data[1]
       value: 
       objectReference: {fileID: 34313582}
+    - target: {fileID: 8331135578958222256, guid: ca1abe6093cfc0840984eed9fdd38b0b,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331135578958222256, guid: ca1abe6093cfc0840984eed9fdd38b0b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3965e728a022c7f49bddf0bf8cfa7677,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca1abe6093cfc0840984eed9fdd38b0b, type: 3}
 --- !u!1001 &1501995408
@@ -20317,6 +20340,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 368338267}
     m_Modifications:
+    - target: {fileID: 2470212961085494166, guid: a52010308bdc6244290e93206ab32bb1,
+        type: 3}
+      propertyPath: m_Name
+      value: Abilities
+      objectReference: {fileID: 0}
     - target: {fileID: 2068771008312482968, guid: a52010308bdc6244290e93206ab32bb1,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -20351,11 +20379,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2470212961085494166, guid: a52010308bdc6244290e93206ab32bb1,
-        type: 3}
-      propertyPath: m_Name
-      value: Abilities
       objectReference: {fileID: 0}
     - target: {fileID: 1228134749505605032, guid: a52010308bdc6244290e93206ab32bb1,
         type: 3}
@@ -21578,6 +21601,12 @@ PrefabInstance:
       propertyPath: objetivo.Array.data[0]
       value: 
       objectReference: {fileID: 724402176}
+    - target: {fileID: 8331135578958222256, guid: ca1abe6093cfc0840984eed9fdd38b0b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3965e728a022c7f49bddf0bf8cfa7677,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca1abe6093cfc0840984eed9fdd38b0b, type: 3}
 --- !u!1 &2102152840
