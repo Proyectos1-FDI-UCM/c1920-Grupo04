@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
         animator.enabled = false;
         GameManager.instance.MovCable(); //Avisar dejar de disparar
         rb.gravityScale = 0;
-        transform.localScale = scale * new Vector2(0.45f, 0.45f); //Cambiar el tamaño para evitar tener la misma box collider
+        transform.localScale = scale * new Vector2(0.2f, 0.2f); //Cambiar el tamaño para evitar tener la misma box collider
 
         this.gameObject.GetComponent<SpriteRenderer>().sprite = enCable; //Sprite cable
         GameObject ChildGameObject = collision.transform.GetChild(0).gameObject; //Punto de entrada
