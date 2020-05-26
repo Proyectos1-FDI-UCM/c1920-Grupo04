@@ -28,7 +28,7 @@ public class Interact : MonoBehaviour
       
     }
     private void OnEnable() {
-        //AudioManager.instance.PlaySound("interruptor", "play");
+        //AudioManager.instance.PlaySound("interruptor", "play"); ...ESTO DABA ERROR...
         Debug.Log("Activado");
         if (spriteRenderer.sprite == LampOff) {
             spriteRenderer.sprite = LampOn;

@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public bool mov = true; //true: mov normal  false: mov cable
     Vector2 spawn;
     UIManager uimanag;
+    bool disparo = true; // indica si puede disparar
 
     private void Awake()
     {
@@ -170,17 +171,19 @@ public class GameManager : MonoBehaviour
     {
         jugadorPC.Respawn();
     }
-    /*
-    public GameObject GetPlayer()
+
+    public bool puedeDisparo()
     {
-        return jugadorPC.GetPlayerGameObject();
-    }*/
-    //public void SetAudioManager(AudioManager AM)
-    //{
-    //    audioManager = AM;
-    //}
-    //public AudioManager GetAudioManager()
-    //{
-    //    return audioManager;
-    //}
+        return disparo;
+    }
+
+    public void blockDisparo()
+    {
+        disparo = false;
+    }
+
+    public void freeDisparo()
+    {
+        disparo = true;
+    }
 }
