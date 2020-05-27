@@ -9,6 +9,7 @@ public class EndGame : MonoBehaviour
     //public GameObject PC; 
     //esto es la pantalla de fin del juego
     public GameObject EndUI;
+    public GameObject DeathUI;
     //este booleano es para saber si ha terminado el nivel (de momento no tiene uso, esto se usara cuando haya mas niveles)
     public static bool levelFinished = false;
 
@@ -34,5 +35,11 @@ public class EndGame : MonoBehaviour
             Time.timeScale = 0f;
         //}
     }
+
+    public void ResumeAfterRespawn() {
+        DeathUI.SetActive(false);
+        Time.timeScale = 1f;
+
+    } 
 
 }

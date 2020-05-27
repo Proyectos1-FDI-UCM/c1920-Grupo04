@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject DeathUI;
     public static GameManager instance;
     PlayerController jugadorPC;
     RespawnPadre respaw;
@@ -68,9 +69,10 @@ public class GameManager : MonoBehaviour
         if (vida <= 0)
         //Al llegar la vida a 0 hacemos que respawnee el jugador (y la escena)
         {
-            jugadorPC.Respawn();
+            DeathUI.SetActive(true);
             uimanag.RecuperaVida();
             vida = vida_maxima;
+            Time.timeScale = 0f;
         }
         else jugadorPC.Parpadea(); //Si le han quitado vida, y no ha muerto
 
