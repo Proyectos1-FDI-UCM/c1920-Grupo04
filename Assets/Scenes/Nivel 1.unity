@@ -21054,6 +21054,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2304546806339646119, guid: 36da19d3a1604be409553476197655c8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2304546805982971947, guid: 36da19d3a1604be409553476197655c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21184,11 +21189,6 @@ PrefabInstance:
       propertyPath: DeathUI
       value: 
       objectReference: {fileID: 102694459}
-    - target: {fileID: 2304546806339646119, guid: 36da19d3a1604be409553476197655c8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2304546806340691655, guid: 36da19d3a1604be409553476197655c8,
         type: 3}
       propertyPath: m_SizeDelta.x
