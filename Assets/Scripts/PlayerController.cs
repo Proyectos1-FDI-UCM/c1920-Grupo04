@@ -66,7 +66,10 @@ public class PlayerController : MonoBehaviour
         setScale();
         deltaY = Input.GetAxis("Vertical");
         setScale();
-        salto = Input.GetKeyDown("w");
+        if (Input.GetKeyDown("w") || Input.GetKeyDown("up"))
+            salto = true;
+        else
+            salto = false;
 
         saltotimer += Time.deltaTime;
 
