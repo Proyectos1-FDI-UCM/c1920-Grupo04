@@ -45,9 +45,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         AudioManager.instance.PlaySound("seleccion", "play");
         gameIsPaused = false;
-        int cantidad = GameManager.instance.EnergiaParaSumar();
-        GameManager.instance.EnergiaSuma(cantidad);
-        GameManager.instance.ChangeVida(-3);
+        Destroy(GameManager.instance.gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     //este metodo carga la escena del menu al pulsar el boton

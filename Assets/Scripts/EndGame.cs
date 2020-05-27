@@ -9,21 +9,23 @@ public class EndGame : MonoBehaviour
     //public GameObject PC; 
     //esto es la pantalla de fin del juego
     public GameObject EndUI;
+    public GameObject DeathUI;
     //este booleano es para saber si ha terminado el nivel (de momento no tiene uso, esto se usara cuando haya mas niveles)
     public static bool levelFinished = false;
 
     //esto es para regresar al menu principal
     public void returnMenu () {
         Time.timeScale = 1f;
-        //esto restaura la energia y la vida del jugador a como esta al principio del juego
-        //int cantidad = GameManager.instance.EnergiaParaSumar();
-        //GameManager.instance.EnergiaSuma(cantidad);
-        //GameManager.instance.ChangeVida(-3);
 
         //esto destruye el GameManager antes de que se cargue la escena del menu para que no cause problemas
         //si se quiere empezar una nueva partida
         Destroy(GameManager.instance.gameObject);
         SceneManager.LoadScene(0);
+    }
+
+    public void Level2() {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(2);
     }
 
     //este metodo es para que cuando el jugador toque el trigger se abra el menu del fin del juego
@@ -33,5 +35,11 @@ public class EndGame : MonoBehaviour
             Time.timeScale = 0f;
         //}
     }
+
+    public void ResumeAfterRespawn() {
+        DeathUI.SetActive(false);
+        Time.timeScale = 1f;
+
+    } 
 
 }

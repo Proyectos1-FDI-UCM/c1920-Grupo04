@@ -27,6 +27,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
         Sound();
     }
+    public void Level2() {
+        SceneManager.LoadScene(2);
+    }
     //El metodo QuitGame sirve para salir del juego pero en el editor no se cerrara el juego pero si ocurrira 
     //cuando se haga la build del juego
     public void QuitGame() {
