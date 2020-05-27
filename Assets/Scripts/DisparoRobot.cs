@@ -11,12 +11,17 @@ public class DisparoRobot : MonoBehaviour
     int layermask, dirValue;
     Vector2 origin;
     private Transform shotPool;
+    VisionEnemigo vision;
+    Animator anim;
+    bool darseVuelta;
 
     // Start is called before the first frame update
     void Start()
     {
         layermask = 1 << 8; //La capa 8 es la del player.  
         shotPool = ShotPool.instance.transform;
+        vision = GetComponent<VisionEnemigo>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,6 +29,7 @@ public class DisparoRobot : MonoBehaviour
     {
         LocalizaAlJugador();
     }
+
 
     /// <summary>
     /// Lanza un rayo virtual en la horizontal con la distancia definida como longitud
@@ -36,14 +42,12 @@ public class DisparoRobot : MonoBehaviour
         if (Physics2D.Raycast(origin, Vector2.right, distance, layermask))
         {
             //Cambia el lado al que mira el robot
-            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
             dirValue = 1;
             if (!shotOnCD) shootPlayer();
             Debug.Log("DERECHA");
         }
         else if (Physics2D.Raycast(origin, Vector2.left, distance, layermask))
         {
-            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
             dirValue = -1;
             if (!shotOnCD) shootPlayer();
             Debug.Log("IZQUIERDA");
@@ -52,6 +56,20 @@ public class DisparoRobot : MonoBehaviour
 
     void shootPlayer()
     {
+        //Deja de mover al robot
+        vision.enabled = false; //Al desactivarse la visión, se desactiva cualquier movimiento
+        anim.enabled = false;
+        Invoke("Movimiento", 1f);
+
+        //Si estás a la izquierda y el robot estaba mirando a la derecha, o estás a la derecha y el robot estaba mirando a la izquierda
+        if ((dirValue == -1 && (int) transform.rotation.y == 0) || (dirValue == 1 && (int) transform.rotation.y == 1))
+        {
+            //Se le da la vuelta
+            transform.Rotate(0, 180, 0);
+            darseVuelta = true;
+        }
+        else darseVuelta = false;
+
         //Calcula el punto de salida
         Vector2 shotpoint = new Vector2(transform.position.x, transform.position.y);
         //Genera la bala
@@ -65,8 +83,16 @@ public class DisparoRobot : MonoBehaviour
         Invoke("resetCD", CD);
     }
 
+
     void resetCD()
     {
         shotOnCD = false;
+    }
+
+    void Movimiento()
+    {
+        vision.enabled = true;
+        anim.enabled = true;
+        if (darseVuelta) transform.Rotate(0, 180, 0);
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -3794254492168267987}
   - component: {fileID: 8602172093883026985}
   - component: {fileID: -157649616881392920}
+  - component: {fileID: 1122578849641198671}
   - component: {fileID: 8142876719729418086}
   - component: {fileID: 1813565054805806712}
   m_Layer: 11
@@ -123,8 +124,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891e355a7e4f63f4d9814974d63e06a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonidoDestruir: {fileID: 7004358721047761972, guid: c7f2bc0bf6f4ac24a9f5717aef254d8c,
-    type: 3}
+--- !u!114 &1122578849641198671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6688566648946058478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62111142af6158c4698fbc742078bf4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!50 &8142876719729418086
 Rigidbody2D:
   serializedVersion: 4

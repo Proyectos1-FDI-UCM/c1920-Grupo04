@@ -6,9 +6,12 @@ public class Danyo : MonoBehaviour
 {
     public int damage = 1;
     private float CD, time;
+    VelBala bala;
     private void Start()
     {
-        CD = 1;
+        bala = GetComponent<VelBala>();
+        if (bala != null) CD = 0f; //Si es una bala, no tiene cooldown
+        else CD = 1f;
         time = 0;
     }
 
@@ -21,6 +24,7 @@ public class Danyo : MonoBehaviour
                 GameManager.instance.ChangeVida(-damage);
                 time = Time.time;
             }
+            if (bala != null) Destroy(this.gameObject);//Si es una bala, se destruye
         }
     }
     private void OnCollisionEnter2D(Collision2D otro) // El enemigo seria un bloque con un unico collider, ya sabeis como funciona
@@ -32,6 +36,7 @@ public class Danyo : MonoBehaviour
                 GameManager.instance.ChangeVida(-damage);
                 time = Time.time;
             }
+            if (bala != null) Destroy(this.gameObject);//Si es una bala, se destruye
         }
     }
 }

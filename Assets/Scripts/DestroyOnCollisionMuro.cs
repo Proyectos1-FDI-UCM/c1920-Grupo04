@@ -10,8 +10,9 @@ public class DestroyOnCollisionMuro : MonoBehaviour
     {
         //guardo si la colisión tenía un nombreScriptBala o no para saber si es una bala
         VelBala scriptBala = collision.gameObject.GetComponent<VelBala>();
+        Danyo scriptDanyo = collision.gameObject.GetComponent<Danyo>();
 
-        if (scriptBala != null)         //si la colisión era una bala
+        if (scriptBala != null && scriptDanyo == null)         //si la colisión era una bala y no era enemigo
         {
             Destroy(this.gameObject);   //Este objeto (muro) se destruye
         }

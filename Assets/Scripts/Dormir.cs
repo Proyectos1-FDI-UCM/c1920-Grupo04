@@ -41,7 +41,6 @@ public class Dormir : MonoBehaviour
             vision.enabled = false;
             danyo.enabled = false;
             spriteRenderer.sprite = dormido;
-            rb.velocity = Vector2.zero;
         }
     }
 

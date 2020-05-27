@@ -46,6 +46,7 @@ public class VisionEnemigo : MonoBehaviour
         //Cuando se desactiva su visión se desactivan cualquier movimiento activado
         movNormal.enabled = false;
         movEnemigoPerseguir.enabled = false;
+        rb.velocity = Vector2.zero;
     }
 
     // Update is called once per frame
