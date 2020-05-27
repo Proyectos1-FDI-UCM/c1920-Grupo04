@@ -1041,8 +1041,8 @@ RectTransform:
   m_Children:
   - {fileID: 2304546807107103229}
   - {fileID: 2304546805967011955}
-  - {fileID: 2304546806339646116}
   - {fileID: 6538114663226815743}
+  - {fileID: 2304546806339646116}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1153,7 +1153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 2304546805967011956}
-  instance: {fileID: 0}
 --- !u!114 &2304546805982971945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1167,7 +1166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndUI: {fileID: 2304546806339646119}
-  gameManager: {fileID: 0}
 --- !u!1 &2304546806225540983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,7 +1407,7 @@ RectTransform:
   - {fileID: 2304546806340691655}
   - {fileID: 2838544765813165553}
   m_Father: {fileID: 2304546805982971947}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2920,7 +2918,7 @@ PrefabInstance:
     - target: {fileID: 4992074956486286386, guid: 5748653c315875a4587eec9f511ac0cf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4992074956486286386, guid: 5748653c315875a4587eec9f511ac0cf,
         type: 3}
