@@ -11,6 +11,8 @@ public class Dormir : MonoBehaviour
     VisionEnemigo vision;
     Danyo danyo;
     Rigidbody2D rb;
+    Collider2D coli;
+    int gravedad;
     
 
     // Start is called before the first frame update
@@ -20,6 +22,7 @@ public class Dormir : MonoBehaviour
         vision = GetComponent<VisionEnemigo>();
         danyo = GetComponent<Danyo>();
         rb = GetComponent<Rigidbody2D>();
+        coli = GetComponent<Collider2D>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -30,6 +33,10 @@ public class Dormir : MonoBehaviour
             vision.enabled = true;
             danyo.enabled = true;
             spriteRenderer.sprite = despierto;
+            //activamso gravedad y collider
+            rb.gravityScale = 1;
+            coli.isTrigger = false; //tremendo trucazo ponerlo en trigger
+                                    //asi el collider sigue funcionando con sus demas compenentes sin necesidad de desactivarlo completamente
         }
     }
 
@@ -41,6 +48,10 @@ public class Dormir : MonoBehaviour
             vision.enabled = false;
             danyo.enabled = false;
             spriteRenderer.sprite = dormido;
+            //se activa su collider y gravedad
+            rb.gravityScale = 0;
+            coli.isTrigger = true;
+
         }
     }
 
