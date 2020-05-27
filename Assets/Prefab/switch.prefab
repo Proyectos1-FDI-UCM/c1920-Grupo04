@@ -96,8 +96,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objetivo:
   - {fileID: 0}
+  on: {fileID: 21300000, guid: 0d0dea9159bf1c34394f25a7fd4c77e5, type: 3}
+  off: {fileID: 21300000, guid: 3965e728a022c7f49bddf0bf8cfa7677, type: 3}
   isInside: 0
-  bala: {fileID: 542567520535890736, guid: ed34aa7d5bc6d314e8dc03a66fbea6b4, type: 3}
   hasDoor: 0
   nextTimeDoorCanOpen: 0
 --- !u!61 &8331135578958222259
@@ -113,7 +114,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0049362183, y: 0.00246799}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -124,5 +125,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5458946, y: 1.1135266}
   m_EdgeRadius: 0

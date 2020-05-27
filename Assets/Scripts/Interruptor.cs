@@ -5,8 +5,8 @@ using UnityEngine;
 public class Interruptor : MonoBehaviour
 {
     public GameObject[] objetivo;
+    public Sprite on, off;
     public bool isInside;
-    public GameObject bala;
     public bool hasDoor;
     public float nextTimeDoorCanOpen; //nDT es next door activation time y sirve para que no se active Interact si no ha acabado la animacion de la puerta
     private void Start() {
@@ -36,10 +36,14 @@ public class Interruptor : MonoBehaviour
                 objetivo[i].GetComponent<Interact>().enabled = true;
             }
         }
+        if (GetComponent<SpriteRenderer>().sprite == off)
+            GetComponent<SpriteRenderer>().sprite = on;
+        else if (GetComponent<SpriteRenderer>().sprite == on)
+                GetComponent<SpriteRenderer>().sprite = off;
     }
     private void OnTriggerEnter2D(Collider2D collision) {
         isInside = true;
-        if (collision.gameObject.GetComponent<SpriteRenderer>().sprite == bala.GetComponent<SpriteRenderer>().sprite) {
+        if (collision.gameObject.GetComponent<VelBala>()) {
             
             Pressed();
             Destroy(collision.gameObject);
