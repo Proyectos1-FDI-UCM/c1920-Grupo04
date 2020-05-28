@@ -13,10 +13,13 @@ public class MovEnemigoPerseguir : MonoBehaviour
     private GameObject player;
 
 
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         //player = GameManager.instance.DevolverJugador().gameObject;
         movNormal = GetComponent<movimiento_enemigo>();
         player = PlayerController.instance.gameObject;
