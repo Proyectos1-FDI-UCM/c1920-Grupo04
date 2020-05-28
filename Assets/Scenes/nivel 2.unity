@@ -3538,17 +3538,17 @@ PrefabInstance:
     - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
         type: 3}
       propertyPath: audioFiles.Array.data[13].isLooping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
         type: 3}
       propertyPath: audioFiles.Array.data[13].playOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2924720556455837553, guid: 228551554952a674986aad72423a7f70,
         type: 3}
       propertyPath: audioFiles.Array.data[13].volume
-      value: 0
+      value: 0.475
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 228551554952a674986aad72423a7f70, type: 3}
