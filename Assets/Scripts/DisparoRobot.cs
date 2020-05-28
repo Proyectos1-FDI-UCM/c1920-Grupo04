@@ -43,13 +43,13 @@ public class DisparoRobot : MonoBehaviour
         {
             //Cambia el lado al que mira el robot
             dirValue = 1;
-            if (!shotOnCD) shootPlayer();
+            if (!shotOnCD && (int)transform.rotation.y == 0) shootPlayer();
             Debug.Log("DERECHA");
         }
         else if (Physics2D.Raycast(origin, Vector2.left, distance, layermask))
         {
             dirValue = -1;
-            if (!shotOnCD) shootPlayer();
+            if (!shotOnCD && (int)transform.rotation.y - 180 < 1) shootPlayer();
             Debug.Log("IZQUIERDA");
         }
     }

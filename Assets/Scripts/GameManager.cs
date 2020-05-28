@@ -34,7 +34,8 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
-        }        
+        }
+        Invoke("SetDeathScreen", 1f);
     }
 
     public void SetDeathScreen()
