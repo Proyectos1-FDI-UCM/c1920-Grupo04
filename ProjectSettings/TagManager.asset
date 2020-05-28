@@ -12,6 +12,7 @@ TagManager:
   - suelo
   - pared
   - Enemigo
+  - DeathScreen
   layers:
   - Default
   - TransparentFX

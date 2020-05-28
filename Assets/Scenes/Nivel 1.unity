@@ -746,12 +746,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &102694459 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5155901382704199664, guid: 36da19d3a1604be409553476197655c8,
-    type: 3}
-  m_PrefabInstance: {fileID: 661154054}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &104348407
 GameObject:
   m_ObjectHideFlags: 0
@@ -37730,11 +37724,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 935425228326059536, guid: 245c2e845f659d44e91e7bad6e44f906,
-        type: 3}
-      propertyPath: DeathUI
-      value: 
-      objectReference: {fileID: 102694459}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 245c2e845f659d44e91e7bad6e44f906, type: 3}
 --- !u!1 &1824666513

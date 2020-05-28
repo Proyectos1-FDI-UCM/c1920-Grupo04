@@ -34,7 +34,12 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
-        }
+        }        
+    }
+
+    public void SetDeathScreen()
+    {
+        DeathUI = uimanag.DeathScreen();
     }
 
     /* NO ENTIENDO PORQUE PERO TIENE DELAY Y FALLA

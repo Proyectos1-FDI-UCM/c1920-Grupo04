@@ -105,4 +105,13 @@ public class UIManager : MonoBehaviour
         finalScoreText.text = puntuacion.ToString();
         deathScoreText.text = puntuacion.ToString();
     }
+    public GameObject DeathScreen()
+    {
+        GameObject d_screen = null;
+        if (transform.GetChild(5).gameObject.CompareTag("DeathScreen"))
+        {
+            d_screen = transform.GetChild(5).gameObject;
+        }
+        return d_screen;
+    }
 }

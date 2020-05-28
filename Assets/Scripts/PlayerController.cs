@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour
         gravedadIni = rb.gravityScale;
         parpadeo = false;
         parpadeoTimer = 0f;
+        GameManager.instance.SetDeathScreen();
     }
 
     void Update()
@@ -186,6 +187,7 @@ public class PlayerController : MonoBehaviour
     {
         tienesDobleSalto = true;
         CD_DSalto.SetActive(true);
+        GameManager.instance.SetDeathScreen();
     }
 
     public void HeTocadoSuelo()
