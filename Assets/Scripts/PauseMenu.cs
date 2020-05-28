@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,7 +11,16 @@ public class PauseMenu : MonoBehaviour
     public static bool gameIsPaused = false;
     //gameobject menu de pausa
     public GameObject pauseMenuUI;
-   
+    //slider para cambiar el volumen
+    public Slider masterSlider;
+    //AudioMixer
+    public AudioMixer audioMixer;
+
+    public void Start() {
+        masterSlider.value = PlayerPrefs.GetFloat("volume", 0f);
+        audioMixer.SetFloat("volume", masterSlider.value);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown("escape")) {
@@ -56,5 +67,9 @@ public class PauseMenu : MonoBehaviour
         //GameManager para poder destruirlo al volver al menu
         Destroy(GameManager.instance.gameObject);
         SceneManager.LoadScene(0);
+    }
+    public void SetVolume(float volume) {
+        PlayerPrefs.SetFloat("volume", volume);
+        audioMixer.SetFloat("volume", volume);
     }
 }
