@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1122578849641198671}
   - component: {fileID: 8142876719729418086}
   - component: {fileID: 1813565054805806712}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Disparo Robot
   m_TagString: Enemigo
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1803529801591491595}
   - component: {fileID: 1803529801591491597}
   - component: {fileID: 1803529801591491594}
-  m_Layer: 18
+  m_Layer: 21
   m_Name: S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1803529801697284959}
-  m_Layer: 18
+  m_Layer: 21
   m_Name: Textos Minimapa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 1803529801871538002}
   - component: {fileID: 1803529801871538004}
   - component: {fileID: 1803529801871538005}
-  m_Layer: 18
+  m_Layer: 21
   m_Name: S1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 1803529802423515233}
   - component: {fileID: 1803529802423515235}
   - component: {fileID: 1803529802423515232}
-  m_Layer: 18
+  m_Layer: 21
   m_Name: Hub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 1803529803000816751}
   - component: {fileID: 1803529803000816737}
   - component: {fileID: 1803529803000816750}
-  m_Layer: 18
+  m_Layer: 21
   m_Name: S3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
