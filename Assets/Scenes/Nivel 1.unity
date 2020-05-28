@@ -20880,11 +20880,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2304546806339646119, guid: 36da19d3a1604be409553476197655c8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2304546805982971947, guid: 36da19d3a1604be409553476197655c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21010,6 +21005,11 @@ PrefabInstance:
       propertyPath: masterSlider
       value: 
       objectReference: {fileID: 361586327}
+    - target: {fileID: 2304546806339646119, guid: 36da19d3a1604be409553476197655c8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2304546807006178909, guid: 36da19d3a1604be409553476197655c8,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -38593,7 +38593,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
