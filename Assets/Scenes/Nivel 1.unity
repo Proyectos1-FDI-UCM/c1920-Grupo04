@@ -20874,6 +20874,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2304546806339646119, guid: 36da19d3a1604be409553476197655c8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2304546805982971947, guid: 36da19d3a1604be409553476197655c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20999,11 +21004,6 @@ PrefabInstance:
       propertyPath: masterSlider
       value: 
       objectReference: {fileID: 361586327}
-    - target: {fileID: 2304546806339646119, guid: 36da19d3a1604be409553476197655c8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2304546807006178909, guid: 36da19d3a1604be409553476197655c8,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -25342,8 +25342,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964401899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.32, y: 1.5699997, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.5, z: 1}
+  m_LocalPosition: {x: 14.32749, y: 1.63282, z: 0}
+  m_LocalScale: {x: 0.0630606, y: 0.751265, z: 1}
   m_Children: []
   m_Father: {fileID: 1348049061}
   m_RootOrder: 0
@@ -25433,7 +25433,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 327a0c6d2a1511645aa597312b920738, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 487e0ad00ea24ec43be20f1d3f784abd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -30090,8 +30090,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c6c19d0bac7274fb56be599f3b48c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  can_pass: {fileID: 21300000, guid: 487e0ad00ea24ec43be20f1d3f784abd, type: 3}
-  not_pass: {fileID: 21300000, guid: 327a0c6d2a1511645aa597312b920738, type: 3}
+  can_pass: {fileID: 21300000, guid: 327a0c6d2a1511645aa597312b920738, type: 3}
+  not_pass: {fileID: 21300000, guid: 487e0ad00ea24ec43be20f1d3f784abd, type: 3}
   on: {fileID: 21300000, guid: 0d0dea9159bf1c34394f25a7fd4c77e5, type: 3}
   off: {fileID: 21300000, guid: 3965e728a022c7f49bddf0bf8cfa7677, type: 3}
 --- !u!61 &1348049064
