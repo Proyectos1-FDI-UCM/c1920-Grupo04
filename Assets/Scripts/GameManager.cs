@@ -122,6 +122,9 @@ public class GameManager : MonoBehaviour
         {
             MejoraEnergia();
         }
+        else {
+            uimanag.masEnergia(Bateria_maxima);
+        }
     }
     public void SumaPuntuacion(int puntos)
     {
