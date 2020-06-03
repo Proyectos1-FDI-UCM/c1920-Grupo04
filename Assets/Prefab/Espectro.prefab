@@ -98,6 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2558622438175919472}
   - component: {fileID: 6596988613022028563}
+  - component: {fileID: 4946926875262015655}
   m_Layer: 0
   m_Name: Espectro
   m_TagString: Untagged
@@ -135,6 +136,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 6348806539853727520, guid: 1b140d9cd661f5245912aafe1efd170d, type: 3}
+--- !u!111 &4946926875262015655
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848408260389481346}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: ba48fbe6fd32c6045831f89f7938e258, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &4755260378775615161
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +246,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2558622438175919472}
     m_Modifications:
+    - target: {fileID: 6348806539853727520, guid: 1b140d9cd661f5245912aafe1efd170d,
+        type: 3}
+      propertyPath: m_Name
+      value: Espectro (sin trigger)
+      objectReference: {fileID: 0}
     - target: {fileID: 6906516994880718566, guid: 1b140d9cd661f5245912aafe1efd170d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -284,11 +305,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6348806539853727520, guid: 1b140d9cd661f5245912aafe1efd170d,
-        type: 3}
-      propertyPath: m_Name
-      value: Espectro (sin trigger)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b140d9cd661f5245912aafe1efd170d, type: 3}
