@@ -2278,7 +2278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 176442077}
   - component: {fileID: 176442078}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27662,8 +27662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c6c19d0bac7274fb56be599f3b48c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  can_pass: {fileID: 21300000, guid: 487e0ad00ea24ec43be20f1d3f784abd, type: 3}
-  not_pass: {fileID: 21300000, guid: 327a0c6d2a1511645aa597312b920738, type: 3}
+  can_pass: {fileID: 21300000, guid: 327a0c6d2a1511645aa597312b920738, type: 3}
+  not_pass: {fileID: 21300000, guid: 487e0ad00ea24ec43be20f1d3f784abd, type: 3}
   on: {fileID: 21300000, guid: 0d0dea9159bf1c34394f25a7fd4c77e5, type: 3}
   off: {fileID: 21300000, guid: 3965e728a022c7f49bddf0bf8cfa7677, type: 3}
 --- !u!61 &1556810533
@@ -30027,7 +30027,7 @@ PrefabInstance:
     - target: {fileID: 8331135578958222257, guid: ca1abe6093cfc0840984eed9fdd38b0b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -40.89
+      value: -41.08
       objectReference: {fileID: 0}
     - target: {fileID: 8331135578958222257, guid: ca1abe6093cfc0840984eed9fdd38b0b,
         type: 3}
@@ -31384,8 +31384,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944821846}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 72.27, y: 28.09, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.5, z: 1}
+  m_LocalPosition: {x: 71.8279, y: 28.0707, z: 0}
+  m_LocalScale: {x: 0.06610608, y: 0.5302452, z: 1}
   m_Children: []
   m_Father: {fileID: 1556810535}
   m_RootOrder: 0
@@ -31472,10 +31472,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1679067869
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 327a0c6d2a1511645aa597312b920738, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 487e0ad00ea24ec43be20f1d3f784abd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
