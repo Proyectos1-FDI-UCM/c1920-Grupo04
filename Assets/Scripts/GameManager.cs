@@ -122,7 +122,8 @@ public class GameManager : MonoBehaviour
         {
             MejoraEnergia();
         }
-        else {
+        else { //esto es para cuando se pasa del nivel 1 al 2 habiendo cogido la mejora de energia que hace que se 
+            //actualice el ui y se vea correctamente la energia del jugador
             uimanag.masEnergia(Bateria_maxima);
         }
     }
