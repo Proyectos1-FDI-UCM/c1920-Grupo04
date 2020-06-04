@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6090212354950953403}
   - component: {fileID: 738049674861893596}
   - component: {fileID: 6599325303436075981}
+  - component: {fileID: 1283765733012378196}
   m_Layer: 13
   m_Name: Pies
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6478471727844003377}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.227, y: -1.8591, z: 0}
+  m_LocalPosition: {x: 0.275, y: -0.855, z: 0}
   m_LocalScale: {x: 1.8965821, y: 0.11824323, z: 1}
   m_Children: []
   m_Father: {fileID: 8014812544536353496}
@@ -100,7 +101,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6478471727844003377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -135,6 +136,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51804496ff4c4d344a64c0cf2b0bbcda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &1283765733012378196
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478471727844003377}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.004341733, y: -1.9450872}
+  serializedVersion: 2
+  m_Radius: 0.45619136
 --- !u!1 &8014812544536353502
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +168,7 @@ GameObject:
   - component: {fileID: 2982402572757198028}
   - component: {fileID: 1927509395462534538}
   - component: {fileID: 7341067911657066855}
+  - component: {fileID: 665236546549871511}
   m_Layer: 8
   m_Name: Spark
   m_TagString: Player
@@ -271,6 +289,7 @@ MonoBehaviour:
   velX: 0
   maxFallVelY: 18
   maxJumpVel: 18
+  CD_DSalto: {fileID: 0}
 --- !u!114 &197839411906608761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +356,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8014812544536353502}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -359,3 +378,19 @@ PolygonCollider2D:
       - {x: 0.7234824, y: 1.8380716}
       - {x: -0.3257464, y: 1.8363203}
       - {x: -0.42073354, y: -1.6054211}
+--- !u!70 &665236546549871511
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014812544536353502}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.2866309, y: 0.07550953}
+  m_Size: {x: 1.7301121, y: 3.848986}
+  m_Direction: 0

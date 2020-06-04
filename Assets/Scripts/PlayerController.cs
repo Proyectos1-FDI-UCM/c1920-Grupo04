@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(false); //Desactivar pies
         //Cambio de collider del personaje
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
-        gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
     }
 
     private void CambioAMovNormal(Collision2D collision)
@@ -146,7 +146,7 @@ public class PlayerController : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(true); //Activar pies
         //Cambio de collider del personaje       
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        gameObject.GetComponent<PolygonCollider2D>().enabled = true;
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
     }
     void DelaySalto()
     {

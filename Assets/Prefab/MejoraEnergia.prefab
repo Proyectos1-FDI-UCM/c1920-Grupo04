@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3180544718866501884}
   - component: {fileID: 445616257514822805}
   - component: {fileID: 5684467421400790806}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: MejoraEnergia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
