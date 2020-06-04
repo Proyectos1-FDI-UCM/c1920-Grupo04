@@ -113,12 +113,13 @@ public class PlayerController : MonoBehaviour
     {
         //Instantiate(cambioMov);
         cable = true; //Movimiento cable (dejar de saltar)
-        animator.enabled = false;
+   
         GameManager.instance.MovCable(); //Avisar dejar de disparar
         rb.gravityScale = 0;
         transform.localScale = scale * new Vector2(0.2f, 0.2f); //Cambiar el tamaño para evitar tener la misma box collider
 
         this.gameObject.GetComponent<SpriteRenderer>().sprite = enCable; //Sprite cable
+        animator.SetFloat("enCable", 2);
         GameObject ChildGameObject = collision.transform.GetChild(0).gameObject; //Punto de entrada
         gameObject.transform.position = ChildGameObject.transform.position;
         transform.GetChild(0).gameObject.SetActive(false); //Desactivar pies
@@ -131,13 +132,11 @@ public class PlayerController : MonoBehaviour
     {
         //Instantiate(cambioMov);
         //Invoke("DelaySalto", 0.2f); //Movimiento normal (volver a saltar)
-        cable = false;
-        animator.enabled = true;
-        GameManager.instance.MovNormal(); //Volver a disparar
+        cable = false;     GameManager.instance.MovNormal(); //Volver a disparar
         rb.gravityScale = gravedadIni;
         transform.localScale = scale; //Vuelve al tamaño normal
         this.gameObject.GetComponent<SpriteRenderer>().sprite = enCamino; //Sprite normal
-        
+        animator.SetFloat("enCable", 0);
         if (collision != null) //Es null cuando respawneas
         {
             GameObject ChildGameObject = collision.transform.GetChild(0).gameObject; //Punto de salida
