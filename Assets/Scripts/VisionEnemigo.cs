@@ -17,8 +17,8 @@ public class VisionEnemigo : MonoBehaviour
     Rigidbody2D rb;
     bool estaGirado;
     private GameObject player;
-    //int layermask;
-    //bool detect = false;
+    int layermask;
+    bool detect = false;
 
     private void Awake()
     {
@@ -33,7 +33,7 @@ public class VisionEnemigo : MonoBehaviour
         movEnemigoPerseguir.enabled = false;
         rb = GetComponent<Rigidbody2D>();
         player = PlayerController.instance.gameObject;
-        //layermask = 1 << 8; //La capa 8 es la del player.
+        layermask = 1 << 8; //La capa 8 es la del player.
 
     }
 
@@ -68,21 +68,18 @@ public class VisionEnemigo : MonoBehaviour
         }
 
         //Distancia entre enemigo y jugador
-        float distancia = Vector2.Distance(player.transform.position, transform.position);
+        //float distancia = Vector2.Distance(player.transform.position, transform.position);
         timer += Time.fixedDeltaTime;
-        //if ((Physics2D.Raycast(transform.position, Vector2.left, visionRadio, layermask) || Physics2D.Raycast(transform.position, Vector2.right, visionRadio, layermask)))
-        //    detect = true;
-        //else
-        //    detect = false;
+        detect = Physics2D.Raycast(transform.position, Vector2.left, visionRadio, layermask) || Physics2D.Raycast(transform.position, Vector2.right, visionRadio, layermask);
 
         //Estos ifs se encargan de activar/desactivar movEnemigoPerseguir si el player entra en el campo de visión
         //Pero si el enemigo llega al límite de donde puede llegar, se encarga el propio movEnemigoPerseguir de desactivarse solo.
-        if (distancia < visionRadio && !movEnemigoPerseguir.enabled && timer > 2f)//detect
+        if (detect && !movEnemigoPerseguir.enabled && timer > 2f)
         {
             movEnemigoPerseguir.enabled = true;
             movNormal.enabled = false;
         }
-        if (distancia >= visionRadio && movEnemigoPerseguir.enabled)//detect
+        if (!detect && movEnemigoPerseguir.enabled)
         {
             movEnemigoPerseguir.enabled = false;
             movNormal.enabled = true;
