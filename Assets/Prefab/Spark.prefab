@@ -304,6 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bala: {fileID: 542567520535890736, guid: ed34aa7d5bc6d314e8dc03a66fbea6b4, type: 3}
   cadencia: 1.5
+  animator: {fileID: 1927509395462534538}
 --- !u!61 &2982402572757198028
 BoxCollider2D:
   m_ObjectHideFlags: 0
