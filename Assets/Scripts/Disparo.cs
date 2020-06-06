@@ -6,6 +6,7 @@ public class Disparo : MonoBehaviour
 {
     public GameObject bala;
     public float cadencia;
+    public Animator animator;
     private float timer = 2;
     private Transform shotPool;
 
@@ -20,16 +21,19 @@ public class Disparo : MonoBehaviour
         {
             if (GameManager.instance.puedeDisparo())
             {
+                
                 GameManager.instance.blockDisparo(); // bloquea disparo
                 AudioManager.instance.PlaySound("DispSpark", "play");
                 GameManager.instance.EnergiaSuma(-1);
+               //
                 Vector2 shotpoint = new Vector2(transform.position.x + 0.25f, transform.position.y - 0.05f);
                 GameObject bullet = Instantiate(bala, shotpoint, Quaternion.identity, shotPool); //Crear la bala
-
+                animator.SetFloat("disparo", 2);
                 if (gameObject.transform.localScale.x < 0)
                     bullet.GetComponent<VelBala>().velocidad *= -1;
                 timer = 0;
             }
+            animator.SetFloat("disparo", 0);
         }
     }
 }
