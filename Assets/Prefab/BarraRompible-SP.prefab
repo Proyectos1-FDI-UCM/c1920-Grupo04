@@ -296,3 +296,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 1
+  puntuacion: 0
+  drop: {fileID: 0}
