@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6090212354950953403}
   - component: {fileID: 738049674861893596}
   - component: {fileID: 6599325303436075981}
-  - component: {fileID: 1283765733012378196}
   m_Layer: 13
   m_Name: Pies
   m_TagString: Untagged
@@ -30,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6478471727844003377}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.275, y: -0.855, z: 0}
-  m_LocalScale: {x: 1.8965821, y: 0.11824323, z: 1}
+  m_LocalPosition: {x: 0.107, y: -1.854, z: 0}
+  m_LocalScale: {x: 2.2047768, y: 0.11824323, z: 1}
   m_Children: []
   m_Father: {fileID: 8014812544536353496}
   m_RootOrder: 0
@@ -101,7 +100,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6478471727844003377}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -120,10 +119,10 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.050448332, y: 4.4574256}
-      - {x: -0.3415248, y: 2.1453598}
-      - {x: -0.16619512, y: -0.47734335}
-      - {x: 0.3222699, y: -0.47734335}
-      - {x: 0.46922222, y: 2.0968032}
+      - {x: -0.26959556, y: 0.4609535}
+      - {x: -0.24655028, y: -0.55819553}
+      - {x: 0.35078543, y: -0.5003155}
+      - {x: 0.37820548, y: 0.6185184}
 --- !u!114 &6599325303436075981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,22 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51804496ff4c4d344a64c0cf2b0bbcda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &1283765733012378196
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6478471727844003377}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.004341733, y: -1.9450872}
-  serializedVersion: 2
-  m_Radius: 0.45619136
 --- !u!1 &8014812544536353502
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +151,6 @@ GameObject:
   - component: {fileID: 2982402572757198028}
   - component: {fileID: 1927509395462534538}
   - component: {fileID: 7341067911657066855}
-  - component: {fileID: 665236546549871511}
   m_Layer: 8
   m_Name: Spark
   m_TagString: Player
@@ -357,7 +339,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8014812544536353502}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -375,23 +357,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.1169157, y: -1.6111615}
-      - {x: 0.7234824, y: 1.8380716}
-      - {x: -0.3257464, y: 1.8363203}
-      - {x: -0.42073354, y: -1.6054211}
---- !u!70 &665236546549871511
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8014812544536353502}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.2866309, y: 0.07550953}
-  m_Size: {x: 1.7301121, y: 3.848986}
-  m_Direction: 0
+    - - {x: 0.9941842, y: -1.8065708}
+      - {x: 0.9022134, y: 1.8309213}
+      - {x: -0.5262048, y: 1.8244501}
+      - {x: -0.5318903, y: -1.820516}

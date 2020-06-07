@@ -74,7 +74,7 @@ public class VisionEnemigo : MonoBehaviour
 
         //Estos ifs se encargan de activar/desactivar movEnemigoPerseguir si el player entra en el campo de visión
         //Pero si el enemigo llega al límite de donde puede llegar, se encarga el propio movEnemigoPerseguir de desactivarse solo.
-        if (detect && !movEnemigoPerseguir.enabled && timer > 2f)
+        if (detect && !movEnemigoPerseguir.enabled && timer > 1f)
         {
             movEnemigoPerseguir.enabled = true;
             movNormal.enabled = false;
