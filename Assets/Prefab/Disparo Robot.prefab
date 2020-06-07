@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 15
+  isEnemy: 1
 --- !u!114 &-157649616881392920
 MonoBehaviour:
   m_ObjectHideFlags: 0

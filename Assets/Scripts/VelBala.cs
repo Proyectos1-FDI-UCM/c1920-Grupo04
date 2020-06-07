@@ -7,6 +7,7 @@ public class VelBala : MonoBehaviour
     Rigidbody2D rb;
     public float velocidad;
     Vector2 velocidadVec;
+    public bool isEnemy = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();        
@@ -21,5 +22,9 @@ public class VelBala : MonoBehaviour
     public void changeDirVel(int dirValue)
     {
         transform.right = new Vector2(transform.right.x * dirValue, transform.right.y);
+    }
+    public bool IsEnemy() 
+    {
+        return isEnemy;
     }
 }

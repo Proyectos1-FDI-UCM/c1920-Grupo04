@@ -21,7 +21,8 @@ public class VidaEnemigo : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<VelBala>() != null)         //si la colisión era una bala
+        VelBala colisionante = collision.gameObject.GetComponent<VelBala>();
+        if (colisionante != null && !colisionante.IsEnemy())         //si la colisión era una bala
         {
             vida--;
             if (vida <= 0)
