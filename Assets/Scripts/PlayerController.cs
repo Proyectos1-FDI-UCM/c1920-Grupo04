@@ -6,9 +6,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float vel, velEnCable, forceJump;
-    public Sprite enCable;
-    public Sprite enCamino;
-    public Sprite jump;
     public GameObject cambioMov;
     public static PlayerController instance;
     public Animator animator;
@@ -82,14 +79,14 @@ public class PlayerController : MonoBehaviour
         if (parpadeo)
         {
             parpadeoTimer += Time.deltaTime;
-            if (parpadeoTimer < 0.15f) Render(false);
-            else if (parpadeoTimer < 0.3f) Render(true);
-            else if (parpadeoTimer < 0.45f) Render(false);
-            else if (parpadeoTimer < 0.6f) Render(true);
-            else if (parpadeoTimer < 0.75f) Render(false);
+            if (parpadeoTimer < 0.15f) spriteRend.enabled = false;
+            else if (parpadeoTimer < 0.3f) spriteRend.enabled = true;
+            else if (parpadeoTimer < 0.45f) spriteRend.enabled = false;
+            else if (parpadeoTimer < 0.6f) spriteRend.enabled = true;
+            else if (parpadeoTimer < 0.75f) spriteRend.enabled = false;
             else if (parpadeoTimer < 0.9f)
             {
-                Render(true);
+                spriteRend.enabled = true;
                 //Reseteo
                 parpadeo = false;
                 parpadeoTimer = 0f;
@@ -117,8 +114,6 @@ public class PlayerController : MonoBehaviour
         GameManager.instance.MovCable(); //Avisar dejar de disparar
         rb.gravityScale = 0;
         transform.localScale = scale * new Vector2(0.2f, 0.2f); //Cambiar el tamaño para evitar tener la misma box collider
-
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = enCable; //Sprite cable
         animator.SetFloat("enCable", 2);
         GameObject ChildGameObject = collision.transform.GetChild(0).gameObject; //Punto de entrada
         gameObject.transform.position = ChildGameObject.transform.position;
@@ -135,7 +130,6 @@ public class PlayerController : MonoBehaviour
         cable = false;     GameManager.instance.MovNormal(); //Volver a disparar
         rb.gravityScale = gravedadIni;
         transform.localScale = scale; //Vuelve al tamaño normal
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = enCamino; //Sprite normal
         animator.SetFloat("enCable", 0);
         if (collision != null) //Es null cuando respawneas
         {
@@ -285,12 +279,6 @@ public class PlayerController : MonoBehaviour
         //Método llamado al perder vida para que Spark empiece a parpadear
     {
         parpadeo = true;
-    }
-
-    private void Render(bool aux)
-        //Desactiva o activa el sprite, cuando Spark parpadea
-    {
-        spriteRend.enabled = aux;
     }
 
 }

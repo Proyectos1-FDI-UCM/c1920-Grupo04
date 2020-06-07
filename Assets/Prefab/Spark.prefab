@@ -120,8 +120,8 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.050448332, y: 4.4574256}
       - {x: -0.26959556, y: 0.4609535}
-      - {x: -0.24655028, y: -0.55819553}
-      - {x: 0.35078543, y: -0.5003155}
+      - {x: -0.24593551, y: -0.5502391}
+      - {x: 0.3691042, y: -0.49375433}
       - {x: 0.37820548, y: 0.6185184}
 --- !u!114 &6599325303436075981
 MonoBehaviour:
@@ -258,9 +258,6 @@ MonoBehaviour:
   vel: 8
   velEnCable: 6
   forceJump: 15
-  enCable: {fileID: 21300000, guid: ca6aaad3a22c2514ea638909e6d9252b, type: 3}
-  enCamino: {fileID: 21300000, guid: b0d1236bc6dfda14391c37a757fad169, type: 3}
-  jump: {fileID: 0}
   cambioMov: {fileID: 798849815186791469, guid: b29eaa05e90f9534ab371a4512532020,
     type: 3}
   animator: {fileID: 1927509395462534538}
@@ -357,7 +354,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.9941842, y: -1.8065708}
+    - - {x: 0.99258196, y: -1.8281058}
       - {x: 0.9022134, y: 1.8309213}
       - {x: -0.5262048, y: 1.8244501}
       - {x: -0.5318903, y: -1.820516}
