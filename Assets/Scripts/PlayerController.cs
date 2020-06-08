@@ -188,7 +188,7 @@ public class PlayerController : MonoBehaviour
        
         puedesDobleSalto = tienesDobleSalto;    //Se podrá usar de nuevo el doble salto (si lo tienes)
         enElSuelo = true;                       //Está en el suelo (puede saltar sin gastar el doble salto)
-        if (saltotimer >= 1f)
+        if (saltotimer >= 0.25f)
         {
             animator.SetFloat("jump", 0f); //animación salto acaba
         }
