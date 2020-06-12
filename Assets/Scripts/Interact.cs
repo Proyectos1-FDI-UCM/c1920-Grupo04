@@ -8,6 +8,7 @@ public class Interact : MonoBehaviour
     public Sprite LampOff;
     public Sprite Light;
     public bool IsDoor;
+    public bool IsStar;
     public Animator animator;
     SpriteRenderer spriteRenderer;
     BoxCollider2D boxCollider;
@@ -28,7 +29,6 @@ public class Interact : MonoBehaviour
       
     }
     private void OnEnable() {
-        //AudioManager.instance.PlaySound("interruptor", "play"); ...ESTO DABA ERROR...
         Debug.Log("Activado");
         if (spriteRenderer.sprite == LampOff) {
             spriteRenderer.sprite = LampOn;
@@ -41,9 +41,12 @@ public class Interact : MonoBehaviour
             boxCollider.enabled = false;
             animator.SetInteger("Open/Close", 1);
         }
+        else if (IsStar == true)
+        {
+            transform.GetComponent<FinishStar>().enabled = true;
+        }
     }
     private void OnDisable() {
-        AudioManager.instance.PlaySound("interruptor", "play");
         Debug.Log("Desactivado");
         if (spriteRenderer.sprite == LampOn) {
             spriteRenderer.sprite = LampOff;
@@ -55,6 +58,10 @@ public class Interact : MonoBehaviour
         else if (IsDoor == true) {
             boxCollider.enabled = true;
             animator.SetInteger("Open/Close", -1);
+        }
+        else if (IsStar == true)
+        {
+            transform.GetComponent<FinishStar>().enabled = false;
         }
     }
 }

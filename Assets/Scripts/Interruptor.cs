@@ -27,7 +27,9 @@ public class Interruptor : MonoBehaviour
         
     }
     void Pressed() { //este es el metodo que activa y desactiva el script Interact de los objetos que estan conectados al interruptor
+        AudioManager.instance.PlaySound("interruptor", "play"); // ...ESTO DABA ERROR...
         int n = objetivo.Length;
+        // Activa / Desactiva los objetos
         for (int i = 0; i < n; i++) {
             if (objetivo[i].GetComponent<Interact>().enabled == true) {
                 objetivo[i].GetComponent<Interact>().enabled = false;
@@ -36,6 +38,7 @@ public class Interruptor : MonoBehaviour
                 objetivo[i].GetComponent<Interact>().enabled = true;
             }
         }
+        // Cambio de sprite en el interruptor
         if (GetComponent<SpriteRenderer>().sprite == off)
             GetComponent<SpriteRenderer>().sprite = on;
         else if (GetComponent<SpriteRenderer>().sprite == on)
