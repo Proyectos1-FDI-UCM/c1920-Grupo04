@@ -20777,6 +20777,16 @@ PrefabInstance:
       propertyPath: m_Text
       value: NEXT LEVEL
       objectReference: {fileID: 0}
+    - target: {fileID: 6538114662736749725, guid: 36da19d3a1604be409553476197655c8,
+        type: 3}
+      propertyPath: m_UVRect.width
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6538114662736749725, guid: 36da19d3a1604be409553476197655c8,
+        type: 3}
+      propertyPath: m_UVRect.x
+      value: -0.005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36da19d3a1604be409553476197655c8, type: 3}
 --- !u!224 &661154055 stripped
@@ -25024,7 +25034,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 487e0ad00ea24ec43be20f1d3f784abd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
