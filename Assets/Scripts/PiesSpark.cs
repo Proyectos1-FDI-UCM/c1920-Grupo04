@@ -9,15 +9,17 @@ public class PiesSpark : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         int angle = (int) Mathf.Abs(Vector2.Angle(collision.GetContact(0).normal, Vector2.down));
-        if (angle == 180 || angle == 129 || angle == 135) //129 y 135 es el ángulo cuando toca un rampa
+        if (angle <= 180 && angle >= 130) // Valores continuos en vez de estrictos
             GameManager.instance.SueloTocado();
+        //Debug.Log(angle);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
         int angle = (int)Mathf.Abs(Vector2.Angle(collision.GetContact(0).normal, Vector2.down));
-        if (angle == 180 || angle == 129 || angle == 135) //129 y 135 es el ángulo cuando toca un rampa
+        if (angle <= 180 && angle >= 130) // Valores continuos en vez de estrictos
             GameManager.instance.SueloTocado();
+        //Debug.Log(angle);
     }
 
     private void OnCollisionExit2D(Collision2D collision)

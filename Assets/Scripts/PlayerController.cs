@@ -149,16 +149,16 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        ContactPoint2D contact = collision.GetContact(0);
-        // Checkea colsiones paredes. 
-        if (contact.normal.x > 0.9 && contact.normal.x < 1.1)
-            movLeftBlock = true;
-        else
-            movLeftBlock = false;
-        if (contact.normal.x < -0.9 && contact.normal.x > -1.1)
+        int angle = (int)Mathf.Abs(Vector2.Angle(collision.GetContact(0).normal, Vector2.right));
+        if (angle <= 180 && angle >= 130)
             movRightBlock = true;
         else
             movRightBlock = false;
+        if (angle >= 0 && angle <= 40)
+            movLeftBlock = true;
+        else
+            movLeftBlock = false;
+        //Debug.Log(angle);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -280,6 +280,5 @@ public class PlayerController : MonoBehaviour
     {
         parpadeo = true;
     }
-
 }
 

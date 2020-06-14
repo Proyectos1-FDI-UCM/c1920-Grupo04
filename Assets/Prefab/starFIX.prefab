@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3204931116777956514}
   - component: {fileID: 3204931116777956527}
   - component: {fileID: 3204931116777956524}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: starFIX
   m_TagString: Untagged
   m_Icon: {fileID: 0}

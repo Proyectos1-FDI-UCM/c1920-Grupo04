@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5488400890696218550}
   - component: {fileID: 5488400890696218551}
   - component: {fileID: 5488400890696218548}
-  m_Layer: 18
+  m_Layer: 23
   m_Name: Puntero Minimapa
   m_TagString: Untagged
   m_Icon: {fileID: 0}

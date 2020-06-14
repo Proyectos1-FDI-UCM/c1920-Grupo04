@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1633433384165500896}
   - component: {fileID: 8869911060109683509}
   - component: {fileID: 6090212354950953403}
-  - component: {fileID: 738049674861893596}
   - component: {fileID: 6599325303436075981}
+  - component: {fileID: 6897817687234610423}
   m_Layer: 13
   m_Name: Pies
   m_TagString: Untagged
@@ -93,37 +93,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783bdea8648f9a141b25a922c1fbf0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &738049674861893596
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6478471727844003377}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.3990507, y: 2.350347}
-      - {x: -0.22586614, y: 2.3943052}
-      - {x: -0.21096635, y: 0.012319839}
-      - {x: -0.12432806, y: -0.50899583}
-      - {x: 0.3684496, y: -0.53112316}
-      - {x: 0.38796866, y: 0.084054165}
 --- !u!114 &6599325303436075981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +105,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51804496ff4c4d344a64c0cf2b0bbcda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &6897817687234610423
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478471727844003377}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.096174456, y: 1.9100872}
+  m_Size: {x: 0.688862, y: 4.910825}
+  m_Direction: 1
 --- !u!1 &8014812544536353502
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +136,7 @@ GameObject:
   - component: {fileID: 197839411906608761}
   - component: {fileID: 2982402572757198028}
   - component: {fileID: 1927509395462534538}
-  - component: {fileID: 7341067911657066855}
+  - component: {fileID: 8541229263750838432}
   m_Layer: 8
   m_Name: Spark
   m_TagString: Player
@@ -330,7 +315,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!60 &7341067911657066855
+--- !u!60 &8541229263750838432
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,11 +340,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.36394852, y: -1.8467687}
-      - {x: -0.16687196, y: -1.8973652}
-      - {x: 0.901498, y: -1.9006646}
-      - {x: 0.9645327, y: -1.8612376}
-      - {x: 1.035479, y: -1.1744558}
-      - {x: 0.93464965, y: 1.8309213}
-      - {x: -0.5262048, y: 1.8244501}
-      - {x: -0.5318904, y: -1.157474}
+    - - {x: 1.0783281, y: -1.6371756}
+      - {x: 1.0756751, y: 0.8701564}
+      - {x: 0.3675353, y: 1.8396847}
+      - {x: -0.44067368, y: 1.8396847}
+      - {x: -0.43968278, y: -1.6356745}
