@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     int vida_maxima = 3;
     int vida = 3;
     int Bateria_maxima = 7;
-    int Bateria = 7;
+    int Bateria = 1;
     int punt = 0;
     public bool mov = true; //true: mov normal  false: mov cable
     Vector2 spawn;

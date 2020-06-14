@@ -14,7 +14,7 @@ public class Nivel2Ini : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        if (timer > 0.2f)
+        if (timer > 0.02f)
         {
             //Inicializa las habilidades de Spark, en caso de empezar directamente en este nivel
             PlayerController.instance.Nivel2Inicializacion();
